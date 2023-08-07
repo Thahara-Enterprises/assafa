@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import meal from '../../data.json';
+import meal from '/data.json';
 
 export default function handler(req, res) {
   if (req.method === 'GET') {
