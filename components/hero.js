@@ -1,15 +1,7 @@
 import Container from './container';
 import Image from 'next/image';
-import heroImg from '../public/img/hero.png';
-import Slider from 'react-slick';
-import Apartment from '../public/img/contracting/apartment.jpg';
-import Balcony from '../public/img/contracting/Balcony.jpg';
-import Hotel from '../public/img/contracting/hotel.jpg';
-import ApartmentTwo from '../public/img/contracting/Apartment2.jpg';
-import CarPark from '../public/img/contracting/carpark.jpg';
-import MEP from '../public/img/contracting/MEP.jpg';
-import Masjid from '../public/img/contracting/masjid.jpg';
-import Residential from '../public/img/contracting/residential.jpg';
+import CloudKitchenBanner from '../public/img/biriyanibanner.jpeg';
+import CloudKitchen from '../public/img/cloud-kitchen.png';
 import Link from 'next/link';
 
 const Hero = () => {
@@ -22,32 +14,31 @@ const Hero = () => {
   };
   return (
     <>
-      <div className="relative">
-        <Image
-          src={ApartmentTwo}
-          alt="Hero Image"
-          className="w-full h-auto brightness-75"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 place-items-center">
+          <Image src={CloudKitchenBanner} alt="Hero Image" layout="fit" />
+
           <div>
-            <h1 className="text-4xl text-center font-bold leading-snug tracking-tight text-white lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-              Welcome to Company Name LLC
+            <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
+              Think homemade food? Think Assafa Cloudkitchen
             </h1>
-            <p className="text-xl text-center leading-normal text-white font-semibold lg:text-xl xl:text-2xl dark:text-gray-300">
-              Lorem Ipsum Dollar sit Lorem Ipsum Dollar sit Lorem Ipsum Dollar
-              sit Lorem Ipsum Dollar sit
+            <p className="sm:text-base text-center leading-normal text-secondary font-semibold lg:text-xl xl:text-2xl dark:text-gray-300 lg:mx-20 xs:mx-5 xl:mx-20">
+              Culinary Engineering, Digitally Delicious - An Online Cloud
+              kitchen platform for Working couples, Our தாத்தா and Our பாட்டி in
+              their old age, Bachelors and Our Foodie family of "Assafa
+              delicacy"
             </p>
-            <div className="flex flex-col items-center justify-center space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row my-8">
+            <div className="flex flex-col sm:mx-4 items-center justify-center space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row my-8">
               <div>
                 <Link
                   href="/Contact"
-                  className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 focus:bg-indigo-400 border-indigo-600 focus:border-indigo-400 border-4  rounded-md"
+                  className="lg:px-8 lg:py-4 sm:px-4 sm:mx-3 sm:py-2 text-lg font-medium text-center text-white bg-indigo-600 focus:bg-indigo-400 border-indigo-600 focus:border-indigo-400 border-4 sm:border-2 rounded-md"
                 >
-                  Request Free Quote
+                  View Meal Plans
                 </Link>
                 <Link
                   href="/Services"
-                  className=" mx-7 px-8 py-4 text-lg font-medium text-center text-white border-indigo-600 border-4 rounded-md"
+                  className="lg:mx-7 lg:px-8 lg:py-4 sm:px-4 sm:py-2  text-lg font-medium text-center border-indigo-600 border-4 rounded-md"
                 >
                   Services
                 </Link>
@@ -59,9 +50,9 @@ const Hero = () => {
       <Container className="flex flex-wrap">
         <div className="flex items-center w-full lg:w-1/2">
           <div className="max-w-2xl mb-8">
-            <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
+            <h6 className="mt-3 text-3xl font-bold leading-snug tracking-tight text-primary  lg:leading-tight lg:text-4xl dark:text-white">
               Who Are We
-            </h1>
+            </h6>
             <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
               Next-Generation MEP Engineering Services!
             </div>
@@ -86,7 +77,7 @@ const Hero = () => {
         <div className="flex items-center justify-center w-full lg:w-1/2">
           <div className="">
             <Image
-              src={MEP}
+              src={CloudKitchen}
               width="616"
               height="617"
               className={'object-cover'}

@@ -11,15 +11,18 @@ import Testimonials from '../components/testimonials';
 import Cta from '../components/cta';
 import Faq from '../components/faq';
 import Countup from '../components/pluscount';
+import Pricing from '../components/pricing';
+import MealPlan from '../components/mealPlan';
+import Container from '../components/container';
 
-const Home = () => {
+const Home = ({ id, breakfast, lunch, dinner }) => {
   return (
     <>
       <Head>
-        <title>Contracting site</title>
+        <title>Assafa Delicacy</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="Online Cloud kitchen for Working couples, Senior citizens, Bachelors and also or foodie"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -35,10 +38,7 @@ const Home = () => {
       </SectionTitle>
       <Countup />
 
-      <SectionTitle
-        pretitle="Company LLC Benefits"
-        title="Why do you need us?"
-      >
+      <SectionTitle pretitle="Company LLC Benefits" title="Why do you need us?">
         Nextly is a free landing page & marketing website template for startups
         and indie projects. Its built with Next.js & TailwindCSS. And its
         completely open-source.
@@ -54,6 +54,34 @@ const Home = () => {
         don&apos;t forget to add one. Just like this.
       </SectionTitle>
       <WhatWeDo />
+      <SectionTitle
+        pretitle="Today's Menu"
+        title="Learn how to fullfil your needs"
+      >
+        This section is to highlight a promo or demo video of your product.
+        Analysts says a landing page with video has 3% more conversion rate. So,
+        don&apos;t forget to add one. Just like this.
+      </SectionTitle>
+      <Container>
+        <table className="min-w-full border-collapse border border-gray-300">
+          <thead>
+            <tr>
+              <th className="border border-gray-300 p-2">ID</th>
+              <th className="border border-gray-300 p-2">Breakfast</th>
+              <th className="border border-gray-300 p-2">Lunch</th>
+              <th className="border border-gray-300 p-2">Dinner</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-gray-300 p-2">{id}</td>
+              <td className="border border-gray-300 p-2">{breakfast}</td>
+              <td className="border border-gray-300 p-2">{lunch}</td>
+              <td className="border border-gray-300 p-2">{dinner}</td>
+            </tr>
+          </tbody>
+        </table>
+      </Container>
 
       <SectionTitle
         pretitle="Submit to us your Requirements"
@@ -63,6 +91,10 @@ const Home = () => {
         Use this section to highlight your popular customers.
       </SectionTitle>
       <Form id="requestquote" />
+      <SectionTitle pretitle="Pricing" title="Prices That Delight, Every Bite">
+        Answer your customers possible questions here, it will increase the
+        conversion rate as well as support or chat requests.
+      </SectionTitle>
       <SectionTitle
         pretitle="Testimonials"
         title="Here's what our customers said"
@@ -83,3 +115,31 @@ const Home = () => {
 };
 
 export default Home;
+export async function getStaticProps() {
+  try {
+    const response = await fetch(`${process.env.PUBLIC_URL}/api/update`);
+    const jsonData = await response.json();
+
+    const id = jsonData.id;
+    const breakfast = jsonData.breakfast;
+    const dinner = jsonData.dinner;
+    const lunch = jsonData.lunch;
+
+    return {
+      props: {
+        id,
+        breakfast,
+        lunch,
+        dinner,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return {
+      props: {
+        breakfast: '',
+        dinner: '',
+      },
+    };
+  }
+}

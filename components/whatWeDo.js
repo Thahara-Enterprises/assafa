@@ -10,7 +10,7 @@ import Residential from '../public/img/contracting/residential.jpg';
 const WhatWeDo = () => {
   return (
     <Container>
-      <div className="grid grid-cols-3 gap-36">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
         <div>
           <Image
             src={Apartment}
@@ -18,7 +18,9 @@ const WhatWeDo = () => {
             height={300}
             alt="apartment contracting in dubai"
           />
-          <h3>Apartment</h3>
+          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+            Apartment
+          </h3>
         </div>
         <div>
           <Image
@@ -27,7 +29,9 @@ const WhatWeDo = () => {
             height={300}
             alt="apartment contracting in dubai"
           />
-          <h3>Car Park</h3>
+          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+            Car Park
+          </h3>
         </div>
         <div>
           <Image
@@ -36,7 +40,9 @@ const WhatWeDo = () => {
             height={300}
             alt="masjid contracting in dubai"
           />
-          <h3>Mosque</h3>
+          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+            Mosque
+          </h3>
         </div>
         <div>
           <Image
@@ -45,7 +51,9 @@ const WhatWeDo = () => {
             height={300}
             alt="hotel contracting in dubai"
           />
-          <h3>Hotel</h3>
+          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+            Hotel
+          </h3>
         </div>
         <div>
           <Image
@@ -54,7 +62,9 @@ const WhatWeDo = () => {
             height={300}
             alt="balcony contracting in dubai"
           />
-          <h3>Kitchen Remodelling</h3>
+          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+            Kitchen Remodelling
+          </h3>
         </div>
         <div>
           <Image
@@ -63,7 +73,9 @@ const WhatWeDo = () => {
             height={300}
             alt="balcony contracting in dubai"
           />
-          <h3>Balcony</h3>
+          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+            Balcony
+          </h3>
         </div>
       </div>
     </Container>
