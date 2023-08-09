@@ -95,6 +95,7 @@ const Home = ({ id, breakfast, lunch, dinner }) => {
         Answer your customers possible questions here, it will increase the
         conversion rate as well as support or chat requests.
       </SectionTitle>
+      <Pricing/>
       <SectionTitle
         pretitle="Testimonials"
         title="Here's what our customers said"
@@ -114,32 +115,23 @@ const Home = ({ id, breakfast, lunch, dinner }) => {
   );
 };
 
-export default Home;
 export async function getStaticProps() {
-  try {
-    const response = await fetch(`https://assafa.vercel.app/api/update`);
-    const jsonData = await response.json();
+  const response = await fetch(
+    `${process.env.PUBLIC_URL || assafa.vercel.app}/api/update`
+  );
+  const jsonData = await response.json();
+  const id = await jsonData.id;
+  const breakfast = await jsonData.breakfast;
+  const dinner = await jsonData.dinner;
+  const lunch = await jsonData.lunch;
 
-    const id = jsonData.id;
-    const breakfast = jsonData.breakfast;
-    const dinner = jsonData.dinner;
-    const lunch = jsonData.lunch;
-
-    return {
-      props: {
-        id,
-        breakfast,
-        lunch,
-        dinner,
-      },
-    };
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return {
-      props: {
-        breakfast: '',
-        dinner: '',
-      },
-    };
-  }
+  return {
+    props: {
+      id,
+      breakfast,
+      lunch,
+      dinner,
+    },
+  };
 }
+export default Home;

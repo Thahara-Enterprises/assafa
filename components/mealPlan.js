@@ -27,7 +27,7 @@ export default function MealPlan({ id, breakfast, lunch, dinner }) {
 }
 export async function getStaticProps() {
   try {
-    const response = await fetch(`${process.env.PUBLIC_URL}/api/update`);
+    const response = await fetch(`${process.env.PUBLIC_URL || assafa.vercel.app}/api/update`);
     const jsonData = await response.json();
 
     const id = jsonData.id;

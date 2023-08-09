@@ -6,7 +6,6 @@ export default function UpdateValueComponent({
   dinner,
 }) {
   const [updatedValue, setUpdatedValue] = useState('');
-  const [post, setPost] = useState('');
 
   const handleUpdate = async () => {
     const response = await fetch('/api/update', {
@@ -40,13 +39,11 @@ export default function UpdateValueComponent({
   );
 }
 export async function getStaticProps() {
-  try {
-    const response = await fetch(`${process.env.PUBLIC_URL}/api/update`);
+    const response = await fetch(`${process.env.PUBLIC_URL || assafa.vercel.app}/api/update`);
     const jsonData = await response.json();
 
     const breakfast = jsonData.breakfast;
     const dinner = jsonData.dinner;
-    console.log(breakfast, dinner);
 
     return {
       props: {
@@ -54,13 +51,5 @@ export async function getStaticProps() {
         dinner,
       },
     };
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return {
-      props: {
-        breakfast: '',
-        dinner: '',
-      },
-    };
-  }
+
 }
