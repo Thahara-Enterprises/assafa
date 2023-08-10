@@ -86,7 +86,7 @@ const Navbar = () => {
                       href="#requestquote"
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                     >
-                      Today's Hot Meal
+                      Today&apos;s Hot Meal
                     </Link>
                     <Link
                       href="#requestquote"
@@ -122,7 +122,7 @@ const Navbar = () => {
             href="#requestquote"
             className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
           >
-            Today's Meal Plan
+            Today&apos;s Meal Plan
           </Link>
           <Link
             href="#requestquote"

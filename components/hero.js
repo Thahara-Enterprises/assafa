@@ -25,8 +25,8 @@ const Hero = () => {
             <p className="sm:text-base text-center leading-normal text-secondary font-semibold lg:text-xl xl:text-2xl dark:text-gray-300 lg:mx-20 xs:mx-5 xl:mx-20">
               Culinary Engineering, Digitally Delicious - An Online Cloud
               kitchen platform for Working couples, Our தாத்தா and Our பாட்டி in
-              their old age, Bachelors and Our Foodie family of "Assafa
-              delicacy"
+              their old age, Bachelors and Our Foodie family of &ldquot;Assafa
+              delicacy&rdquot;
             </p>
             <div className="flex flex-col sm:mx-4 items-center justify-center space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row my-8">
               <div>
@@ -58,7 +58,7 @@ const Hero = () => {
             </div>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industry&apos;s standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
