@@ -116,7 +116,11 @@ const Home = ({ id, breakfast, lunch, dinner }) => {
 };
 
 export async function getStaticProps() {
-  const response = await fetch(`/api/update`);
+  const apiUrl =
+    process.env.NODE_ENV === 'production'
+      ? process.env.API_URL_PROD
+      : process.env.API_URL_DEV;
+  const response = await fetch(`${apiUrl}/api/update`);
   const jsonData = await response.json();
   const id = jsonData.id;
   const breakfast = jsonData.breakfast;

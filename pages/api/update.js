@@ -3,6 +3,7 @@ import path from 'path';
 import meal from '../../data.json';
 
 export default function handler(req, res) {
+ 
 
   if (req.method === 'PUT') {
     const filePath = path.join(process.cwd(), `/data.json`);
