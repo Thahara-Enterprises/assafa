@@ -17,7 +17,7 @@ import Container from '../components/container';
 
 const Home = ({ id, breakfast, lunch, dinner }) => {
   return (
-    <div className="max-w-md">
+    <div>
       <Head>
         <title>Assafa Delicacy</title>
         <meta
@@ -120,7 +120,7 @@ export async function getStaticProps() {
     process.env.NODE_ENV === 'production'
       ? process.env.API_URL_PROD
       : process.env.API_URL_DEV;
-  const response = await fetch(`${apiUrl}/api/update`);
+  const response = await fetch(`${apiUrl}/api/meal`);
   const jsonData = await response.json();
   const id = jsonData.id;
   const breakfast = jsonData.breakfast;
