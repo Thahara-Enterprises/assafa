@@ -17,7 +17,7 @@ import Container from '../components/container';
 
 const Home = ({ id, breakfast, lunch, dinner }) => {
   return (
-    <>
+    <div className="max-w-md">
       <Head>
         <title>Assafa Delicacy</title>
         <meta
@@ -95,7 +95,7 @@ const Home = ({ id, breakfast, lunch, dinner }) => {
         Answer your customers possible questions here, it will increase the
         conversion rate as well as support or chat requests.
       </SectionTitle>
-      <Pricing/>
+      <Pricing />
       <SectionTitle
         pretitle="Testimonials"
         title="Here's what our customers said"
@@ -111,19 +111,21 @@ const Home = ({ id, breakfast, lunch, dinner }) => {
       <Faq />
       <Cta />
       <Footer />
-    </>
+    </div>
   );
 };
 
 export async function getStaticProps() {
-  const response = await fetch(
-    `${process.env.PUBLIC_URL || assafa.vercel.app}/api/update`
-  );
+  const apiUrl =
+    process.env.NODE_ENV === 'production'
+      ? process.env.API_URL_PROD
+      : process.env.API_URL_DEV;
+  const response = await fetch(`${apiUrl}/api/update`);
   const jsonData = await response.json();
-  const id = await jsonData.id;
-  const breakfast = await jsonData.breakfast;
-  const dinner = await jsonData.dinner;
-  const lunch = await jsonData.lunch;
+  const id = jsonData.id;
+  const breakfast = jsonData.breakfast;
+  const dinner = jsonData.dinner;
+  const lunch = jsonData.lunch;
 
   return {
     props: {

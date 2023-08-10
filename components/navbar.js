@@ -86,7 +86,13 @@ const Navbar = () => {
                       href="#requestquote"
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                     >
-                      Request Quote
+                      Today's Hot Meal
+                    </Link>
+                    <Link
+                      href="#requestquote"
+                      className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
+                    >
+                      Monthly Mess Plans
                     </Link>
                   </>
                 </Disclosure.Panel>
@@ -116,7 +122,13 @@ const Navbar = () => {
             href="#requestquote"
             className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
           >
-            Request Quote
+            Today's Meal Plan
+          </Link>
+          <Link
+            href="#requestquote"
+            className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
+          >
+            Monthly Mess Plans
           </Link>
 
           <ThemeChanger />

@@ -1,43 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import Container from '../components/container';
-import useSWR from 'swr';
 
-export default function UpdateValueComponent() {
-  const [updatedValue, setUpdatedValue] = useState('');
+function UpdateMenu() {
+  const [menuData, setMenuData] = useState('');
 
-  const handleUpdate = async () => {
-    const apiUrl =
-      process.env.NODE_ENV === 'production'
-        ? process.env.API_URL_PROD
-        : process.env.API_URL_DEV;
-    const response = await fetch(`${apiUrl}/api/update`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ updatedValue }),
-    });
+  useEffect(() => {
+    // Load data from data.json
+    fetch('../data.json')
+      .then((response) => response.json())
+      .catch((error) => console.error('Error loading data:', error));
+  }, []);
 
-    const dta = await response.json();
-    if (dta.success) {
-      console.log('updated successfully');
+  const updateMenuData = async () => {
+    try {
+      const response = await fetch('/api/update', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ menuData }),
+      });
+
+      if (response.ok) {
+        console.log('Menu data updated successfully');
+      } else {
+        console.error('Failed to update menu data');
+      }
+    } catch (error) {
+      console.error('Error updating menu data:', error);
     }
   };
 
   return (
-    <>
-      <div>
-        <input
-          type="text"
-          value={updatedValue}
-          onChange={(e) => setUpdatedValue(e.target.value)}
-          placeholder="value you want to update"
-        />
-        <button onClick={handleUpdate}>Update Value</button>
-      </div>
+    <div>
       <Container className={`flex w-full flex-col mt-4 max-w-2xl`}>
         <form
-          onSubmit={handleUpdate}
+          onSubmit={updateMenuData}
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-6">
@@ -53,8 +51,8 @@ export default function UpdateValueComponent() {
               id="dinner"
               name="dinner"
               placeholder="Enter dinner menu"
-              value={updatedValue}
-              onChange={(e) => setUpdatedValue(e.target.value)}
+              value={menuData.dinner}
+              onChange={(e) => setMenuData(e.target.value)}
             />
           </div>
           <button
@@ -65,6 +63,8 @@ export default function UpdateValueComponent() {
           </button>
         </form>
       </Container>
-    </>
+    </div>
   );
 }
+
+export default UpdateMenu;
