@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Hero from '../components/hero';
 import Navbar from '../components/navbar';
@@ -12,10 +13,20 @@ import Cta from '../components/cta';
 import Faq from '../components/faq';
 import Countup from '../components/pluscount';
 import Pricing from '../components/pricing';
-import MealPlan from '../components/mealPlan';
 import Container from '../components/container';
 
-const Home = ({ id, breakfast, lunch, dinner }) => {
+const Home = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch('/api/meal');
+      const data = await response.json();
+      console.log(data);
+      setData(data);
+    }
+    fetchData();
+  }, []);
   return (
     <div>
       <Head>
@@ -74,10 +85,10 @@ const Home = ({ id, breakfast, lunch, dinner }) => {
           </thead>
           <tbody>
             <tr>
-              <td className="border border-gray-300 p-2">{id}</td>
-              <td className="border border-gray-300 p-2">{breakfast}</td>
-              <td className="border border-gray-300 p-2">{lunch}</td>
-              <td className="border border-gray-300 p-2">{dinner}</td>
+              <td className="border border-gray-300 p-2">{data.id}</td>
+              <td className="border border-gray-300 p-2">{data.breakfast}</td>
+              <td className="border border-gray-300 p-2">{data.lunch}</td>
+              <td className="border border-gray-300 p-2">{data.dinner}</td>
             </tr>
           </tbody>
         </table>
@@ -115,25 +126,4 @@ const Home = ({ id, breakfast, lunch, dinner }) => {
   );
 };
 
-export async function getStaticProps() {
-  const apiUrl =
-    process.env.NODE_ENV === 'production'
-      ? process.env.API_URL_PROD
-      : process.env.API_URL_DEV;
-  const response = await fetch(`${apiUrl}/api/meal`);
-  const jsonData = await response.json();
-  const id = jsonData.id;
-  const breakfast = jsonData.breakfast;
-  const dinner = jsonData.dinner;
-  const lunch = jsonData.lunch;
-
-  return {
-    props: {
-      id,
-      breakfast,
-      lunch,
-      dinner,
-    },
-  };
-}
 export default Home;
