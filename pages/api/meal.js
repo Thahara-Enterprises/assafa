@@ -1,5 +1,5 @@
 
-import meal from '../../json/data.json';
+import meal from '../json/data.json';
 
 export default async function handler(req, res) {
 

@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Container from '../components/container';
+import {baseUrl} from "../pages"
 
 function UpdateMenu() {
   const [menuData, setMenuData] = useState('');
 
   useEffect(() => {
     // Load data from data.json
-    fetch('../json/data.json')
+    fetch(`${baseUrl}/json/data.json`)
       .then((response) => response.json())
       .catch((error) => console.error('Error loading data:', error));
   }, []);
 
   const updateMenuData = async () => {
     try {
-      const response = await fetch('/api/update', {
+      const response = await fetch(`${baseUrl}/api/update`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
