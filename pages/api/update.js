@@ -3,7 +3,7 @@ import path from 'path';
 
 export default function handler(req, res) {
   if (req.method === 'PUT') {
-    const filePath = path.join(process.cwd(), `/data.json`);
+    const filePath = path.join(process.cwd(), `/json/data.json`);
 
     // Read the JSON file
     const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf8'));

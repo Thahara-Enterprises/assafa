@@ -6,7 +6,7 @@ function UpdateMenu() {
 
   useEffect(() => {
     // Load data from data.json
-    fetch('/data.json')
+    fetch('../json/data.json')
       .then((response) => response.json())
       .catch((error) => console.error('Error loading data:', error));
   }, []);
