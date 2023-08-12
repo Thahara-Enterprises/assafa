@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Container from '../components/container';
-import {baseUrl} from "../pages"
+import { apiUrl } from '../config';
 
+const baseUrl = `${apiUrl}`;
 function UpdateMenu() {
   const [menuData, setMenuData] = useState('');
 
   useEffect(() => {
     // Load data from data.json
-    fetch(`${baseUrl}/json/data.json`)
+    fetch(`/data.json`)
       .then((response) => response.json())
       .catch((error) => console.error('Error loading data:', error));
   }, []);

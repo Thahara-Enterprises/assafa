@@ -1,10 +1,12 @@
 import fs from 'fs';
 import path from 'path';
-import { baseUrl } from '../../pages';
+import { apiUrl } from '../../config';
+
+const baseUrl = `${apiUrl}/json`;
 
 export default function handler(req, res) {
   if (req.method === 'PUT') {
-    const filePath = path.join(process.cwd(), `${baseUrl}/json/data.json`);
+    const filePath = path.join(process.cwd(), `/data.json`);
 
     // Read the JSON file
     const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf8'));

@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Container from '../components/container';
-import useSWR from 'swr';
+import { apiUrl } from '../config';
 
+const baseUrl = `${apiUrl}`;
 export default function UpdateValueComponent() {
   const [updatedValue, setUpdatedValue] = useState('');
 
   const handleUpdate = async () => {
-    const apiUrl =
-      process.env.NODE_ENV === 'production'
-        ? process.env.API_URL_PROD
-        : process.env.API_URL_DEV;
-    const response = await fetch(`${apiUrl}/api/update`, {
+
+    const response = await fetch(`${baseUrl}/api/update`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
