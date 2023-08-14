@@ -7,7 +7,6 @@ export default function UpdateValueComponent() {
   const [updatedValue, setUpdatedValue] = useState('');
 
   const handleUpdate = async () => {
-
     const response = await fetch(`http://localhost.com/api/update`, {
       method: 'PUT',
       headers: {
