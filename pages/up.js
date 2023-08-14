@@ -8,7 +8,7 @@ function UpdateMenu() {
 
   useEffect(() => {
     // Load data from data.json
-    fetch(`https://assafa.vercel.app/data.json`)
+    fetch(`/data.json`)
       .then((response) => response.json())
       .catch((error) => console.error('Error loading data:', error));
   }, []);
