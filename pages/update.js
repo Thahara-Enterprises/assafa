@@ -8,7 +8,7 @@ export default function UpdateValueComponent() {
 
   const handleUpdate = async () => {
 
-    const response = await fetch(`${baseUrl}/api/update`, {
+    const response = await fetch(`http://localhost.com/api/update`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

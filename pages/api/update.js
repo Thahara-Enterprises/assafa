@@ -6,7 +6,10 @@ const baseUrl = `${apiUrl}`;
 
 export default function handler(req, res) {
   if (req.method === 'PUT') {
-    const filePath = path.join(process.cwd(), `${baseUrl}/data.json`);
+    const filePath = path.join(
+      process.cwd(),
+      `/data.json`
+    );
 
     // Read the JSON file
     const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf8'));

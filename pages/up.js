@@ -8,14 +8,14 @@ function UpdateMenu() {
 
   useEffect(() => {
     // Load data from data.json
-    fetch(`${baseUrl}/data.json`)
+    fetch(`https://assafa.vercel.app/data.json`)
       .then((response) => response.json())
       .catch((error) => console.error('Error loading data:', error));
   }, []);
 
   const updateMenuData = async () => {
     try {
-      const response = await fetch(`${baseUrl}/api/update`, {
+      const response = await fetch(`https://assafa.vercel.app/api/update`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
