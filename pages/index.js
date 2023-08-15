@@ -14,6 +14,7 @@ import Cta from '../components/cta';
 import Faq from '../components/faq';
 import Countup from '../components/pluscount';
 import Pricing from '../components/pricing';
+import Halwa from '../components/halwa';
 import Container from '../components/container';
 
 const Home = () => {
@@ -31,7 +32,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Assafa Delicacy</title>
+        <title>Assafa Delicacy - Delicious and Tasty Home made food</title>
         <meta
           name="description"
           content="Online Cloud kitchen for Working couples, Senior citizens, Bachelors and also or foodie"
@@ -108,6 +109,15 @@ const Home = () => {
         conversion rate as well as support or chat requests.
       </SectionTitle>
       <Pricing />
+      <SectionTitle
+        pretitle="Halwa Hunt"
+        title="A bite of halwa is a taste of comfort and tradition."
+      >
+        Dear Halwa lovers, we make fresh homemade halwa customizable to your
+        preferences - Beetroot, Bread, carrot, pumpkin and we also cater for
+        bulk order.
+      </SectionTitle>
+      <Halwa />
       <SectionTitle
         pretitle="Testimonials"
         title="Here's what our customers said"

@@ -19,7 +19,7 @@ const WhatWeDo = () => {
             alt="apartment contracting in dubai"
           />
           <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-            Apartment
+            Large Quantity Orders
           </h3>
         </div>
         <div>
@@ -30,7 +30,7 @@ const WhatWeDo = () => {
             alt="apartment contracting in dubai"
           />
           <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-            Car Park
+            Takeaway available
           </h3>
         </div>
         <div>
@@ -41,40 +41,7 @@ const WhatWeDo = () => {
             alt="masjid contracting in dubai"
           />
           <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-            Mosque
-          </h3>
-        </div>
-        <div>
-          <Image
-            src={Hotel}
-            className="rounded-md"
-            height={300}
-            alt="hotel contracting in dubai"
-          />
-          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-            Hotel
-          </h3>
-        </div>
-        <div>
-          <Image
-            src={Balcony}
-            className="rounded-md"
-            height={300}
-            alt="balcony contracting in dubai"
-          />
-          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-            Kitchen Remodelling
-          </h3>
-        </div>
-        <div>
-          <Image
-            src={Residential}
-            className="rounded-md"
-            height={300}
-            alt="balcony contracting in dubai"
-          />
-          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-            Balcony
+            Delivery free within certain areas
           </h3>
         </div>
       </div>

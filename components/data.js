@@ -16,8 +16,8 @@ const benefitOne = {
   image: benefitOneImg,
   bullets: [
     {
-      title: 'Expertise and Specialization',
-      desc: 'Contracting companies often specialize in specific industries or services, providing clients access to expert knowledge, skills, and experience in their respective fields.',
+      title: 'Authentic Feel',
+      desc: 'Feel the authenticity of South indian, North indian and Middle eastern food in our hands. Subscribe our Weekly/ Monthly plans now.',
       icon: <FaceSmileIcon />,
     },
     {
@@ -26,28 +26,28 @@ const benefitOne = {
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: 'Flexibility and Scalability',
-      desc: 'Contracting companies offer flexible services, allowing clients to adjust the scope of work or team size according to project requirements and business needs.',
-      icon: <CursorArrowRaysIcon />,
-    },
-    {
-      title: 'Access to Resources',
-      desc: 'Contracting companies typically have access to a wide range of resources, including specialized equipment, technology, and a network of subcontractors, which can benefit the clients project.',
-      icon: <CursorArrowRaysIcon />,
-    },
-    {
-      title: 'Risk Mitigation',
-      desc: 'Contracting companies often assume responsibility for project risks, compliance, and insurance, reducing the burden on the client and offering additional protection.',
-      icon: <CursorArrowRaysIcon />,
-    },
-    {
       title: 'Time Efficiency',
-      desc: 'Experienced contracting companies can efficiently manage projects, meet deadlines, and streamline processes, saving time and improving project outcomes.',
+      desc: 'Proper nutrition isnt just about what you eat, but also when you eat it. Subscribe to Assafa delicacys Monthly/Weekly subscription plan to get your meal on time',
       icon: <CursorArrowRaysIcon />,
     },
     {
       title: 'Quality Assurance',
       desc: 'Contracting companies are focused on maintaining their reputation and meeting client expectations, ensuring that work is executed with high standards of quality and craftsmanship.',
+      icon: <CursorArrowRaysIcon />,
+    },
+    {
+      title: 'Pregnancy Friendly diets',
+      desc: 'Your diet during pregnancy impacts your babys future health. Make each bite count with our Monthly/Weekly subscription plans',
+      icon: <CursorArrowRaysIcon />,
+    },
+    {
+      title: 'We Care our senior citizens',
+      desc: 'Growing old is mandatory, but growing up with care is optional. We dont just cook food, we spice it up with love. Subscribe to our monthly plans and let your days bloom with love',
+      icon: <CursorArrowRaysIcon />,
+    },
+    {
+      title: 'Bachelor friendly Food',
+      desc: 'Now you dont have to go back to home for delicious home made food. Subscribe to our Monthly plan. And Yes! there is no compromise.',
       icon: <CursorArrowRaysIcon />,
     },
   ],

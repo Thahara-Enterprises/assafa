@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       colors: {
         trueGray: colors.neutral,
-        primary: '#FFD700',
+        primary: '#FFA500',
         secondary: '#333333',
         accent: '#00A6ED',
         complementary: '#8B4513',

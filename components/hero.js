@@ -23,22 +23,22 @@ const Hero = () => {
               Think homemade food? Think Assafa Cloudkitchen
             </h1>
             <p className="sm:text-base text-center leading-normal text-secondary font-semibold lg:text-xl xl:text-2xl dark:text-gray-300 lg:mx-20 xs:mx-5 xl:mx-20">
-              Culinary Engineering, Digitally Delicious - An Online Cloud
+              Culinary Engineering, Digitally Delicious - An Online Homemade food Cloud
               kitchen platform for Working couples, Our தாத்தா and Our பாட்டி in
               their old age, Bachelors and Our Foodie family of &ldquot;Assafa
               delicacy&rdquot;
             </p>
             <div className="flex flex-col sm:mx-4 items-center justify-center space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row my-8">
-              <div>
+              <div className="p-2">
                 <Link
                   href="/Contact"
-                  className="lg:px-8 lg:py-4 sm:px-4 sm:mx-3 sm:py-2 text-lg font-medium text-center text-white bg-indigo-600 focus:bg-indigo-400 border-indigo-600 focus:border-indigo-400 border-4 sm:border-2 rounded-md"
+                  className="lg:px-8 lg:py-4 sm:px-6 sm:mx-3 sm:py-2 lg:text-lg  font-medium text-center text-white bg-indigo-600 focus:bg-indigo-400 border-indigo-600 focus:border-indigo-400 border-4 sm:border-2 rounded-md"
                 >
                   View Meal Plans
                 </Link>
                 <Link
                   href="/Services"
-                  className="lg:mx-7 lg:px-8 lg:py-4 sm:px-4 sm:py-2  text-lg font-medium text-center border-indigo-600 border-4 rounded-md"
+                  className="lg:mx-7 lg:px-8 lg:py-4 sm:px-6 sm:py-2 lg:text-lg sm:text-base font-medium text-center border-indigo-600 border-4 rounded-md px-2"
                 >
                   Services
                 </Link>

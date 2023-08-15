@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../components/footer';
 import Balcony from '../public/img/contracting/Balcony.jpg';
-import MEP from '../public/img/contracting/MEP.jpg';
 
 import Image from 'next/image';
 import Container from '../components/container';
@@ -12,34 +11,50 @@ import Residential from '../public/img/contracting/residential.jpg';
 import SectionTitle from '../components/sectionTitle';
 import Link from 'next/link';
 
-export default function Services() {
+export default function Halwa() {
   const services = [
     {
-      title: 'Bulk Orders Undertaken',
+      title: 'Gajar Halwa (Carrot Halwa)',
       image: Balcony,
-      description:
-        'We do orders for Marriage and other functions',
+      description: 'We do orders for Marriage and other functions',
     },
     {
-      title: 'Delivery',
+      title: 'Suji Halwa (Semolina Halwa)',
       image: Balcony,
       description:
         'Free delivery available for certain areas while for rest of the areas, delivery charges applies',
     },
     {
-      title: 'Custom Meals Available on request',
+      title: 'Badam Halwa (Almond Halwa)',
       image: Balcony,
       description:
         'Need Custom meal as per your own taste bud? We accept order accordingly',
     },
     {
-      title: 'Takeaway available',
+      title: 'Kaju Halwa (Cashew Nut Halwa)',
       image: Balcony,
-      description:
-        'You can also take food from our doorstep',
+      description: 'You can also take food from our doorstep',
     },
     {
-      title: 'Halwa Hunt',
+      title: 'Baklava',
+      image: Balcony,
+      description:
+        'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
+    },
+    {
+      title: 'Pistachio Halwa',
+      image: Balcony,
+      description:
+        'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
+    },
+    {
+      title: 'Coconut Halwa',
+      image: Balcony,
+      description:
+        'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
+    },
+    {
+      title: 'Any Halwa based on your Preferences',
       image: Balcony,
       description:
         'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
@@ -47,14 +62,6 @@ export default function Services() {
   ];
   return (
     <div>
-      <Head>
-        <title>Contracting site</title>
-        <meta
-          name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Navbar />
       <div className="relative">
         <Image

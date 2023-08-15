@@ -9,18 +9,6 @@ const Navbar = () => {
       item: 'Home',
       href: '/',
     },
-    {
-      item: 'Services',
-      href: '/Services',
-    },
-    {
-      item: 'Contact',
-      href: '/Contact',
-    },
-    {
-      item: 'Projects',
-      href: '/Projects',
-    },
   ];
 
   return (
