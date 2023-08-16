@@ -62,30 +62,6 @@ export default function Halwa() {
   ];
   return (
     <div>
-      <Navbar />
-      <div className="relative">
-        <Image
-          src={Residential}
-          alt="Hero Image"
-          className="w-full h-72 brightness-75"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div>
-            <h1 className="text-4xl text-center font-bold leading-snug tracking-tight text-white lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-              Welcome to Company Name LLC
-            </h1>
-            <p className="text-xl text-center leading-normal text-white font-semibold lg:text-xl xl:text-2xl dark:text-gray-300">
-              Lorem Ipsum Dollar sit Lorem Ipsum Dollar sit Lorem Ipsum Dollar
-              sit Lorem Ipsum Dollar sit
-            </p>
-          </div>
-        </div>
-      </div>
-      <SectionTitle pretitle="Our Services" title="Checkout our service list!">
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
-      </SectionTitle>
       <Container>
         <div className="grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-1 gap-6 rounded-md">
           {services.map((i) => (
@@ -98,12 +74,11 @@ export default function Halwa() {
               <p className="max-w-2xl pt-4 pb-8 text-lg leading-normal text-gray-800 lg:text-xl xl:text-xl dark:text-gray-300">
                 {i.description}
               </p>
-              <Link
-                href="/Contact"
-                className="p-4 text-lg font-medium text-center text-white bg-indigo-600 focus:bg-indigo-400 border-indigo-600 focus:border-indigo-400 border-4  rounded-md"
-              >
-                Request Free Quote
-              </Link>
+              <a href="tel:+919600052742">
+                <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
+                  Call Now
+                </button>
+              </a>
             </div>
           ))}
         </div>

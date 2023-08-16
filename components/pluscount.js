@@ -10,29 +10,17 @@ class Countup extends Component {
   render() {
     return (
       <div>
-        <div className="grid lg:grid-cols-7 text-center justify-center sm:grid-cols-1 gap-5 mt-8 mx-auto px-10 md:justify-around">
+        <div className="grid lg:grid-cols-4  text-center justify-center sm:grid-cols-2 gap-5 mt-8 mx-auto px-10 md:justify-around">
           <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-            <CountUp end={2000} duration={50} />+
+            <CountUp end={88} duration={50} />+
             <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-              Happy Clients
-            </div>
-          </div>
-          <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-            <CountUp end={500} duration={50} />+
-            <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-              Staff Members
-            </div>
-          </div>
-          <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-            <CountUp end={8000} duration={50} />+
-            <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-              Hour of Work
+              Happy Customers
             </div>
           </div>
           <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
             <CountUp end={5} duration={50} />+
             <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-              Countries Experiences
+              Staff Members
             </div>
           </div>
           <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
@@ -42,15 +30,9 @@ class Countup extends Component {
             </div>
           </div>
           <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-            <CountUp end={300} duration={50} />+
+            <CountUp end={50} duration={50} />+
             <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-              Finished Projects
-            </div>
-          </div>
-          <div className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-            <CountUp end={15} duration={50} />+
-            <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-              Award Won
+              Completed Orders
             </div>
           </div>
         </div>

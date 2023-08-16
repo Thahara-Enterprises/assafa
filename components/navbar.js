@@ -108,13 +108,13 @@ const Navbar = () => {
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link
             href="#requestquote"
-            className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
+            className="px-6 py-2 text-white bg-accent rounded-md md:ml-5"
           >
             Today&apos;s Meal Plan
           </Link>
           <Link
             href="#requestquote"
-            className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
+            className="px-6 py-2 text-white bg-accent rounded-md md:ml-5"
           >
             Monthly Mess Plans
           </Link>

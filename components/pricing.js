@@ -4,7 +4,7 @@ import Container from './container';
 function PricingCard() {
   return (
     <Container>
-      <div className="grid lg:grid-cols-4 text-center justify-center sm:grid-cols-1 gap-5 mt-8 mx-auto px-10 md:justify-around">
+      <div className="grid lg:grid-cols-3 text-center justify-center sm:grid-cols-1 gap-5 mt-8 mx-auto px-10 md:justify-around">
         <div className="bg-white rounded-lg shadow-lg p-6">
           <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white mb-4">
             <span className="text-xl font-bold">1</span>
@@ -14,7 +14,7 @@ function PricingCard() {
           </h2>
           <p className="text-gray-600 mb-4">Daily Meal Plan</p>
           <div className="flex justify-between items-center mb-6">
-            <span className="text-secondary text-lg">₹ 189/- Only</span>
+            <span className="text-lg text-complementary ">₹ 189/- Only</span>
             <span className="text-accent font-bold text-lg">/ day</span>
           </div>
           <ul className="text-sm text-gray-600">
@@ -47,9 +47,11 @@ function PricingCard() {
               Access to all features
             </li>
           </ul>
-          <button className="bg-complementary hover:bg-accent text-white font-semibold py-2 px-4 rounded-full mt-6">
-            Call Now
-          </button>
+          <a href="tel:+919600052742">
+            <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
+              Call Now
+            </button>
+          </a>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-6">
           <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white mb-4">
@@ -61,7 +63,7 @@ function PricingCard() {
           <p className="text-gray-600 mb-4">Perfect for Working Couples</p>
           <div className="flex justify-between items-center mb-6">
             <span className="text-secondary text-lg">₹ 999 /- (approx)</span>
-            <span className="text-accent font-bold text-lg">/ month</span>
+            <span className="text-accent font-bold text-lg">/ week</span>
           </div>
           <ul className="text-sm text-gray-600">
             <li className="flex items-center mb-2">
@@ -93,9 +95,11 @@ function PricingCard() {
               Access to all features
             </li>
           </ul>
-          <button className="bg-complementary hover:bg-accent text-white font-semibold py-2 px-4 rounded-full mt-6">
-            Call Now
-          </button>
+          <a href="tel:+919600052742">
+            <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
+              Call Now
+            </button>
+          </a>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-6">
           <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white mb-4">
@@ -138,11 +142,11 @@ function PricingCard() {
                 <path d="M2 21C2 21.5523 2.44772 22 3 22H21C21.5523 22 22 21.5523 22 21V14H2V21Z"></path>
                 <path d="M3 2C2.44772 2 2 2.44772 2 3V10H22V3C22 2.44772 21.5523 2 21 2H3Z"></path>
               </svg>
-             Delivery Available for certain areas
+              Delivery Available for certain areas
             </li>
           </ul>
-          <a href="tel:9600052742">
-            <button className="bg-complementary hover:bg-accent text-white font-semibold py-2 px-4 rounded-full mt-6">
+          <a href="tel:+919600052742">
+            <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
               Call Now
             </button>
           </a>

@@ -35,59 +35,80 @@ const Faq = () => {
 
 const faqdata = [
   {
-    question: 'How can I schedule an appointment?',
+    question: 'What is a Homemade Food Cloud Kitchen?',
     answer: 'Yes, this template is completely free to use.',
   },
   {
-    question: 'Can I visit the branch without scheduling an appointment?',
+    question: 'How Does Ordering Work?',
     answer: 'Yes, this you can.',
   },
   {
-    question: 'What branch services will be available on Saturdays',
+    question: 'Is Your Food Prepared Fresh?',
     answer:
       "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
   },
   {
-    question:
-      'How can I get information about leasing, maintainence and contracting services',
+    question: 'Are Special Dietary Requirements Accommodated?',
     answer:
       "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
   },
   {
-    question: 'What are the working hours of Company Name LLC',
+    question: 'Are there a Delivery and Pickup Options?',
     answer:
       "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
   },
   {
-    question:
-      'What documentation are required for residential tenancy contract?',
+    question: 'How Soon Can I Get My Order?',
     answer:
       "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
   },
   {
-    question:
-      'What documentation are required for commercial tenancy contract?',
+    question: 'Can I Customize My Order?',
     answer:
       "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
   },
   {
-    question: 'Can I make part payment',
+    question: 'What Safety Measures Are in Place?',
     answer:
       "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
   },
   {
-    question:
-      'What are the ddocuments required for issuance of Tawtheeq contract?',
+    question: 'What Payment Methods Are Accepted?',
     answer:
       "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
   },
   {
-    question: 'Does law require head protection in construction site?',
+    question: 'Can I Cancel or Modify an Order?',
     answer:
       "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
   },
   {
-    question: 'What are the first aid requirement for the site?',
+    question: 'Do You Offer Subscription Plans?',
+    answer:
+      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+  },
+  {
+    question: 'How Do I Contact Customer Support?',
+    answer:
+      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+  },
+  {
+    question: 'Do You Have Reviews or Testimonials?',
+    answer:
+      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+  },
+  {
+    question: 'How Can I Partner with Your Cloud Kitchen?',
+    answer:
+      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+  },
+  {
+    question: 'Is Feedback Welcome?',
+    answer:
+      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+  },
+  {
+    question: 'Can I Recommend New Dishes?',
     answer:
       "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
   },

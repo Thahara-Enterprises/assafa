@@ -1,48 +1,48 @@
 import Container from './container';
-import Image from 'next/image';
-import Apartment from '../public/img/contracting/apartment.jpg';
-import Balcony from '../public/img/contracting/Balcony.jpg';
-import Hotel from '../public/img/contracting/hotel.jpg';
-import CarPark from '../public/img/contracting/carpark.jpg';
-import Masjid from '../public/img/contracting/masjid.jpg';
-import Residential from '../public/img/contracting/residential.jpg';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faUtensils,
+  faShoppingBag,
+  faTruck,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+library.add(faUtensils, faShoppingBag, faTruck);
 
 const WhatWeDo = () => {
   return (
     <Container>
-      <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
-        <div>
-          <Image
-            src={Apartment}
-            className="rounded-md"
-            height={300}
-            alt="apartment contracting in dubai"
+      <div className="grid lg:grid-cols-3 sm:grid-cols-1 place-items-center items-center  gap-4">
+        <div className="max-w-2xl mt-3 text-3xl text-center font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+          <FontAwesomeIcon
+            icon="utensils"
+            size="lg"
+            className="text-complementary"
           />
-          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+          <div className="text-sm mt-3 font-bold tracking-wider text-indigo-600 uppercase">
             Large Quantity Orders
-          </h3>
+          </div>
         </div>
-        <div>
-          <Image
-            src={CarPark}
-            className="rounded-md"
-            height={300}
-            alt="apartment contracting in dubai"
+        <div className="max-w-2xl mt-3 text-3xl text-center font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+          <FontAwesomeIcon
+            icon="fa-solid fa-bag-shopping"
+            size="lg"
+            className="text-complementary"
           />
-          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+          <div className="text-sm mt-3 font-bold tracking-wider text-indigo-600 uppercase">
             Takeaway available
-          </h3>
+          </div>
         </div>
-        <div>
-          <Image
-            src={Masjid}
-            className="rounded-md"
-            height={300}
-            alt="masjid contracting in dubai"
+
+        <div className="max-w-2xl mt-3 text-3xl text-center font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+          <FontAwesomeIcon
+            icon="fa-solid fa-truck"
+            size="lg"
+            className="text-complementary"
           />
-          <h3 className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+          <div className="text-sm mt-3 font-bold tracking-wider text-indigo-600 uppercase">
             Delivery free within certain areas
-          </h3>
+          </div>
         </div>
       </div>
     </Container>

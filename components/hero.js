@@ -23,25 +23,28 @@ const Hero = () => {
               Think homemade food? Think Assafa Cloudkitchen
             </h1>
             <p className="sm:text-base text-center leading-normal text-secondary font-semibold lg:text-xl xl:text-2xl dark:text-gray-300 lg:mx-20 xs:mx-5 xl:mx-20">
-              Culinary Engineering, Digitally Delicious - An Online Homemade food Cloud
-              kitchen platform for Working couples, Our தாத்தா and Our பாட்டி in
-              their old age, Bachelors and Our Foodie family of &ldquot;Assafa
-              delicacy&rdquot;
+              Culinary Engineering, Digitally Delicious - An Online Homemade
+              food Cloud kitchen platform for Working couples, Senior citizens,
+              Bachelors and Our Foodie family of Assafa delicacy
             </p>
             <div className="flex flex-col sm:mx-4 items-center justify-center space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row my-8">
-              <div className="p-2">
-                <Link
-                  href="/Contact"
-                  className="lg:px-8 lg:py-4 sm:px-6 sm:mx-3 sm:py-2 lg:text-lg  font-medium text-center text-white bg-indigo-600 focus:bg-indigo-400 border-indigo-600 focus:border-indigo-400 border-4 sm:border-2 rounded-md"
-                >
-                  View Meal Plans
-                </Link>
-                <Link
-                  href="/Services"
-                  className="lg:mx-7 lg:px-8 lg:py-4 sm:px-6 sm:py-2 lg:text-lg sm:text-base font-medium text-center border-indigo-600 border-4 rounded-md px-2"
-                >
-                  Services
-                </Link>
+              <div>
+                <span>
+                  <Link
+                    href="/Contact"
+                    className="px-8 lg:py-4 sm:px-6 sm:mx-3 sm:py-2 lg:text-lg  font-medium text-center text-white bg-accent focus:bg-accent border-accent focus:border-accent border-4 sm:border-2 rounded-md"
+                  >
+                    View Meal Plans
+                  </Link>
+                </span>
+                <span className="mx-3">
+                  <Link
+                    href="/Services"
+                    className="lg:mx-7 lg:px-8 lg:py-4  sm:mx-4 sm:px-4 lg:text-lg sm:text-base font-medium text-center border-accent border-4 rounded-md px-2"
+                  >
+                    Services
+                  </Link>
+                </span>
               </div>
             </div>
           </div>
@@ -53,23 +56,50 @@ const Hero = () => {
             <h6 className="mt-3 text-3xl font-bold leading-snug tracking-tight text-primary  lg:leading-tight lg:text-4xl dark:text-white">
               Who Are We
             </h6>
-            <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-              Next-Generation MEP Engineering Services!
+            <div className="text-lg font-bold tracking-wider text-complementary uppercase">
+              Find us where Cooking with Passion and Love met an Unexpected
+              Business Model
             </div>
-            <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it to make a type specimen book.
+            <p className="py-5 text-xl leading-normal text-gray-700 lg:text-xl xl:text-2xl dark:text-gray-300">
+              <ul className="list-disc">
+                <li>
+                  We give weekly and monthly subscription plans Check out{' '}
+                  <a href="#subscription" className="text-accent">
+                    here
+                  </a>
+                </li>
+                <li>
+                  We cater South indian, North indian and Middle eastern food
+                </li>
+                <li>
+                  We take orders for variety of traditional Halwa options like
+                  baklava, dum karoot, beetroot halwa, bread halwa, omani halwa,
+                  see the range of products{' '}
+                  <a href="#subscription" className="text-accent">
+                    here
+                  </a>
+                </li>
+                <li>
+                  We undertake Bulk orders for marriages, get together and party
+                  orders
+                </li>
+                <li>
+                  We take orders for variety of chai like ginger, Masala chai,
+                  kashmiri chai, Sulaimani chai, see the range of products{' '}
+                  <a href="#subscription" className="text-accent">
+                    here
+                  </a>
+                </li>
+              </ul>
             </p>
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
               <a
-                href="/Projects"
+                href="/become-a-chef"
                 target="_blank"
                 rel="noopener"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md "
+                className="px-8 py-4 text-lg font-medium text-center text-white bg-accent rounded-md "
               >
-                Explore Our Projects
+                BECOME A CHEF
               </a>
             </div>
           </div>

@@ -104,11 +104,14 @@ const Home = () => {
         Use this section to highlight your popular customers.
       </SectionTitle>
       <Form id="requestquote" />
-      <SectionTitle pretitle="Pricing" title="Prices That Delight, Every Bite">
+      <SectionTitle
+        pretitle="Subscription Plan Pricing"
+        title="Prices That Delight, Every Bite"
+      >
         Answer your customers possible questions here, it will increase the
         conversion rate as well as support or chat requests.
       </SectionTitle>
-      <Pricing />
+      <Pricing id="subscription" />
       <SectionTitle
         pretitle="Halwa Hunt"
         title="A bite of halwa is a taste of comfort and tradition."
