@@ -3,11 +3,10 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faUtensils,
   faShoppingBag,
-  faTruck,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-library.add(faUtensils, faShoppingBag, faTruck);
+library.add(faUtensils, faShoppingBag);
 
 const WhatWeDo = () => {
   return (

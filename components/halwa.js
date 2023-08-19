@@ -83,8 +83,6 @@ export default function Halwa() {
           ))}
         </div>
       </Container>
-      <Cta />
-      <Footer />
     </div>
   );
 }

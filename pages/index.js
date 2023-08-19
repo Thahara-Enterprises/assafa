@@ -16,19 +16,10 @@ import Countup from '../components/pluscount';
 import Pricing from '../components/pricing';
 import Halwa from '../components/halwa';
 import Container from '../components/container';
+import { google } from 'googleapis';
+const sheets = google.sheets('v4');
 
-const Home = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch('/api/meal');
-      const data = await response.json();
-      console.log(data);
-      setData(data);
-    }
-    fetchData();
-  }, []);
+const Home = ({ date, lunch, dinner }) => {
   return (
     <div>
       <Head>
@@ -79,29 +70,27 @@ const Home = () => {
         <table className="min-w-full border-collapse border border-gray-300">
           <thead>
             <tr>
-              <th className="border border-gray-300 p-2">ID</th>
-              <th className="border border-gray-300 p-2">Breakfast</th>
+              <th className="border border-gray-300 p-2">Date</th>
               <th className="border border-gray-300 p-2">Lunch</th>
               <th className="border border-gray-300 p-2">Dinner</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border border-gray-300 p-2">{data.id}</td>
-              <td className="border border-gray-300 p-2">{data.breakfast}</td>
-              <td className="border border-gray-300 p-2">{data.lunch}</td>
-              <td className="border border-gray-300 p-2">{data.dinner}</td>
+              <td className="border border-gray-300 p-2">{date}</td>
+              <td className="border border-gray-300 p-2">{lunch}</td>
+              <td className="border border-gray-300 p-2">{dinner}</td>
             </tr>
           </tbody>
         </table>
       </Container>
 
       <SectionTitle
-        pretitle="Submit to us your Requirements"
-        title="A form to begin your biggest Milestone"
+        pretitle="Become a Partner"
+        title="A form to fullfil your passion and dreams"
       >
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+        Are you a great cook? want to be a partner with us? Submit your Details
+        here.
       </SectionTitle>
       <Form id="requestquote" />
       <SectionTitle
@@ -141,3 +130,30 @@ const Home = () => {
 };
 
 export default Home;
+export async function getServerSideProps() {
+  const scopes = ['https://www.googleapis.com/auth/spreadsheets'];
+  const jwt = new google.auth.JWT(
+    process.env.DAILY_MEAL_CLIENT_EMAIL,
+    null,
+    process.env.DAILY_MEAL_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    scopes,
+    null
+  );
+
+  const readData = await sheets.spreadsheets.values.get({
+    auth: jwt,
+    spreadsheetId: process.env.DAILY_MEAL_DATABASE_ID,
+    range: 'Sheet1!A2:C2',
+  });
+  const date = readData.data.values[0][0];
+  const lunch = readData.data.values[0][1];
+  const dinner = readData.data.values[0][2];
+
+  return {
+    props: {
+      date,
+      lunch,
+      dinner,
+    },
+  };
+}

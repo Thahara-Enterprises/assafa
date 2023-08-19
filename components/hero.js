@@ -60,7 +60,7 @@ const Hero = () => {
               Find us where Cooking with Passion and Love met an Unexpected
               Business Model
             </div>
-            <p className="py-5 text-xl leading-normal text-gray-700 lg:text-xl xl:text-2xl dark:text-gray-300">
+            <p className="py-5 text-lg leading-normal text-gray-700 lg:text-lg xl:text-lg sm:text-base dark:text-gray-300">
               <ul className="list-disc">
                 <li>
                   We give weekly and monthly subscription plans Check out{' '}

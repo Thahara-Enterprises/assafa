@@ -2,10 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import { apiUrl } from '../../config';
 
-const baseUrl = `${apiUrl}`;
+
+
+const baseUrl = `${apiUrl}/api/meal`;
 
 export default function handler(req, res) {
   if (req.method === 'PUT') {
+    const mealGet = fetch(baseUrl).then(console.log(JSON.stringify(baseUrl)))
+
     const filePath = path.join(
       process.cwd(),
       `/data.json`
