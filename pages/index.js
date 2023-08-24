@@ -19,7 +19,16 @@ import Container from '../components/container';
 import { google } from 'googleapis';
 const sheets = google.sheets('v4');
 
-const Home = ({ date, lunch, dinner }) => {
+const Home = ({
+  date,
+  lunch,
+  lunchPrice,
+  dinner,
+  dinnerPrice,
+  total,
+  lunchStatus,
+  dinnerStatus,
+}) => {
   return (
     <div>
       <Head>
@@ -67,22 +76,56 @@ const Home = ({ date, lunch, dinner }) => {
         don&apos;t forget to add one. Just like this.
       </SectionTitle>
       <Container>
-        <table className="min-w-full border-collapse border border-gray-300">
-          <thead>
-            <tr>
-              <th className="border border-gray-300 p-2">Date</th>
-              <th className="border border-gray-300 p-2">Lunch</th>
-              <th className="border border-gray-300 p-2">Dinner</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-gray-300 p-2">{date}</td>
-              <td className="border border-gray-300 p-2">{lunch}</td>
-              <td className="border border-gray-300 p-2">{dinner}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="grid lg:grid-cols-2  sm:grid-cols-1 place-items-center items-center  gap-2">
+          <div className=" bg-white rounded-lg shadow-md p-6 ">
+            <div className="flex justify-between mb-4">
+              <p className="text-gray-600 text-sm">Date: {date}</p>
+            </div>
+
+            <div className="mb-4">
+              <p className="text-lg sm:text-base font-bold tracking-wider text-accent uppercase">
+                Dinner Menu
+              </p>
+              <div className="text-sm">
+                Current Status:
+                {dinnerStatus === `Order Undertaken` ? (
+                  <p className="text-green-500">Order Available</p>
+                ) : (
+                  <p className="text-red-500">Order not Available</p>
+                )}
+              </div>
+              <ul className="text-gray-600">{dinner}</ul>
+            </div>
+            <p className="text-gray-600 mb-1">Dinner Price: {dinnerPrice}</p>
+            <a href="/daily-menu-order">
+              <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
+                Order Now
+              </button>
+            </a>
+          </div>
+          <div className=" bg-white rounded-lg shadow-md p-6">
+            <div className="flex justify-between mb-4">
+              <p className="text-gray-600 text-sm">Date: {date}</p>
+            </div>
+            <div className="mb-4">
+              <p className="text-lg sm:text-base font-bold tracking-wider text-accent uppercase">
+                Lunch Menu
+              </p>
+              <div className="text-green-600 text-sm">
+                Current Status: {lunchStatus}
+              </div>
+              <ul className="text-lg sm:text-base font-bold tracking-wider text-accent uppercase">
+                {lunch}
+              </ul>
+            </div>
+            <p className="text-gray-600 mb-1">Lunch Price: {lunchPrice}</p>
+            <a href="/daily-menu-order">
+              <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
+                Order Now
+              </button>
+            </a>
+          </div>
+        </div>
       </Container>
 
       <SectionTitle
@@ -143,17 +186,38 @@ export async function getServerSideProps() {
   const readData = await sheets.spreadsheets.values.get({
     auth: jwt,
     spreadsheetId: process.env.DAILY_MEAL_DATABASE_ID,
-    range: 'Sheet1!A2:C2',
+    range: 'Sheet1!A2:H2',
   });
   const date = readData.data.values[0][0];
   const lunch = readData.data.values[0][1];
-  const dinner = readData.data.values[0][2];
+  const lunchPrice = readData.data.values[0][2];
+  const dinner = readData.data.values[0][3];
+  const dinnerPrice = readData.data.values[0][4];
+  const total = readData.data.values[0][5];
+  const lunchStatus = readData.data.values[0][6];
+  const dinnerStatus = readData.data.values[0][7];
+
+  console.log(
+    date,
+    lunch,
+    lunchPrice,
+    dinner,
+    dinnerPrice,
+    total,
+    lunchStatus,
+    dinnerStatus
+  );
 
   return {
     props: {
       date,
       lunch,
+      lunchPrice,
       dinner,
+      dinnerPrice,
+      total,
+      lunchStatus,
+      dinnerStatus,
     },
   };
 }

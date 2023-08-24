@@ -9,6 +9,22 @@ const Navbar = () => {
       item: 'Home',
       href: '/',
     },
+    {
+      item: 'Meal Subscription',
+      href: '/meal-subscription',
+    },
+    {
+      item: 'Halwa corner',
+      href: '/halwa-corner',
+    },
+    {
+      item: 'Party Orders',
+      href: '/bulk-order',
+    },
+    {
+      item: 'Become a chef',
+      href: '/become-a-chef',
+    },
   ];
 
   return (
@@ -107,13 +123,13 @@ const Navbar = () => {
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link
-            href="#requestquote"
+            href="/daily-menu-update"
             className="px-6 py-2 text-white bg-accent rounded-md md:ml-5"
           >
             Today&apos;s Meal Plan
           </Link>
           <Link
-            href="#requestquote"
+            href="/meal-subscription"
             className="px-6 py-2 text-white bg-accent rounded-md md:ml-5"
           >
             Monthly Mess Plans
