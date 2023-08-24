@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './container';
+import Link from 'next/link';
 
 function PricingCard() {
   return (
@@ -49,11 +50,11 @@ function PricingCard() {
               Delivery Available to certain areas
             </li>
           </ul>
-          <a href="/daily-menu-update">
+          <Link href="/daily-menu-update">
             <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
               View Todays Menu
             </button>
-          </a>
+          </Link>
         </div>
         <div className="bg-card2 rounded-lg shadow-lg p-6">
           <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white mb-4">
@@ -99,11 +100,11 @@ function PricingCard() {
               Delivery Available to certain areas
             </li>
           </ul>
-          <a href="/meal-subscription">
+          <Link href="/meal-subscription">
             <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
               Subscribe Now
             </button>
-          </a>
+          </Link>
         </div>
         <div className="bg-card3 rounded-lg shadow-lg p-6">
           <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white mb-4">
@@ -151,11 +152,11 @@ function PricingCard() {
               Delivery Available for certain areas
             </li>
           </ul>
-          <a href="/meal-subscription">
+          <Link href="/meal-subscription">
             <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
               Subscribe Now
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </Container>

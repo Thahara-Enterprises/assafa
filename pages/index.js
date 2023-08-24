@@ -17,6 +17,7 @@ import Pricing from '../components/pricing';
 import Halwa from '../components/halwa';
 import Container from '../components/container';
 import { google } from 'googleapis';
+import Link from 'next/link';
 const sheets = google.sheets('v4');
 
 const Home = ({
@@ -97,11 +98,11 @@ const Home = ({
               <ul className="text-gray-600">{dinner}</ul>
             </div>
             <p className="text-gray-600 mb-1">Dinner Price: {dinnerPrice}</p>
-            <a href="/daily-menu-order">
+            <Link href="/daily-menu-order">
               <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                 Order Now
               </button>
-            </a>
+            </Link>
           </div>
           <div className=" bg-white rounded-lg shadow-md p-6">
             <div className="flex justify-between mb-4">
@@ -119,11 +120,11 @@ const Home = ({
               </ul>
             </div>
             <p className="text-gray-600 mb-1">Lunch Price: {lunchPrice}</p>
-            <a href="/daily-menu-order">
+            <Link href="/daily-menu-order">
               <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                 Order Now
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </Container>
