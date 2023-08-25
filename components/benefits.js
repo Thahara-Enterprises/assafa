@@ -31,7 +31,7 @@ const Benefits = (props) => {
           }`}
         >
           <div>
-            <div className="flex flex-col w-full mt-4">
+            <div className="grid grid-cols-4">
               <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-primary lg:leading-tight lg:text-4xl dark:text-white">
                 {data.title}
               </h3>
@@ -76,5 +76,6 @@ function Benefit(props) {
     </>
   );
 }
+
 
 export default Benefits;

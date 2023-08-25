@@ -18,6 +18,7 @@ import Halwa from '../components/halwa';
 import Container from '../components/container';
 import { google } from 'googleapis';
 import Link from 'next/link';
+import Bene from './Bene';
 const sheets = google.sheets('v4');
 
 const Home = ({
@@ -58,6 +59,7 @@ const Home = ({
         completely open-source.
       </SectionTitle>
       <Benefits data={benefitOne} />
+      <Bene />
 
       <SectionTitle
         pretitle="What we do"
@@ -77,49 +79,76 @@ const Home = ({
         don&apos;t forget to add one. Just like this.
       </SectionTitle>
       <Container>
-        <div className="grid lg:grid-cols-2  sm:grid-cols-1 place-items-center items-center  gap-2">
-          <div className=" bg-white rounded-lg shadow-md p-6 ">
-            <div className="flex justify-between mb-4">
-              <p className="text-gray-600 text-sm">Date: {date}</p>
-            </div>
-
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1 place-items-center items-center gap-2">
+          <div className=" bg-secondary rounded-lg shadow-md p-6 w-auto">
             <div className="mb-4">
-              <p className="text-lg sm:text-base font-bold tracking-wider text-accent uppercase">
-                Dinner Menu
+              <p className="text-gray-400 text-base float-right">
+                Date: {date}
               </p>
-              <div className="text-sm">
-                Current Status:
-                {dinnerStatus === `Order Undertaken` ? (
-                  <p className="text-green-500">Order Available</p>
+            </div>
+            <div className="mb-4">
+              <p className="text-2xl font-bold text-primary mb-2 uppercase">
+                Today&apos;s Lunch Menu
+              </p>
+              <div className="text-green-600 text-sm">
+                {lunchStatus === `Order Undertaken` ? (
+                  <span className="text-green-500">
+                    Current Status: Order Undertaken
+                  </span>
                 ) : (
-                  <p className="text-red-500">Order not Available</p>
+                  <span className="text-red-500">
+                    Current Status: Order not Undertaken
+                  </span>
                 )}
               </div>
-              <ul className="text-gray-600">{dinner}</ul>
+              <p className="text-lg sm:text-base font-bold tracking-wider text-white uppercase">
+                {lunch}
+              </p>
             </div>
-            <p className="text-gray-600 mb-1">Dinner Price: {dinnerPrice}</p>
+            <div className="flex justify-between items-center mb-6">
+              <span className="text-accent font-extrabold text-3xl">
+                ₹ {lunchPrice} /-
+              </span>
+              <span className="text-accent font-bold text-lg">/ per BOX</span>
+            </div>
             <Link href="/daily-menu-order">
               <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                 Order Now
               </button>
             </Link>
           </div>
-          <div className=" bg-white rounded-lg shadow-md p-6">
-            <div className="flex justify-between mb-4">
-              <p className="text-gray-600 text-sm">Date: {date}</p>
-            </div>
+          <div className=" bg-secondary rounded-lg shadow-md p-6 w-auto">
             <div className="mb-4">
-              <p className="text-lg sm:text-base font-bold tracking-wider text-accent uppercase">
-                Lunch Menu
+              <p className="text-gray-400 text-base float-right">
+                Date: {date}
               </p>
-              <div className="text-green-600 text-sm">
-                Current Status: {lunchStatus}
-              </div>
-              <ul className="text-lg sm:text-base font-bold tracking-wider text-accent uppercase">
-                {lunch}
-              </ul>
             </div>
-            <p className="text-gray-600 mb-1">Lunch Price: {lunchPrice}</p>
+
+            <div className="mb-4">
+              <p className="text-2xl font-bold text-primary mb-2 uppercase">
+                Today&apos;s Dinner Menu
+              </p>
+              <div className="text-sm">
+                {dinnerStatus === `Order Undertaken` ? (
+                  <span className="text-green-500">
+                    Current Status: Order Undertaken
+                  </span>
+                ) : (
+                  <span className="text-red-500">
+                    Current Status: Order not Undertaken
+                  </span>
+                )}
+              </div>
+              <p className="text-lg sm:text-base font-bold tracking-wider text-white uppercase">
+                {dinner}
+              </p>
+            </div>
+            <div className="flex justify-between items-center mb-6">
+              <span className="text-accent font-extrabold text-3xl">
+                ₹ {dinnerPrice} /-
+              </span>
+              <span className="text-accent font-bold text-lg">/ per BOX</span>
+            </div>
             <Link href="/daily-menu-order">
               <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                 Order Now

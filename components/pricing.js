@@ -5,18 +5,18 @@ import Link from 'next/link';
 function PricingCard() {
   return (
     <Container>
-      <div className="grid lg:grid-cols-3 text-center justify-center sm:grid-cols-1 gap-5 mt-8 mx-auto px-10 md:justify-around">
-        <div className="bg-card rounded-lg shadow-lg p-6">
+      <div className="grid lg:grid-cols-3 text-center justify-center sm:grid-cols-1 gap-5 mt-8 mx-auto sm:mx-1 lg:px-10 md:justify-around">
+        <div className="bg-secondary rounded-lg shadow-lg p-6">
           <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white mb-4">
-            <span className="text-xl font-bold">1</span>
+            <span className="text-xl font-bold">2</span>
           </div>
-          <h2 className="text-2xl font-bold text-black mb-2">
+          <h2 className="text-2xl font-bold text-primary mb-2">
             Daily Meal Plan
           </h2>
-          <p className="text-secondary mb-4">Daily Meal Plan</p>
+          <p className="text-gray-300 mb-4">Perfect for Working Couples</p>
           <div className="flex justify-between items-center mb-6">
-            <span className="text-complementary font-extrabold text-3xl">
-              ₹ 189/- (approx)
+            <span className="text-accent font-extrabold text-3xl">
+              ₹ 189 /- (approx)
             </span>
             <span className="text-accent font-bold text-lg">/ day</span>
           </div>
@@ -50,22 +50,22 @@ function PricingCard() {
               Delivery Available to certain areas
             </li>
           </ul>
-          <Link href="/daily-menu-update">
+          <Link href="/meal-subscription">
             <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
-              View Todays Menu
+              Subscribe Now
             </button>
           </Link>
         </div>
-        <div className="bg-card2 rounded-lg shadow-lg p-6">
+        <div className="bg-secondary rounded-lg shadow-lg p-6">
           <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white mb-4">
             <span className="text-xl font-bold">2</span>
           </div>
-          <h2 className="text-2xl font-bold text-black mb-2">
+          <h2 className="text-2xl font-bold text-primary mb-2">
             Weekly Meal Plan
           </h2>
-          <p className="text-gray-800 mb-4">Perfect for Working Couples</p>
+          <p className="text-gray-300 mb-4">Perfect for Working Couples</p>
           <div className="flex justify-between items-center mb-6">
-            <span className="text-complementary font-extrabold text-3xl">
+            <span className="text-accent font-extrabold text-3xl">
               ₹ 999 /- (approx)
             </span>
             <span className="text-accent font-bold text-lg">/ week</span>
@@ -106,18 +106,18 @@ function PricingCard() {
             </button>
           </Link>
         </div>
-        <div className="bg-card3 rounded-lg shadow-lg p-6">
+        <div className="bg-secondary rounded-lg shadow-lg p-6">
           <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-white mb-4">
             <span className="text-xl font-bold">3</span>
           </div>
-          <h2 className="text-2xl font-bold text-black mb-2">
+          <h2 className="text-2xl font-bold text-primary mb-2">
             Monthly Meal Plan
           </h2>
-          <p className="text-gray-800 mb-4">
+          <p className="text-gray-300 mb-4">
             Perfect for Bachelors and Senior citizens
           </p>
           <div className="flex justify-between items-center mb-6">
-            <span className="text-complementary font-extrabold text-3xl">
+            <span className="text-accent font-extrabold text-3xl">
               ₹ 3999/- (approx)
             </span>
             <span className="text-accent font-bold text-lg">/ month</span>
