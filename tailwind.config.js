@@ -17,7 +17,7 @@ module.exports = {
         secondary2: '#0077B6',
         accent: '#00A6ED',
         complementary: '#8B4513',
-        complementary2: '#32CD32',
+        complementary2: '#65fe08',
         background: '#FFFFFF',
         card: '#D9455E',
         card2: '#A93EE6',

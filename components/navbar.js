@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
+      <nav className="container relative flex flex-wrap items-center justify-between lg:justify-between p-2">
         {/* Logo  */}
         <Disclosure>
           {({ open }) => (
@@ -39,14 +39,13 @@ const Navbar = () => {
                   <span className="flex items-center space-x-2 text-2xl font-medium text-accent dark:text-gray-100">
                     <span>
                       <Image
-                        src="/img/logo.svg"
+                        src="/img/logo512.png"
                         alt="N"
                         width="32"
                         height="32"
                         className="w-8"
                       />
                     </span>
-                    <span>Assafa Delicacy</span>
                   </span>
                 </Link>
 
@@ -96,7 +95,7 @@ const Navbar = () => {
                       href="#requestquote"
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                     >
-                      Monthly Mess Plans
+                      Meal Subscription
                     </Link>
                   </>
                 </Disclosure.Panel>
@@ -126,13 +125,13 @@ const Navbar = () => {
             href="/daily-menu-update"
             className="px-6 py-2 text-white bg-accent rounded-md md:ml-5"
           >
-            Today&apos;s Meal Plan
+            Today&apos;s Hot Meal
           </Link>
           <Link
             href="/meal-subscription"
             className="px-6 py-2 text-white bg-accent rounded-md md:ml-5"
           >
-            Monthly Mess Plans
+            Meal Subscription
           </Link>
 
           <ThemeChanger />

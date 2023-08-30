@@ -1,52 +1,98 @@
-import React from 'react'
+import React from 'react';
 import Container from './container';
 import Image from 'next/image';
+import BhindiMasala from '../public/img/signature/bhindimasalafry.jpeg';
+import ButterChicken from '../public/img/signature/butter-chicken.jpg';
+import ChickenMandi from '../public/img/signature/chickenmandi.jpeg';
+import SofianiBiriyani from '../public/img/signature/sofiyanibiriyani.jpeg';
+import ChickenWhiteKurma from '../public/img/signature/chickenwhitekurma.jpeg';
+import Crab from '../public/img/signature/crab.jpeg';
+import Squid from '../public/img/signature/squid.jpg';
+import DalMuttonSalna from '../public/img/signature/dalmuttoncheema.jpeg';
+import PotatoCheeseBall from '../public/img/signature/potatocheeseball.jpeg';
+import PrawnRoast from '../public/img/signature/Prawnroast.webp';
+import SpicyFishCurry from '../public/img/signature/spicy-fish-curry.jpeg';
+import Roti from '../public/img/signature/roti.jpeg';
+
+import Slider from 'react-slick';
+import Link from 'next/link';
 
 export default function SignatureDish() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 2,
+  };
   const services = [
     {
-      title: 'Gajar Halwa (Carrot Halwa)',
-      image: Balcony,
+      title: 'Chicken White Biriyani',
+      image: SofianiBiriyani,
       description: 'We do orders for Marriage and other functions',
     },
     {
-      title: 'Suji Halwa (Semolina Halwa)',
-      image: Balcony,
+      title: 'Chicken Mandi',
+      image: ChickenMandi,
       description:
         'Free delivery available for certain areas while for rest of the areas, delivery charges applies',
     },
     {
-      title: 'Badam Halwa (Almond Halwa)',
-      image: Balcony,
+      title: 'Spicy Fish Curry',
+      image: SpicyFishCurry,
       description:
         'Need Custom meal as per your own taste bud? We accept order accordingly',
     },
     {
-      title: 'Kaju Halwa (Cashew Nut Halwa)',
-      image: Balcony,
+      title: 'Butter Chicken',
+      image: ButterChicken,
       description: 'You can also take food from our doorstep',
     },
     {
-      title: 'Baklava',
-      image: Balcony,
+      title: 'Prawn Roast',
+      image: PrawnRoast,
       description:
         'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
     },
     {
-      title: 'Pistachio Halwa',
-      image: Balcony,
+      title: 'Roti',
+      image: Roti,
       description:
         'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
     },
     {
-      title: 'Coconut Halwa',
-      image: Balcony,
+      title: 'Bhindi Masala Fry',
+      image: BhindiMasala,
       description:
         'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
     },
     {
-      title: 'Any Halwa based on your Preferences',
-      image: Balcony,
+      title: 'Dal Mutton Cheema',
+      image: DalMuttonSalna,
+      description:
+        'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
+    },
+    {
+      title: 'Squid Fry',
+      image: Squid,
+      description:
+        'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
+    },
+    {
+      title: 'Potato Cheese Balls',
+      image: PotatoCheeseBall,
+      description:
+        'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
+    },
+    {
+      title: 'Chicken White Kurma',
+      image: ChickenWhiteKurma,
+      description:
+        'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
+    },
+    {
+      title: 'Crab Curry',
+      image: Crab,
       description:
         'Dear Halwa lovers, we make fresh homemade halwa customizable to your preferences - Beetroot, Bread, carrot, pumpkin and we also cater for bulk order.',
     },
@@ -54,27 +100,34 @@ export default function SignatureDish() {
   return (
     <div>
       <Container>
-        <div className="grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-1 gap-6 rounded-md">
+        <Slider {...settings}>
           {services.map((i) => (
-            <div className="p-5 shadow-xl border-2 text-center" key={i.title}>
-              <Image src={i.image} alt={i.title} className="w-full h-auto" />
-              <h3 className="py-5 text-sm font-bold tracking-wider text-indigo-600 uppercase">
+            <div className="p-5 m-1 border-2 text-center" key={i.title}>
+              <Image
+                src={i.image}
+                alt={i.title}
+                height={150}
+                width="100%"
+                className="w-full"
+              />
+              <h3 className="py-5 text-sm font-bold tracking-wider text-indigo-600 uppercase h-16">
                 {i.title}
               </h3>
               <hr />
-              <p className="max-w-2xl pt-4 pb-8 text-lg leading-normal text-gray-800 lg:text-xl xl:text-xl dark:text-gray-300">
-                {i.description}
-              </p>
-              <a href="tel:+919600052742">
+              <Link href="tel:+919600052742">
                 <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                   Call Now
                 </button>
-              </a>
+              </Link>
             </div>
           ))}
-        </div>
+        </Slider>
       </Container>
+      <Link href="/meal-subscription">
+        <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
+          View Other Sample Meals
+        </button>
+      </Link>
     </div>
   );
 }
-

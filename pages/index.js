@@ -5,20 +5,22 @@ import Hero from '../components/hero';
 import Navbar from '../components/navbar';
 import SectionTitle from '../components/sectionTitle';
 import Form from '../components/form';
-import { benefitOne } from '../components/data';
-import WhatWeDo from '../components/whatWeDo';
-import Benefits from '../components/benefits';
+
 import Footer from '../components/footer';
 import Testimonials from '../components/testimonials';
 import Cta from '../components/cta';
 import Faq from '../components/faq';
 import Countup from '../components/pluscount';
 import Pricing from '../components/pricing';
-import Halwa from '../components/halwa';
 import Container from '../components/container';
 import { google } from 'googleapis';
 import Link from 'next/link';
-import Bene from './Bene';
+import Bene from '../components/Bene';
+import SignatureDish from '../components/signaturedish';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHandshake } from '@fortawesome/free-solid-svg-icons';
+library.add(faHandshake);
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const sheets = google.sheets('v4');
 
 const Home = ({
@@ -32,7 +34,7 @@ const Home = ({
   dinnerStatus,
 }) => {
   return (
-    <div>
+    <div className="mx-5">
       <Head>
         <title>Assafa Delicacy - Delicious and Tasty Home made food</title>
         <meta
@@ -44,32 +46,25 @@ const Home = ({
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Our Accompolishment"
-        title="Real Acheivement takes hard roads to finish"
+        pretitle="Our Signature Dish"
+        title="Assafa Delicacy's Top Reviewed dishes."
       >
         This section is to highlight a promo or demo video of your product.
         Analysts says a landing page with video has 3% more conversion rate. So,
         don&apos;t forget to add one. Just like this.
       </SectionTitle>
-      <Countup />
+      <SignatureDish />
 
-      <SectionTitle pretitle="Company LLC Benefits" title="Why do you need us?">
+      <SectionTitle
+        pretitle="Company LLC Benefits"
+        title="What make Assafa Delicacy to stand out in Market?"
+      >
         Nextly is a free landing page & marketing website template for startups
         and indie projects. Its built with Next.js & TailwindCSS. And its
         completely open-source.
       </SectionTitle>
-      <Benefits data={benefitOne} />
       <Bene />
 
-      <SectionTitle
-        pretitle="What we do"
-        title="Learn how to fullfil your needs"
-      >
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
-      </SectionTitle>
-      <WhatWeDo />
       <SectionTitle
         pretitle="Today's Menu"
         title="Learn how to fullfil your needs"
@@ -87,7 +82,7 @@ const Home = ({
               </p>
             </div>
             <div className="mb-4">
-              <p className="text-2xl font-bold text-primary mb-2 uppercase">
+              <p className="text-2xl sm:text-lg xs:text-lg font-bold text-primary tracking-wider mb-2 uppercase">
                 Today&apos;s Lunch Menu
               </p>
               <div className="text-green-600 text-sm">
@@ -125,7 +120,7 @@ const Home = ({
             </div>
 
             <div className="mb-4">
-              <p className="text-2xl font-bold text-primary mb-2 uppercase">
+              <p className="text-2xl sm:text-lg xs:text-lg font-bold text-primary tracking-wider mb-2 uppercase">
                 Today&apos;s Dinner Menu
               </p>
               <div className="text-sm">
@@ -157,7 +152,11 @@ const Home = ({
           </div>
         </div>
       </Container>
-
+      <FontAwesomeIcon
+        icon="fa-solid faHandshake"
+        size="lg"
+        className="text-complementary"
+      />
       <SectionTitle
         pretitle="Become a Partner"
         title="A form to fullfil your passion and dreams"
@@ -170,8 +169,7 @@ const Home = ({
         pretitle="Subscription Plan Pricing"
         title="Prices That Delight, Every Bite"
       >
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
+        Delivery Free for 8km around Our cloud Kitchen.
       </SectionTitle>
       <Pricing id="subscription" />
       <SectionTitle
@@ -182,20 +180,43 @@ const Home = ({
         preferences - Beetroot, Bread, carrot, pumpkin and we also cater for
         bulk order.
       </SectionTitle>
-      <Halwa />
+      <div className=" bg-secondary2 pb-10 shadow-md text-center">
+        <SectionTitle
+          pretitle="Halwa Corner"
+          title="A bite of halwa is a taste of comfort and tradition."
+        >
+          <div className="text-secondary font-sans font-bold">
+            Dear Halwa lovers, we make fresh homemade halwa customizable to your
+            preferences - Beetroot, Bread, carrot, pumpkin and we also cater for
+            bulk order.
+          </div>
+        </SectionTitle>
+        <Link
+          href="/halwa-corner"
+          className=" hover:bg-yellow-700 bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6 transition duration-300"
+        >
+          Visit Halwa Corner
+        </Link>
+      </div>
       <SectionTitle
         pretitle="Testimonials"
         title="Here's what our customers said"
-      >
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
-      </SectionTitle>
+      ></SectionTitle>
       <Testimonials />
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
-      </SectionTitle>
+      <SectionTitle
+        pretitle="FAQ"
+        title="Frequently Asked Questions"
+      ></SectionTitle>
       <Faq />
+      <SectionTitle
+        pretitle="Our Accompolishment"
+        title="Real Acheivement takes hard roads to finish"
+      >
+        This section is to highlight a promo or demo video of your product.
+        Analysts says a landing page with video has 3% more conversion rate. So,
+        don&apos;t forget to add one. Just like this.
+      </SectionTitle>
+      <Countup />
       <Cta />
       <Footer />
     </div>

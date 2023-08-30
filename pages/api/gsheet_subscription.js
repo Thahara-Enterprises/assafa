@@ -1,5 +1,6 @@
 import { google } from 'googleapis';
 const sheets = google.sheets('v4');
+import nodemailer from 'nodemailer';
 
 async function handler(req, res) {
   if (req.method === 'POST') {
@@ -18,8 +19,8 @@ async function handler(req, res) {
       range: 'subscription',
     });
     console.log(readData.data.values);
-
     const today = new Date();
+
     const thisYear = today.getFullYear();
     const RefNo =
       thisYear.toString().substring(2) +
@@ -31,6 +32,15 @@ async function handler(req, res) {
     const email = req.body.email;
     const location = req.body.location;
     const mealPlan = req.body.message;
+    const date =
+      today.getFullYear() +
+      '-' +
+      (today.getMonth() + 1) +
+      '-' +
+      today.getDate();
+    const time =
+      today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+    const dateTime = date + ' ' + time;
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.DAILY_MEAL_DATABASE_ID,
@@ -42,10 +52,65 @@ async function handler(req, res) {
       },
     });
     const data = JSON.stringify(response);
+    const transporter = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+        user: 'jsafroze@gmail.com',
+        pass: 'poyc zxzw pses quqf',
+      },
+    });
+
+    // Prepare email message
+    const mailOptions = {
+      from: 'jsafroze@gmail.com',
+      to: 'jsafroze@gmail.com',
+      subject: 'New Order Received',
+      text: `${
+        'Ticket: ' +
+        dateTime +
+        ',' +
+        name +
+        ',' +
+        email +
+        ',' +
+        phone +
+        ',' +
+        location +
+        ',' +
+        'Meal Subscription:' +
+        mealPlan
+      }`,
+    };
+    const mailOpt = {
+      from: 'jsafroze@gmail.com',
+      to: `${email}`,
+      subject: 'Assafa Delicacy | Your Order is Confirmed',
+      text: `${
+        'Ticket: ' +
+        Date.now +
+        Timestamp +
+        ',' +
+        name +
+        ',' +
+        email +
+        ',' +
+        phone +
+        ',' +
+        location +
+        ',' +
+        'Meal Subscription:' +
+        mealPlan
+      }`,
+    };
+
+    await transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOpt);
+
     res.status(201).json(data);
   } else {
     res.status(200).json({ message: 'error' });
   }
+  // Create a Nodemailer transporter
 }
 
 export default handler;

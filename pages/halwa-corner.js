@@ -22,6 +22,7 @@ export default function HalwaCorner() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <HalwaHero />
       <SectionTitle
         pretitle="Halwa Hunt"
         title="A bite of halwa is a taste of comfort and tradition."
@@ -30,7 +31,7 @@ export default function HalwaCorner() {
         preferences - Beetroot, Bread, carrot, pumpkin and we also cater for
         bulk order.
       </SectionTitle>
-      <HalwaHero />
+
       <Halwa />
       <Cta />
 
