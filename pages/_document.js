@@ -1,5 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import Link from "next/link";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Link from 'next/link';
 
 class MyDocument extends Document {
   render() {
@@ -11,6 +11,24 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
+        <script
+          async
+          dangerouslySetInnerHTML={{
+            __html: `https://www.googletagmanager.com/gtag/js?id=G-9P6FD85M0G`,
+          }}
+        ></script>
+
+        <script
+          id="myscript2"
+          dangerouslySetInnerHTML={{
+            __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-9P6FD85M0G');
+              `,
+          }}
+        />
         <body>
           <Main />
           <NextScript />
