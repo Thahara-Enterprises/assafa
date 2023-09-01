@@ -10,20 +10,20 @@ export default function Footer() {
       href: '/',
     },
     {
-      item: 'About',
-      href: '/About',
+      item: 'Meal Subscription',
+      href: '/meal-subscription',
     },
     {
-      item: 'Services',
-      href: '/Services',
+      item: 'Halwa corner',
+      href: '/halwa-corner',
     },
     {
-      item: 'Contact',
-      href: '/Contact',
+      item: 'Party Orders',
+      href: '/party-order',
     },
     {
-      item: 'Projects',
-      href: '/Projects',
+      item: 'Become a chef',
+      href: '/become-a-chef',
     },
   ];
   return (
@@ -38,20 +38,18 @@ export default function Footer() {
                 className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
               >
                 <Image
-                  src="/img/logo.svg"
-                  alt="N"
+                  src="/img/favicon-32x32.png"
+                  alt="homemade food"
                   width="32"
                   height="32"
                   className="w-8"
                 />
-                <span>Nextly</span>
+                <span>Assafa Homemade Food</span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
+              Assafa Delicacy is th online platform 
             </div>
             <div>Follow us</div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">

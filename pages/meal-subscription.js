@@ -56,6 +56,10 @@ export default function MealSubscription() {
       <Navbar />
 
       <Container>
+        <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
+          Meal Plan Subscription
+        </h1>
+
         <SectionTitle
           pretitle="Meal Plan"
           title="Check below what does a Assafa Cloud Kitchen's Typical Plan Looks like"
@@ -345,14 +349,15 @@ export default function MealSubscription() {
           </div>
         </div>
       </Container>
-      <SectionTitle
-        pretitle="Note"
-        title="Terms and Conditions alert"
-      >
-        Delivery is free upto 5 km around the Cloud Kitchen. For the rest of the locations, charges applies and it varies from Rs 30 to Rs 90 and also depends on Number of Boxes Ordered.
+      <SectionTitle pretitle="Note" title="Terms and Conditions alert">
+        Delivery is free upto 5 km around the Cloud Kitchen. For the rest of the
+        locations, charges applies and it varies from Rs 30 to Rs 90 and also
+        depends on Number of Boxes Ordered. Please be upon the time constraint.
+        Else the order will be delivered the day after or in any untime or it
+        will never be delivered based on circumstances.
       </SectionTitle>
 
-      <PricingCard id="subscription" />
+      <PricingCard />
       <Cta />
 
       <Footer />

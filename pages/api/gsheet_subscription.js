@@ -32,6 +32,8 @@ async function handler(req, res) {
     const email = req.body.email;
     const location = req.body.location;
     const mealPlan = req.body.message;
+    const fromDate = req.body.fromDate;
+    const toDate = req.body.toDate;
     const date =
       today.getFullYear() +
       '-' +
@@ -48,7 +50,7 @@ async function handler(req, res) {
       valueInputOption: 'USER_ENTERED',
       auth: jwt,
       requestBody: {
-        values: [[RefNo, name, email, phone, location, mealPlan]],
+        values: [[RefNo, name, email, phone, location, mealPlan, fromDate, toDate]],
       },
     });
     const data = JSON.stringify(response);
@@ -56,7 +58,7 @@ async function handler(req, res) {
       service: 'Gmail',
       auth: {
         user: 'jsafroze@gmail.com',
-        pass: 'poyc zxzw pses quqf',
+        pass: process.env.PASS,
       },
     });
 
@@ -68,23 +70,30 @@ async function handler(req, res) {
       text: `${
         'Ticket: ' +
         dateTime +
-        ',' +
+        '\n' +
         name +
-        ',' +
+        '\n' +
         email +
-        ',' +
+        '\n' +
         phone +
-        ',' +
+        '\n' +
         location +
-        ',' +
+        '\n' +
         'Meal Subscription:' +
-        mealPlan
+        mealPlan +
+        '\n' +
+        'From Date: ' +
+        fromDate +
+        '\n' +
+        'To Date: ' +
+        toDate +
+        '\n'
       }`,
     };
     const mailOpt = {
       from: 'jsafroze@gmail.com',
       to: `${email}`,
-      subject: 'Assafa Delicacy | Your Order is Confirmed',
+      subject: 'Assafa Delicacy | Your Order is Under ',
       text: `${
         'Ticket: ' +
         Date.now +

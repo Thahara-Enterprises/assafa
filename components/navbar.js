@@ -19,7 +19,7 @@ const Navbar = () => {
     },
     {
       item: 'Party Orders',
-      href: '/bulk-order',
+      href: '/party-order',
     },
     {
       item: 'Become a chef',
@@ -36,22 +36,17 @@ const Navbar = () => {
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <Link href="/">
-                  <span className="flex items-center space-x-2 text-2xl font-medium text-accent dark:text-gray-100">
-                    <span>
-                      <Image
-                        src="/img/logo512.png"
-                        alt="N"
-                        width="32"
-                        height="32"
-                        className="w-8"
-                      />
-                    </span>
-                  </span>
+                  <Image
+                    src="/img/favicon.ico"
+                    alt="home food delivery chennai"
+                    width="32"
+                    height="32"
+                  />
                 </Link>
 
                 <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 ml-auto text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
+                  className="px-2 py-1 ml-auto text-accent rounded-md lg:hidden hover:underline hover:text-primary focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
                 >
                   <svg
                     className="w-6 h-6 fill-current"
@@ -80,7 +75,7 @@ const Navbar = () => {
                       <Link
                         key={i.item}
                         href={i.href}
-                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                        className="w-full px-4 py-2 -ml-4 text-accent rounded-md dark:text-gray-300 hover:text-primary hover:underline focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
                       >
                         {i.item}
                       </Link>
@@ -111,7 +106,7 @@ const Navbar = () => {
               <li className="mr-3 nav__item" key={index}>
                 <Link
                   href={menu.href}
-                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                  className="inline-block px-4 py-2 text-lg font-normal text-accent no-underline rounded-md dark:text-gray-200 hover:text-primary hover:underline focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
                 >
                   {menu.item}
                 </Link>
@@ -122,7 +117,7 @@ const Navbar = () => {
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link
-            href="/daily-menu-update"
+            href="/todays-menu-update"
             className="px-6 py-2 text-white bg-accent rounded-md md:ml-5"
           >
             Today&apos;s Hot Meal
@@ -133,8 +128,6 @@ const Navbar = () => {
           >
             Meal Subscription
           </Link>
-
-          <ThemeChanger />
         </div>
       </nav>
     </div>

@@ -23,17 +23,15 @@ async function handler(req, res) {
 
     const thisYear = today.getFullYear();
     const RefNo =
-      'BULK' +
-      thisYear.toString().substring(2) +
+      'LUN'+thisYear.toString().substring(2) +
       '000' +
       (readData.data.values.length + 1);
     const Timestamp = req.body.Timestamp;
     const name = req.body.name;
     const phone = req.body.phone;
     const email = req.body.email;
-    const locationOfEvent = req.body.locationOfEvent;
-    const noOfGuest = req.body.noOfGuest;
-    const dateOfEvent = req.body.dateOfEvent;
+    const location = req.body.location;
+    const noOfBox = req.body.noOfBox;
 
     const date =
       today.getFullYear() +
@@ -47,21 +45,11 @@ async function handler(req, res) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.DAILY_MEAL_DATABASE_ID,
-      range: 'bulkorder',
+      range: 'todayslunchorder',
       valueInputOption: 'USER_ENTERED',
       auth: jwt,
       requestBody: {
-        values: [
-          [
-            RefNo,
-            name,
-            email,
-            phone,
-            noOfGuest,
-            dateOfEvent,
-            locationOfEvent,
-          ],
-        ],
+        values: [[RefNo, name, location, noOfBox, email, phone]],
       },
     });
     const data = JSON.stringify(response);
@@ -77,7 +65,7 @@ async function handler(req, res) {
     const mailOptions = {
       from: 'jsafroze@gmail.com',
       to: 'jsafroze@gmail.com',
-      subject: 'New Bulk Order Received',
+      subject: 'New Order Received',
       text: `${
         'Ticket: ' +
         dateTime +
@@ -88,11 +76,10 @@ async function handler(req, res) {
         '\n' +
         phone +
         '\n' +
-        noOfGuest +
+        location +
         '\n' +
-        dateOfEvent +
-        '\n' +
-        locationOfEvent
+        'No Of Box:' +
+        noOfBox
       }`,
     };
     const mailOpt = {
@@ -110,12 +97,10 @@ async function handler(req, res) {
         '\n' +
         phone +
         '\n' +
+        location +
         '\n' +
-        noOfGuest +
-        '\n' +
-        dateOfEvent +
-        '\n' +
-        locationOfEvent
+        'No Of Box:' +
+        noOfBox
       }`,
     };
 

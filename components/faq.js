@@ -36,81 +36,66 @@ const Faq = () => {
 const faqdata = [
   {
     question: 'What is a Homemade Food Cloud Kitchen?',
-    answer: 'Yes, this template is completely free to use.',
+    answer: 'It is a kitchen unlike restaurant kitchen where the food tastes only like home made food. It has takeaway options and online order options.',
   },
   {
     question: 'How Does Ordering Work?',
-    answer: 'Yes, this you can.',
+    answer: 'You order the meal by submitting the form and you will get a confirmation mail and whatsapp message and meal is either delivered to you or you takeaway is available based on your preferences',
   },
   {
     question: 'Is Your Food Prepared Fresh?',
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Yes, we start to prepare only when order is placed. Literally means the food is made just for you.",
   },
   {
     question: 'Are Special Dietary Requirements Accommodated?',
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "70% of our dinner menu are mostly keto friendly.",
   },
   {
     question: 'Are there a Delivery and Pickup Options?',
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Delivery is free around 5 km radius from cloud kitchen and rest of the place delivery charges may range from Rs 40 to Rs 100",
   },
   {
     question: 'How Soon Can I Get My Order?',
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "We always make sure that orders are delivered on time.",
   },
   {
     question: 'Can I Customize My Order?',
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
-  },
-  {
-    question: 'What Safety Measures Are in Place?',
-    answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "You cannot customize daily based order. But yes you can customize if you are meal plan subscriber.",
   },
   {
     question: 'What Payment Methods Are Accepted?',
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "We accept GPay, PhonePe, Stripe pay",
   },
   {
     question: 'Can I Cancel or Modify an Order?',
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Yes you can cancel before the time constraints.",
   },
   {
     question: 'Do You Offer Subscription Plans?',
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Yes we give weekly and monthly subscription plans",
   },
   {
     question: 'How Do I Contact Customer Support?',
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Submit the form or Online chat or Call 9600052742 ",
   },
   {
     question: 'Do You Have Reviews or Testimonials?',
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Yes, Checkout the testimonials in our website or in our instagram Highlights",
   },
   {
     question: 'How Can I Partner with Your Cloud Kitchen?',
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
-  },
-  {
-    question: 'Is Feedback Welcome?',
-    answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
-  },
-  {
-    question: 'Can I Recommend New Dishes?',
-    answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "By submitting your details on our 'become a partner' page, you get a confirmation message stating that you are a partner",
   },
 ];
 

@@ -7,6 +7,9 @@ const Form = (props) => {
     email: '',
     message: '',
     phone: '',
+    menusICook: '',
+    dailyorbulk: '',
+    location: '',
   });
 
   const handleChange = (e) => {
@@ -16,7 +19,7 @@ const Form = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = fetch(`/api/send-email`, {
+    const response = fetch(`/api/gsheet_becomeachef`, {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
@@ -29,6 +32,9 @@ const Form = (props) => {
       email: '',
       message: '',
       phone: '',
+      menusICook: '',
+      dailyorbulk: '',
+      location: '',
     });
   };
   return (
@@ -56,23 +62,6 @@ const Form = (props) => {
         </div>
         <div className="mb-6">
           <label
-            htmlFor="phone"
-            className="block text-gray-700 text-sm font-bold mb-2"
-          >
-            Phone:
-          </label>
-          <input
-            type="text"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-            id="name"
-            name="phone"
-            placeholder="Your Whatsapp Number"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mb-6">
-          <label
             htmlFor="email"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
@@ -90,10 +79,82 @@ const Form = (props) => {
         </div>
         <div className="mb-6">
           <label
+            htmlFor="phone"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Whatsapp No
+          </label>
+          <input
+            type="text"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="name"
+            name="phone"
+            placeholder="Your Whatsapp Number"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-6">
+          <label
+            htmlFor="location"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Location:
+          </label>
+          <input
+            type="location"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Where do You stay?"
+            id="location"
+            name="location"
+            value={formData.location}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-6">
+          <label
+            htmlFor="dailyorbulk"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Do you cook on daily basis:
+          </label>
+          <select
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="dailyorbulk"
+            name="dailyorbulk"
+            value={formData.dailyorbulk}
+            onChange={handleChange}
+          >
+            <option value="" disabled>
+              Select your Schedule
+            </option>
+            <option>Yes, I can undertake orders on daily basis</option>
+            <option>No, I undertake only bulk orders</option>
+          </select>
+        </div>
+        <div className="mb-6">
+          <label
+            htmlFor="email"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            List the menus you can cook:
+          </label>
+          <input
+            type="text"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Menu Orders Which I can Undertake"
+            id="email"
+            name="menuicook"
+            value={formData.menusICook}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-6">
+          <label
             htmlFor="message"
             className="block text-gray-700 text-sm font-bold mb-2"
           >
-            Requirement:
+            Do you have any specific note?
           </label>
           <textarea
             className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"

@@ -21,9 +21,42 @@ export default function SignatureDish() {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 5,
     slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   const services = [
     {
@@ -100,34 +133,17 @@ export default function SignatureDish() {
   return (
     <div>
       <Container>
-        <Slider {...settings}>
+        <Slider {...settings} className="m-0">
           {services.map((i) => (
-            <div className="p-5 m-1 border-2 text-center" key={i.title}>
-              <Image
-                src={i.image}
-                alt={i.title}
-                height={150}
-                width="100%"
-                className="w-full"
-              />
+            <div className="p-3 text-center" key={i.title}>
+              <Image src={i.image} alt={i.title} className="rounded-2xl " />
               <h3 className="py-5 text-sm font-bold tracking-wider text-indigo-600 uppercase h-16">
                 {i.title}
               </h3>
-              <hr />
-              <Link href="tel:+919600052742">
-                <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
-                  Call Now
-                </button>
-              </Link>
             </div>
           ))}
         </Slider>
       </Container>
-      <Link href="/meal-subscription">
-        <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
-          View Other Sample Meals
-        </button>
-      </Link>
     </div>
   );
 }

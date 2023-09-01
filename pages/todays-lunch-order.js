@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Container from '../components/container';
 
-export default function MealSubscriptionOrder() {
+export default function TodaysLunchrOrder() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
     location: '',
-    message: '',
+    noOfBox: '',
   });
 
   const handleChange = (e) => {
@@ -17,7 +17,7 @@ export default function MealSubscriptionOrder() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = fetch(`/api/gsheet_subscription`, {
+    const response = fetch(`/api/gsheet_todayslunchorder`, {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
@@ -29,12 +29,13 @@ export default function MealSubscriptionOrder() {
       name: '',
       email: '',
       location: '',
-      message: '',
+      noOfBox: '',
       phone: '',
     });
   };
   return (
     <div>
+      (name, location, no of box, whatsappno, email)
       <Container className={`flex w-full flex-col mt-4 max-w-2xl`}>
         <form
           onSubmit={handleSubmit}
@@ -62,7 +63,7 @@ export default function MealSubscriptionOrder() {
               htmlFor="phone"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Phone:
+              Whatsapp No:
             </label>
             <input
               type="text"
@@ -110,59 +111,22 @@ export default function MealSubscriptionOrder() {
           </div>
           <div className="mb-6">
             <label
-              htmlFor="message"
+              htmlFor="noOfBox"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Select Subscription Plan:
-            </label>
-            <select
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-            >
-              <option value="" disabled>
-                Select your Meal Plan
-              </option>
-              <option>Monthly</option>
-              <option>Weekly</option>
-            </select>
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="fromDate"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              From
+              No Of Box
             </label>
             <input
-              type="date"
+              type="text"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               placeholder="Enter your Email Address"
-              id="fromDate"
-              name="fromDate"
-              value={formData.fromDate}
+              id="noOfBox"
+              name="noOfBox"
+              value={formData.noOfBox}
               onChange={handleChange}
             />
           </div>
-          <div className="mb-6">
-            <label
-              htmlFor="toDate"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              To
-            </label>
-            <input
-              type="date"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Enter your Email Address"
-              id="toDate"
-              name="toDate"
-              value={formData.toDate}
-              onChange={handleChange}
-            />
-          </div>
+
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"

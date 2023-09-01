@@ -50,9 +50,9 @@ function PricingCard() {
               Delivery Available to certain areas
             </li>
           </ul>
-          <Link href="/meal-subscription-order">
+          <Link href="/todays-menu-update">
             <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
-              Subscribe Now
+              Today&apos;s Menu
             </button>
           </Link>
         </div>
@@ -152,7 +152,7 @@ function PricingCard() {
               Delivery Available for certain areas
             </li>
           </ul>
-          <Link href="/meal-subscription">
+          <Link href="/meal-subscription-order">
             <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
               Subscribe Now
             </button>

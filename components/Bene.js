@@ -28,9 +28,57 @@ import Family from '../public/img/icons/family.png';
 import FreshFood from '../public/img/icons/freshfood.png';
 import Pregnancy from '../public/img/icons/pregnancy.png';
 import SeniorCitizen from '../public/img/icons/seniorcitizen.png';
+import KetoFriendly2 from '../public/img/icons/keto-friendly2.png';
+import Slider from 'react-slick';
 
 export default function Bene() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const benefit = [
+    {
+      title: 'Keto Friendly',
+      desc: 'Keto friendly foods help your body to easily break the foods into ketones which is a key way for weight loss and helps your body to keep in shape. 70% of our dinner menu are keto friendly. Subscribe to Our dinner Meal Weekly and Montly and kickstart your weight loss journey here.',
+      icon: <FontAwesomeIcon icon={faBowlFood} size="2x" />,
+      image: KetoFriendly2,
+    },
     {
       title: 'Fresh Homemade Quality',
       desc: 'Feel the authenticity of South indian, North indian and Middle eastern food in our hands. Subscribe our Weekly/ Monthly plans now.',
@@ -79,11 +127,11 @@ export default function Bene() {
   return (
     <>
       <Container>
-        <div className="grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-1 gap-6 rounded-md place-items-center items-center justify-center">
+        <Slider {...settings} className="m-0">
           {benefit.map((i) => (
             <div
               key={i.title}
-              className="max-w-2xl mt-3 text-3xl text-center  font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white"
+              className="max-w-2xl mt-3 text-3xl text-center tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white"
             >
               <div className="flex justify-center items-center">
                 <Image
@@ -94,15 +142,15 @@ export default function Bene() {
                   placeholder="blur"
                 />
               </div>
-              <h3 className="py-5 text-xl font-bold tracking-wider text-accent uppercase">
+              <h3 className="py-5 text-base font-bold tracking-wider text-accent uppercase">
                 {i.title}
               </h3>
-              <p className="max-w-2xl pt-4 pb-8 text-lg leading-normal text-gray-800 lg:text-base xl:text-base dark:text-gray-300">
+              <p className="max-w-2xl pt-2 pb-5 text-base leading-normal text-gray-500  dark:text-gray-300">
                 {i.desc}
               </p>
             </div>
           ))}
-        </div>
+        </Slider>
       </Container>
     </>
   );

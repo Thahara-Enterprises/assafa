@@ -1,13 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Container from '../components/container';
+import Image from 'next/image';
+import Banquet from '../public/img/party-hall.jpg';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import Head from 'next/head';
 
-export default function MealSubscriptionOrder() {
+export default function BulkOrders() {
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
     email: '',
-    location: '',
-    message: '',
+    dateOfEvent: '',
+    phone: '',
+    locationOfEvent: '',
+    noOfGuest: '',
   });
 
   const handleChange = (e) => {
@@ -17,7 +23,7 @@ export default function MealSubscriptionOrder() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = fetch(`/api/gsheet_subscription`, {
+    const response = fetch(`/api/gsheet_bulk`, {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
@@ -28,13 +34,42 @@ export default function MealSubscriptionOrder() {
     setFormData({
       name: '',
       email: '',
-      location: '',
-      message: '',
+      dateOfEvent: '',
       phone: '',
+      locationOfEvent: '',
+      noOfGuest: '',
     });
   };
   return (
     <div>
+      <Head>
+        <title>Assafa Delicacy - Party Orders Undertaken</title>
+        <meta
+          name="description"
+          content="Worried about Party orders Arrangement?
+Sit back and Relax! We have got you covered till its on your guest's Table"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navbar />
+      <div className="bg-secondary h-screen relative">
+        <Image
+          src={Banquet}
+          alt="banquet hall preparation"
+          className="absolute inset-0 object-cover w-full h-full opacity-40"
+        />
+
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+          <h1 className="text-4xl text-primary font-bold mb-4">
+            Party Orders Undertaken
+          </h1>
+          <p className="text-lg text-white mb-8">
+            Love filled dishes From Assafa cloud kitchen to Your guest table |
+            Submit your Inquiries Below and get a call back from our expert
+          </p>
+        </div>
+      </div>
+
       <Container className={`flex w-full flex-col mt-4 max-w-2xl`}>
         <form
           onSubmit={handleSubmit}
@@ -62,7 +97,7 @@ export default function MealSubscriptionOrder() {
               htmlFor="phone"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Phone:
+              Whatsapp No:
             </label>
             <input
               type="text"
@@ -93,84 +128,65 @@ export default function MealSubscriptionOrder() {
           </div>
           <div className="mb-6">
             <label
-              htmlFor="location"
+              htmlFor="dateOfEvent"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Select your Location
+              Date of Event:
+            </label>
+            <input
+              type="date"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Approximate No. of Guest in the Party"
+              id="dateOfEvent"
+              name="dateOfEvent"
+              value={formData.dateOfEvent}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="noOfGuest"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              No of Guest (approx):
             </label>
             <input
               type="text"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Enter your Email Address"
-              id="location"
-              name="location"
-              value={formData.location}
+              placeholder="Approximate No. of Guest in the Party"
+              id="noOfGuest"
+              name="noOfGuest"
+              value={formData.noOfGuest}
               onChange={handleChange}
             />
           </div>
           <div className="mb-6">
             <label
-              htmlFor="message"
+              htmlFor="text"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Select Subscription Plan:
-            </label>
-            <select
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-            >
-              <option value="" disabled>
-                Select your Meal Plan
-              </option>
-              <option>Monthly</option>
-              <option>Weekly</option>
-            </select>
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="fromDate"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              From
+              Location of Event
             </label>
             <input
-              type="date"
+              type="locationOfEvent"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Enter your Email Address"
-              id="fromDate"
-              name="fromDate"
-              value={formData.fromDate}
+              placeholder="Location of Delivering the Orders"
+              id="locationOfEvent"
+              name="locationOfEvent"
+              value={formData.locationOfEvent}
               onChange={handleChange}
             />
           </div>
-          <div className="mb-6">
-            <label
-              htmlFor="toDate"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              To
-            </label>
-            <input
-              type="date"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Enter your Email Address"
-              id="toDate"
-              name="toDate"
-              value={formData.toDate}
-              onChange={handleChange}
-            />
-          </div>
+
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
-            Send
+            Get Call back
           </button>
         </form>
       </Container>
+      <Footer />
     </div>
   );
 }

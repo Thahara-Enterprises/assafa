@@ -1,56 +1,12 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Hero from '../components/hero';
-import Navbar from '../components/navbar';
-import SectionTitle from '../components/sectionTitle';
-import Form from '../components/form';
-import Footer from '../components/footer';
-import Testimonials from '../components/testimonials';
-import Cta from '../components/cta';
-import Faq from '../components/faq';
-import Pricing from '../components/pricing';
-import Container from '../components/container';
-import { google } from 'googleapis';
 import Link from 'next/link';
-import Bene from '../components/Bene';
-import SignatureDish from '../components/signaturedish';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHandshake } from '@fortawesome/free-solid-svg-icons';
-library.add(faHandshake);
-import { useRouter } from 'next/router';
+import React from 'react'
+import Container from '../components/container';
+import SectionTitle from '../components/sectionTitle';
 const sheets = google.sheets('v4');
 
-const Home = ({
-  date,
-  lunch,
-  lunchPrice,
-  dinner,
-  dinnerPrice,
-  total,
-  lunchStatus,
-  dinnerStatus,
-}) => {
-  const router = useRouter();
-  const { userId } = router.query;
+export default function DailyMenuUpdate() {
   return (
-    <div className="mx-5">
-      <Head>
-        <title>Assafa Delicacy - Delicious and Tasty Home made food</title>
-        <meta
-          name="description"
-          content="Online Cloud kitchen for Working couples, Senior citizens, Bachelors and also or foodie"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navbar />
-      <Hero />
-      <SectionTitle
-        pretitle="Our Signature Dish"
-        title="Assafa Delicacy's Top Reviewed dishes."
-      ></SectionTitle>
-      <SignatureDish />
-
+    <div>
       <SectionTitle
         pretitle="Today's Menu"
         title="Learn how to fullfil your needs"
@@ -94,7 +50,7 @@ const Home = ({
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
-            <Link href="/todays-lunch-order">
+            <Link href="/daily-menu-order">
               <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                 Order Now
               </button>
@@ -132,7 +88,7 @@ const Home = ({
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
-            <Link href="/todays-dinner-order">
+            <Link href="/daily-menu-order">
               <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                 Order Now
               </button>
@@ -140,85 +96,16 @@ const Home = ({
           </div>
         </div>
       </Container>
-      <SectionTitle
-        pretitle="Assafa Cloud Kitchen Benefits"
-        title="What make Assafa Delicacy to stand out in Market?"
-      >
-        The food we make at Assafa Delicacy is always delicious and loved by
-        Many people. Visit our instagram Review page to see all the reviews. We
-        have been doing it for 20 years as a bulk order yearly and have started
-        to do it on daily basis as we have always been passion about cooking.
-        Are you a great cook and has the same zeal and passion as well, then
-        join our network by submitting Our{' '}
-        <nobr
-          dangerouslySetInnerHTML={{
-            __html: '&ldquo;Become a Partner&rdquo;',
-          }}
-        />
-        form below.
+      <SectionTitle pretitle="Note" title="Terms and Conditions alert">
+        Delivery is free upto 5 km around the Cloud Kitchen. For the rest of the
+        locations, charges applies and it varies from Rs 30 to Rs 90 and also
+        depends on Number of Boxes Ordered. Please be upon the time constraint.
+        Else the order will be delivered the day after or in any untime or it
+        will never be delivered based on circumstances.
       </SectionTitle>
-      <Bene />
-      <SectionTitle
-        pretitle="Subscription Plan Pricing"
-        title="Prices That Delight, Every Bite"
-      >
-        Delivery Free for 5km around Our cloud Kitchen. Charges applies for the
-        rest of the area based on number of Boxes or orders and kilometers.
-      </SectionTitle>
-      <Pricing />
-
-      <SectionTitle
-        pretitle="Become a Partner"
-        title="A form to fullfil your passion and dreams"
-      >
-        Are you a great cook? want to be a partner with us? Submit your Details
-        here.
-      </SectionTitle>
-      <Form id="requestquote" />
-
-      <div className=" bg-secondary pb-10 shadow-md text-center rounded-3xl">
-        <SectionTitle
-          pretitle="Halwa Corner"
-          title="A bite of halwa is a taste of comfort and tradition."
-        >
-          <div className="text-white font-sans font-bold">
-            Dear Halwa lovers, we make fresh homemade halwa customizable to your
-            preferences - Beetroot, Bread, carrot, pumpkin etc and we also cater
-            for bulk order.
-          </div>
-        </SectionTitle>
-        <Link
-          href="/halwa-corner"
-          className=" hover:bg-yellow-700 bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6 transition duration-300"
-        >
-          Visit Halwa Corner
-        </Link>
-      </div>
-      <SectionTitle
-        pretitle="Testimonials"
-        title="Here's what our customers said"
-      ></SectionTitle>
-      <Testimonials />
-      <SectionTitle
-        pretitle="FAQ"
-        title="Frequently Asked Questions"
-      ></SectionTitle>
-      <Faq />
-      <SectionTitle
-        pretitle="Our Accompolishment"
-        title="Real Acheivement takes hard roads to finish"
-      >
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
-      </SectionTitle>
-      <Cta />
-      <Footer />
     </div>
   );
-};
-
-export default Home;
+}
 export async function getServerSideProps() {
   const scopes = ['https://www.googleapis.com/auth/spreadsheets'];
   const jwt = new google.auth.JWT(
