@@ -29,6 +29,11 @@ class MyDocument extends Document {
               `,
           }}
         />
+        <script
+          id="myscript3"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-9P6FD85M0G`}
+        />
         <body>
           <Main />
           <NextScript />

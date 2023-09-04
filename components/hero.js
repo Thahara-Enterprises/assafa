@@ -27,15 +27,15 @@ const Hero = () => {
                 <span>
                   <Link
                     href="/meal-subscription"
-                    className="px-8 lg:py-4 sm:px-6 sm:mx-3 sm:py-2 lg:text-lg  font-medium text-center text-white bg-accent focus:bg-accent border-accent focus:border-accent border-4 sm:border-2 rounded-md"
+                    className="px-8 lg:py-4 sm:px-6 sm:mx-3 sm:py-2 xs:mx-1 xs:py-2 lg:text-lg font-medium text-center text-white bg-accent focus:bg-accent border-accent focus:border-accent border-4 sm:border-2 rounded-md"
                   >
                     Meal Subscription Plans
                   </Link>
                 </span>
-                <span className="mx-3">
+                <span className="mx-3 xs:mx-0">
                   <Link
                     href="/todays-menu-update"
-                    className="lg:mx-7 lg:px-8 lg:py-4  sm:mx-4 sm:px-4 lg:text-lg sm:text-base font-medium text-center border-accent border-4 rounded-md px-2"
+                    className="lg:mx-7 lg:px-8 lg:py-4  sm:mx-4 sm:px-4 xs:px-1 xs:px-1 lg:text-lg sm:text-base font-medium text-center border-accent border-4 rounded-md px-2"
                   >
                     View Today&apos;s Meal
                   </Link>
