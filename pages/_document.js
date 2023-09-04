@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-document-import-in-page */
+
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import Link from 'next/link';
 
@@ -28,11 +30,6 @@ class MyDocument extends Document {
                 gtag('config', 'G-9P6FD85M0G');
               `,
           }}
-        />
-        <script
-          id="myscript3"
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-9P6FD85M0G`}
         />
         <body>
           <Main />
