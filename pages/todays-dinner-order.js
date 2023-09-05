@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import Container from '../components/container';
 
-export default function TodaysDinnerOrder() {
+export default function TodaysDinnerOrder({dinnerStatus}) {
+  const isOrderAvailable = () => {
+
+  }
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -96,7 +99,7 @@ export default function TodaysDinnerOrder() {
               htmlFor="location"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Select your Location
+              Delivery Address
             </label>
             <input
               type="text"
@@ -118,7 +121,7 @@ export default function TodaysDinnerOrder() {
             <input
               type="text"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Enter your Email Address"
+              placeholder="Number of Boxes"
               id="noOfBox"
               name="noOfBox"
               value={formData.noOfBox}
@@ -136,4 +139,35 @@ export default function TodaysDinnerOrder() {
       </Container>
     </div>
   );
+}
+export async function getServerSideProps() {
+  const scopes = ['https://www.googleapis.com/auth/spreadsheets'];
+  const jwt = new google.auth.JWT(
+    process.env.DAILY_MEAL_CLIENT_EMAIL,
+    null,
+    process.env.DAILY_MEAL_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    scopes,
+    null
+  );
+
+  const readData = await sheets.spreadsheets.values.get({
+    auth: jwt,
+    spreadsheetId: process.env.DAILY_MEAL_DATABASE_ID,
+    range: 'Sheet1!A2:H2',
+  });
+  const date = readData.data.values[0][0];
+  const lunch = readData.data.values[0][1];
+  const lunchPrice = readData.data.values[0][2];
+  const dinner = readData.data.values[0][3];
+  const dinnerPrice = readData.data.values[0][4];
+  const total = readData.data.values[0][5];
+  const lunchStatus = readData.data.values[0][6];
+  const dinnerStatus = readData.data.values[0][7];
+
+  return {
+    props: {
+
+      dinnerStatus,
+    },
+  };
 }

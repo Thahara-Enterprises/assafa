@@ -14,18 +14,16 @@ export default function DailyMenuUpdate({
   lunchPrice,
   dinner,
   dinnerPrice,
-  total,
   lunchStatus,
   dinnerStatus,
 }) {
   return (
     <div>
       <Head>
-        <title>Assafa Delicacy - Party Orders Undertaken</title>
+        <title>Assafa Delicacy - Today&apos;s Menu Update</title>
         <meta
           name="description"
-          content="Worried about Party orders Arrangement?
-Sit back and Relax! We have got you covered till its on your guest's Table"
+          content="Order hot, Homemade food and get Updates of Dinner and Lunch menu here"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -73,6 +71,7 @@ Sit back and Relax! We have got you covered till its on your guest's Table"
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
+            
             <Link href="/todays-lunch-order">
               <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                 Order Now
@@ -153,17 +152,6 @@ export async function getServerSideProps() {
   const total = readData.data.values[0][5];
   const lunchStatus = readData.data.values[0][6];
   const dinnerStatus = readData.data.values[0][7];
-
-  console.log(
-    date,
-    lunch,
-    lunchPrice,
-    dinner,
-    dinnerPrice,
-    total,
-    lunchStatus,
-    dinnerStatus
-  );
 
   return {
     props: {
