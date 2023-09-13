@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { postRequest } from './utils/postRequest';
-import { getStripe } from './utils/getStripe';
+import { postRequest } from '../components/utils/postRequest';
+import { getStripe } from '../components/utils/getStripe';
 import { useRouter } from 'next/router';
 import CarrotHalwa from '../public/img/halwa/carrot-halwa.jpg';
 
