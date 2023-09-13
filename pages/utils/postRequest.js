@@ -1,4 +1,4 @@
-export async function postRequest(url, data = {}) {
+ async function postRequest(url, data = {}) {
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -20,3 +20,5 @@ export async function postRequest(url, data = {}) {
     throw err;
   }
 }
+
+export default postRequest;
