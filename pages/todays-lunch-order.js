@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from '../components/container';
+import { google } from 'googleapis';
+const sheets = google.sheets('v4');
+import moment from 'moment-timezone';
 
 export default function TodaysLunchrOrder() {
   const [formData, setFormData] = useState({
@@ -9,6 +12,17 @@ export default function TodaysLunchrOrder() {
     location: '',
     noOfBox: '',
   });
+  const [currentTime, setCurrentTime] = useState(moment().tz('Asia/Kolkata'));
+
+  useEffect(() => {
+    // Update the current time every second
+    const interval = setInterval(() => {
+      setCurrentTime(moment().tz('Asia/Kolkata'));
+    }, 1000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,6 +46,10 @@ export default function TodaysLunchrOrder() {
       noOfBox: '',
       phone: '',
     });
+  };
+  const isLunchTime = () => {
+    const currentTimeFormatted = currentTime.format('HH:mm');
+    return currentTimeFormatted >= '18:00' || currentTimeFormatted <= '10:00';
   };
   return (
     <div>
@@ -126,15 +144,53 @@ export default function TodaysLunchrOrder() {
               onChange={handleChange}
             />
           </div>
-
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit"
-          >
-            Send
-          </button>
+          {isLunchTime() ? (
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              Order
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="bg-blue-500 blur-sm hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              disabled
+            >
+              Order
+            </button>
+          )}
         </form>
       </Container>
     </div>
   );
+}
+export async function getServerSideProps() {
+  const scopes = ['https://www.googleapis.com/auth/spreadsheets'];
+  const jwt = new google.auth.JWT(
+    process.env.DAILY_MEAL_CLIENT_EMAIL,
+    null,
+    process.env.DAILY_MEAL_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    scopes,
+    null
+  );
+
+  const readData = await sheets.spreadsheets.values.get({
+    auth: jwt,
+    spreadsheetId: process.env.DAILY_MEAL_DATABASE_ID,
+    range: 'Sheet1!A2:H2',
+  });
+  const date = readData.data.values[0][0];
+  const lunch = readData.data.values[0][1];
+  const lunchPrice = readData.data.values[0][2];
+  const total = readData.data.values[0][5];
+  const lunchStatus = readData.data.values[0][6];
+
+  return {
+    props: {
+      date,
+      lunch,
+      lunchPrice,
+
+      total,
+      lunchStatus,
+    },
+  };
 }

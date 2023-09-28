@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from '../components/container';
 import SectionTitle from '../components/sectionTitle';
 import { google } from 'googleapis';
@@ -7,6 +7,7 @@ const sheets = google.sheets('v4');
 import Navbar from '../components/navbar';
 import Head from 'next/head';
 import Footer from '../components/footer';
+import moment from 'moment-timezone';
 
 export default function DailyMenuUpdate({
   date,
@@ -17,6 +18,26 @@ export default function DailyMenuUpdate({
   lunchStatus,
   dinnerStatus,
 }) {
+  const [currentTime, setCurrentTime] = useState(moment().tz('Asia/Kolkata'));
+
+  useEffect(() => {
+    // Update the current time every second
+    const interval = setInterval(() => {
+      setCurrentTime(moment().tz('Asia/Kolkata'));
+    }, 1000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
+
+  const isLunchTime = () => {
+    const currentTimeFormatted = currentTime.format('HH:mm');
+    return currentTimeFormatted >= '18:00' || currentTimeFormatted <= '10:00';
+  };
+  const isDinnerTime = () => {
+    const currentTimeFormatted = currentTime.format('HH:mm');
+    return currentTimeFormatted >= '13:00' && currentTimeFormatted <= '19:00';
+  };
   return (
     <div>
       <Head>
@@ -51,9 +72,9 @@ export default function DailyMenuUpdate({
                 Today&apos;s Lunch Menu
               </p>
               <div className="text-green-600 text-sm">
-                {lunchStatus === `Order Undertaken` ? (
+                {isLunchTime() ? (
                   <span className="text-green-500">
-                    Current Status: Order Undertaken
+                    Current Status: Order Undertake
                   </span>
                 ) : (
                   <span className="text-red-500">
@@ -71,12 +92,24 @@ export default function DailyMenuUpdate({
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
-            
-            <Link href="/todays-lunch-order">
-              <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
-                Order Now
-              </button>
-            </Link>
+
+            {isLunchTime() ? (
+              <Link href="/todays-lunch-order">
+                <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
+                  Order Now
+                </button>
+              </Link>
+            ) : (
+              <Link href="/todays-lunch-order">
+                <button
+                  type="button"
+                  className="bg-gray-300 blur-sm cursor-not-allowed text-white font-semibold py-2 px-4 rounded-full mt-6"
+                  disabled
+                >
+                  Order Now
+                </button>
+              </Link>
+            )}
           </div>
           <div className=" bg-secondary rounded-lg shadow-md p-6 w-auto">
             <div className="mb-4">
@@ -90,7 +123,7 @@ export default function DailyMenuUpdate({
                 Today&apos;s Dinner Menu
               </div>
               <div className="text-sm">
-                {dinnerStatus === `Order Undertaken` ? (
+                {isDinnerTime() ? (
                   <span className="text-green-500">
                     Current Status: Order Undertaken
                   </span>
@@ -110,11 +143,23 @@ export default function DailyMenuUpdate({
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
-            <Link href="/todays-dinner-order">
-              <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
-                Order Now
-              </button>
-            </Link>
+            {isDinnerTime() ? (
+              <Link href="/todays-dinner-order">
+                <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
+                  Order Now
+                </button>
+              </Link>
+            ) : (
+              <Link href="/todays-dinner-order">
+                <button
+                  type="button"
+                  className="bg-gray-300 blur-sm cursor-not-allowed text-black font-semibold py-2 px-4 rounded-full mt-6"
+                  disabled
+                >
+                  Order Now
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </Container>
