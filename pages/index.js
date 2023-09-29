@@ -20,6 +20,7 @@ import { faHandshake } from '@fortawesome/free-solid-svg-icons';
 library.add(faHandshake);
 import { useRouter } from 'next/router';
 const sheets = google.sheets('v4');
+import moment from 'moment-timezone';
 
 const Home = ({
   date,
@@ -33,6 +34,26 @@ const Home = ({
 }) => {
   const router = useRouter();
   const { userId } = router.query;
+  const [currentTime, setCurrentTime] = useState(moment().tz('Asia/Kolkata'));
+
+  useEffect(() => {
+    // Update the current time every second
+    const interval = setInterval(() => {
+      setCurrentTime(moment().tz('Asia/Kolkata'));
+    }, 1000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
+
+  const isDinnerTime = () => {
+    const currentTimeFormatted = currentTime.format('HH:mm');
+    return currentTimeFormatted >= '13:00' && currentTimeFormatted <= '19:00';
+  };
+  const isLunchTime = () => {
+    const currentTimeFormatted = currentTime.format('HH:mm');
+    return currentTimeFormatted >= '18:00' || currentTimeFormatted <= '10:00';
+  };
   return (
     <div className="mx-5">
       <Head>
@@ -94,11 +115,23 @@ const Home = ({
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
-            <Link href="/todays-lunch-order">
-              <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
-                Order Now
-              </button>
-            </Link>
+            {isLunchTime() ? (
+              <Link href="/todays-lunch-order">
+                <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
+                  Order Now
+                </button>
+              </Link>
+            ) : (
+              <Link href="/todays-lunch-order">
+                <button
+                  type="button"
+                  className="bg-gray-300 blur-sm cursor-not-allowed text-white font-semibold py-2 px-4 rounded-full mt-6"
+                  disabled
+                >
+                  Order Now
+                </button>
+              </Link>
+            )}
           </div>
           <div className=" bg-secondary rounded-lg shadow-md p-6 w-auto">
             <div className="mb-4">
@@ -132,11 +165,23 @@ const Home = ({
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
-            <Link href="/todays-dinner-order">
-              <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
-                Order Now
-              </button>
-            </Link>
+            {isDinnerTime() && dinner !== '-' ? (
+              <Link href="/todays-dinner-order">
+                <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
+                  Order Now
+                </button>
+              </Link>
+            ) : (
+              <Link href="/todays-dinner-order">
+                <button
+                  type="button"
+                  className="bg-gray-300 blur-sm cursor-not-allowed text-black font-semibold py-2 px-4 rounded-full mt-6"
+                  disabled
+                >
+                  Order Now
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </Container>
