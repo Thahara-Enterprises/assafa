@@ -145,7 +145,7 @@ const Home = ({
                 Today&apos;s Dinner Menu
               </div>
               <div className="text-sm">
-                {isDinnerTime() ? (
+                {isDinnerTime() && dinner !== '-' ? (
                   <span className="text-green-500">
                     Current Status: Order Undertaken
                   </span>

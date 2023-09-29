@@ -53,7 +53,6 @@ export default function TodaysLunchrOrder() {
   };
   return (
     <div>
-      (name, location, no of box, whatsappno, email)
       <Container className={`flex w-full flex-col mt-4 max-w-2xl`}>
         <form
           onSubmit={handleSubmit}
@@ -144,8 +143,11 @@ export default function TodaysLunchrOrder() {
               onChange={handleChange}
             />
           </div>
-          {isLunchTime() ? (
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+          {isLunchTime() && lunch !== '-' ? (
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
               Order
             </button>
           ) : (

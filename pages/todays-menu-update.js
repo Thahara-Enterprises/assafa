@@ -72,7 +72,7 @@ export default function DailyMenuUpdate({
                 Today&apos;s Lunch Menu
               </p>
               <div className="text-green-600 text-sm">
-                {isLunchTime() ? (
+                {isLunchTime() && lunch !== '-' ? (
                   <span className="text-green-500">
                     Current Status: Order Undertake
                   </span>
@@ -93,7 +93,7 @@ export default function DailyMenuUpdate({
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
 
-            {isLunchTime() ? (
+            {isLunchTime() && lunch !== '-' ? (
               <Link href="/todays-lunch-order">
                 <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                   Order Now
@@ -123,7 +123,7 @@ export default function DailyMenuUpdate({
                 Today&apos;s Dinner Menu
               </div>
               <div className="text-sm">
-                {isDinnerTime() ? (
+                {isDinnerTime() && dinner !== '-' ? (
                   <span className="text-green-500">
                     Current Status: Order Undertaken
                   </span>
@@ -143,7 +143,7 @@ export default function DailyMenuUpdate({
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
-            {isDinnerTime() ? (
+            {isDinnerTime() && dinner !== '-' ? (
               <Link href="/todays-dinner-order">
                 <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                   Order Now
