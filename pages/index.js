@@ -95,7 +95,7 @@ const Home = ({
                 Today&apos;s Lunch Menu
               </p>
               <div className="text-green-600 text-sm">
-                {lunchStatus === `Order Undertaken` ? (
+                {isLunchTime() && lunch !== '-' ? (
                   <span className="text-green-500">
                     Current Status: Order Undertaken
                   </span>
@@ -115,7 +115,7 @@ const Home = ({
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
-            {isLunchTime() ? (
+            {isLunchTime() && lunch !== '-' ? (
               <Link href="/todays-lunch-order">
                 <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                   Order Now
@@ -145,7 +145,7 @@ const Home = ({
                 Today&apos;s Dinner Menu
               </div>
               <div className="text-sm">
-                {dinnerStatus === `Order Undertaken` ? (
+                {isDinnerTime() ? (
                   <span className="text-green-500">
                     Current Status: Order Undertaken
                   </span>
