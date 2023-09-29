@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Container from '../components/container';
 import moment from 'moment-timezone';
 
-export default function TodaysDinnerOrder() {
+export default function TodaysDinnerOrder({ dinner }) {
   const [currentTime, setCurrentTime] = useState(moment().tz('Asia/Kolkata'));
 
   useEffect(() => {
@@ -14,7 +14,6 @@ export default function TodaysDinnerOrder() {
     // Clear the interval when the component unmounts
     return () => clearInterval(interval);
   }, []);
-
 
   const isDinnerTime = () => {
     const currentTimeFormatted = currentTime.format('HH:mm');
@@ -165,4 +164,3 @@ export default function TodaysDinnerOrder() {
     </div>
   );
 }
-

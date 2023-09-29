@@ -4,7 +4,7 @@ import { google } from 'googleapis';
 const sheets = google.sheets('v4');
 import moment from 'moment-timezone';
 
-export default function TodaysLunchrOrder() {
+export default function TodaysLunchrOrder({lunch}) {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
