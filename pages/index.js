@@ -101,7 +101,7 @@ const Home = ({
                   </span>
                 ) : (
                   <span className="text-red-500">
-                    Current Status: Order not Undertaken
+                    Current Status: Order closed
                   </span>
                 )}
               </div>

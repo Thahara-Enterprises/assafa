@@ -18,7 +18,6 @@ async function handler(req, res) {
       spreadsheetId: process.env.DAILY_MEAL_DATABASE_ID,
       range: 'subscription',
     });
-    console.log(readData.data.values);
     const today = new Date();
 
     const thisYear = today.getFullYear();

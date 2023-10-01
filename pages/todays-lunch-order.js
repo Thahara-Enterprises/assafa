@@ -3,8 +3,28 @@ import Container from '../components/container';
 import { google } from 'googleapis';
 const sheets = google.sheets('v4');
 import moment from 'moment-timezone';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faUser,
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt,
+  faBox,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
+library.add(faUser, faEnvelope, faPhone, faMapMarkerAlt, faBox);
+import LunchForm from '../public/img/dinner-menu-form.png';
+import Head from 'next/head';
+import Navbar from '../components/navbar';
 
-export default function TodaysLunchrOrder({lunch}) {
+export default function TodaysLunchrOrder({
+  date,
+  lunch,
+  lunchPrice,
+  total,
+  lunchStatus,
+}) {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -13,7 +33,11 @@ export default function TodaysLunchrOrder({lunch}) {
     noOfBox: '',
   });
   const [currentTime, setCurrentTime] = useState(moment().tz('Asia/Kolkata'));
+  const [totalPrice, setTotalPrice] = useState(lunchPrice);
 
+  useEffect(() => {
+    setTotalPrice(formData.noOfBox * Number(lunchPrice));
+  }, [formData.noOfBox, lunchPrice]);
   useEffect(() => {
     // Update the current time every second
     const interval = setInterval(() => {
@@ -53,114 +77,127 @@ export default function TodaysLunchrOrder({lunch}) {
   };
   return (
     <div>
-      <Container className={`flex w-full flex-col mt-4 max-w-2xl`}>
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
-        >
-          <div className="mb-6">
-            <label
-              htmlFor="name"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              Name:
-            </label>
-            <input
-              type="text"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
+      <Head>
+        <title>Assafa Delicacy - Delicious and Tasty Home made food</title>
+        <meta
+          name="description"
+          content="Online Cloud kitchen for Working couples, Senior citizens, Bachelors and also or foodie"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navbar />
+      <div className="max-w-sm mx-auto flex items-center justify-center border lg:border-gray-300 xl:border-gray-300 md:border-gray-300 2xl:border-gray-300 sm:border-none shadow-md rounded px-4 py-4 mb-4">
+        <div>
+          <div className="flex items-center justify-center">
+            <Image
+              src={LunchForm}
+              alt="home made food delivery"
+              width="177"
+              height="100"
             />
           </div>
-          <div className="mb-6">
-            <label
-              htmlFor="phone"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              Whatsapp No:
-            </label>
-            <input
-              type="text"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="name"
-              name="phone"
-              placeholder="Your Whatsapp Number"
-              value={formData.phone}
-              onChange={handleChange}
-            />
+          <div className="flex items-center justify-center text-sm font-bold text-primary uppercase font-sans">
+            {lunch}
           </div>
-          <div className="mb-6">
-            <label
-              htmlFor="email"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              Email:
-            </label>
-            <input
-              type="email"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Enter your Email Address"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
+          <div className="font-bold text-secondary flex items-center justify-center mb-2">
+            ₹{lunchPrice} /per box
           </div>
-          <div className="mb-6">
-            <label
-              htmlFor="location"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              Select your Location
-            </label>
-            <input
-              type="text"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Enter your Email Address"
-              id="location"
-              name="location"
-              value={formData.location}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="noOfBox"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
-              No Of Box
-            </label>
-            <input
-              type="text"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Enter your Email Address"
-              id="noOfBox"
-              name="noOfBox"
-              value={formData.noOfBox}
-              onChange={handleChange}
-            />
-          </div>
-          {isLunchTime() && lunch !== '-' ? (
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="submit"
-            >
-              Order
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="bg-blue-500 blur-sm hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              disabled
-            >
-              Order
-            </button>
-          )}
-        </form>
-      </Container>
+
+          <form onSubmit={handleSubmit}>
+            <div className="flex items-center justify-center mb-2">
+              <span className="bg-gray-300 py-1 px-2 mb-2 mx-2 rounded-full">
+                <FontAwesomeIcon icon="fa-solid fa-box" />
+              </span>
+              <input
+                type="text"
+                className="shadow appearance-none border w-full py-1 px-2 text-gray-700 mb-2 leading-tight focus:outline-none focus:shadow-outline text-xs"
+                id="noOfBox"
+                name="noOfBox"
+                placeholder="Number Of Box"
+                value={formData.noOfBox}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex items-center justify-center mb-2">
+              <span className="bg-gray-300 py-1 px-2 mb-2 mx-2 rounded-full">
+                <FontAwesomeIcon icon="fas fa-user" />
+              </span>
+              <input
+                type="text"
+                className="shadow appearance-none border w-full py-1 px-2 text-gray-700 mb-2 leading-tight focus:outline-none focus:shadow-outline text-xs"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex items-center justify-center mb-2">
+              <span className="bg-gray-300 py-1 px-2 mb-2 mx-2 rounded-full">
+                <FontAwesomeIcon icon="fa-solid fa-phone" />
+              </span>
+              <input
+                type="text"
+                className="shadow appearance-none border w-full py-1 px-2 text-gray-700 mb-2 leading-tight focus:outline-none focus:shadow-outline text-xs"
+                id="name"
+                name="phone"
+                placeholder="Your Whatsapp Number"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex items-center justify-center mb-2">
+              <span className="bg-gray-300 py-1 px-2 mb-2 mx-2 rounded-full">
+                <FontAwesomeIcon icon="fa-solid fa-envelope" />
+              </span>
+              <input
+                type="email"
+                className="shadow appearance-none border w-full py-1 px-2 text-gray-700 mb-2 leading-tight focus:outline-none focus:shadow-outline text-xs"
+                placeholder="Enter your Email Address"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex items-center justify-center mb-2">
+              <span className="bg-gray-300 py-1 px-2 mb-2 mx-2 rounded-full">
+                <FontAwesomeIcon icon="fas fa-map-marker-alt" />
+              </span>
+              <input
+                type="text"
+                className="shadow appearance-none border w-full py-1 px-2 text-gray-700 mb-2 leading-tight focus:outline-none focus:shadow-outline text-xs"
+                placeholder="Delivery Location"
+                id="location"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="font-bold text-secondary flex items-center justify-center mb-2">
+              Price: ₹{totalPrice}
+            </div>
+            <div className="flex items-center justify-center">
+              {isLunchTime() && lunch !== '-' ? (
+                <button
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                  type="submit"
+                >
+                  Order
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="bg-blue-500 blur-sm hover:bg-blue-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                  disabled
+                >
+                  Order
+                </button>
+              )}
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
@@ -190,7 +227,6 @@ export async function getServerSideProps() {
       date,
       lunch,
       lunchPrice,
-
       total,
       lunchStatus,
     },
