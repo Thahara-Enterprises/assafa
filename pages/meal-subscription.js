@@ -76,7 +76,7 @@ export default function MealSubscription() {
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Squid Fry
+                  Nethili Gravy & Dal Rasam
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
@@ -97,12 +97,12 @@ export default function MealSubscription() {
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Squid Fry
+                  Chettinad Chicken Ghee Roast
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  White Rice
+                  Khichdi Rice
                 </span>
                 <br />
                 <span className="text-gray-400 ">Extras: </span>
@@ -118,7 +118,7 @@ export default function MealSubscription() {
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Squid Fry
+                  Fish Gravy & Sura Puttu
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
@@ -139,7 +139,7 @@ export default function MealSubscription() {
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Squid Fry
+                  Boti Gravy / Kodal salna
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
@@ -160,17 +160,12 @@ export default function MealSubscription() {
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Squid Fry
+                  Chicken Kurma & Dhalcha
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  White Rice
-                </span>
-                <br />
-                <span className="text-gray-400 ">Extras: </span>
-                <span className="text-complementary2 uppercase font-bold">
-                  Kadamba Poriyal
+                  Bahara Rice
                 </span>
                 <br />
               </li>
@@ -181,7 +176,7 @@ export default function MealSubscription() {
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Squid Fry
+                  Mutton Liver / Eeral , Coconut Rasam
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
@@ -200,19 +195,16 @@ export default function MealSubscription() {
             <hr />
             <ul className="text-white text-base">
               <li>
-                <span className="text-gray-400">Main Course: </span>
-                <span className="text-complementary2 uppercase font-bold">
-                  Squid Fry
-                </span>
+
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  White Rice
+                 Chicken Mandi
                 </span>
                 <br />
                 <span className="text-gray-400">Extras: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Kadamba Poriyal
+                 Salsa
                 </span>
                 <br />
               </li>
@@ -234,7 +226,7 @@ export default function MealSubscription() {
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Squid Fry
+                    Beef Chukka
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -250,7 +242,7 @@ export default function MealSubscription() {
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Squid Fry
+                    Butter Chicken
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -266,7 +258,7 @@ export default function MealSubscription() {
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Squid Fry
+                   Panneer Butter Masala
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -282,7 +274,7 @@ export default function MealSubscription() {
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Squid Fry
+                   Pepper Chicken
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -298,7 +290,7 @@ export default function MealSubscription() {
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Squid Fry
+                    Aatu Kal Paya
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -314,7 +306,7 @@ export default function MealSubscription() {
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Squid Fry
+                    Afghani Green Chicken
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -330,7 +322,7 @@ export default function MealSubscription() {
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Squid Fry
+                    Mutton Keema Masala
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
