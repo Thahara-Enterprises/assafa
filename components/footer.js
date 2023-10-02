@@ -75,35 +75,6 @@ export default function Footer() {
                 <Linkedin />
               </a>
             </div>
-            <div className="w-16 mt-5 space-x-2 text-gray-400 dark:text-gray-500">
-              <span>
-                <a>Mylapore</a>
-              </span>
-              <span>
-                <a>Mylapore</a>
-              </span>
-              <span>
-                <a>Mylapore</a>
-              </span>
-              <span>
-                <a>Mylapore</a>
-              </span>
-              <span>
-                <a>Mylapore</a>
-              </span>
-              <span>
-                <a>Mylapore</a>
-              </span>
-              <span>
-                <a>Mylapore</a>
-              </span>
-              <span>
-                <a>Mylapore</a>
-              </span>
-              <span>
-                <a>Mylapore</a>
-              </span>
-            </div>
           </div>
 
           <div>
