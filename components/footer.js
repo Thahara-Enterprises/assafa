@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import Container from './container';
+import Logo from '../public/img/logo192.png';
 
 export default function Footer() {
   const navigation = [
@@ -27,31 +27,28 @@ export default function Footer() {
     },
   ];
   return (
-    <div className="relative">
-      <Container>
+    <div>
+      <div className=" bg-secondary p-5">
         <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div>
-              {' '}
               <Link
                 href="/"
-                className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
+                className="flex items-center space-x-2 text-2xl font-medium text-accent dark:text-gray-100"
               >
-                <Image
-                  src="/img/favicon-32x32.png"
-                  alt="homemade food"
-                  width="32"
-                  height="32"
-                  className="w-8"
-                />
-                <span>Assafa Homemade Food</span>
+                {' '}
+                <Image src={Logo} alt="homemade food" width="75" height="75" />
+                <span>Assafa Delicacy</span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Assafa Delicacy is th online platform
+              Fresh Homemade meals /Meals subscription (Monthly, weekly, Daily)
+              /Party Orders /Fresh Halwa = Assafa delicacy
             </div>
-            <div>Follow us</div>
+            <div className="text-sm py-4 font-bold tracking-wider text-indigo-600 uppercase">
+              Follow US
+            </div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
               <a
                 href="https://twitter.com/assafadelicacy"
@@ -78,6 +75,35 @@ export default function Footer() {
                 <Linkedin />
               </a>
             </div>
+            <div className="w-16 mt-5 space-x-2 text-gray-400 dark:text-gray-500">
+              <span>
+                <a>Mylapore</a>
+              </span>
+              <span>
+                <a>Mylapore</a>
+              </span>
+              <span>
+                <a>Mylapore</a>
+              </span>
+              <span>
+                <a>Mylapore</a>
+              </span>
+              <span>
+                <a>Mylapore</a>
+              </span>
+              <span>
+                <a>Mylapore</a>
+              </span>
+              <span>
+                <a>Mylapore</a>
+              </span>
+              <span>
+                <a>Mylapore</a>
+              </span>
+              <span>
+                <a>Mylapore</a>
+              </span>
+            </div>
           </div>
 
           <div>
@@ -99,25 +125,29 @@ export default function Footer() {
           <div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
               <ul>
-                <li className="text-sm py-4 font-bold tracking-wider text-indigo-600 uppercase">
-                  HEAD OFFICE
-                </li>
-                <li>
-                  125 Big fella St., New York, Hi 5654775, United States of
-                  America
-                </li>
-                <li>Phone: 0123456789</li>
-                <li>Email: test@sbtechnosoft.com</li>
+                <li>Chennai, Tamil nadu</li>
+                <li>Phone: +91 9600052742</li>
+                <li>Email: assafadelicacy@gmail.com</li>
                 <li>Office Time: 9 a.m.- 6 p.m.</li>
+                <li>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d523272.2925593702!2d79.86915641841026!3d13.055218544789437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sae!4v1696229259264!5m2!1sen!2sae"
+                    width="320"
+                    height="180"
+                    allowFullScreen="no"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
+        <div className="text-sm my-5 text-center text-gray-600 dark:text-gray-400">
           Copyright © {new Date().getFullYear()}.
         </div>
-      </Container>
+      </div>
     </div>
   );
 }

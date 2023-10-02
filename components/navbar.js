@@ -2,6 +2,7 @@ import Link from 'next/link';
 import ThemeChanger from './DarkSwitch';
 import Image from 'next/image';
 import { Disclosure } from '@headlessui/react';
+import Favicon from '../public/img/favicon-32x32.png';
 
 const Navbar = () => {
   const navigation = [
@@ -37,7 +38,7 @@ const Navbar = () => {
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <Link href="/">
                   <Image
-                    src="/img/favicon.ico"
+                    src={Favicon}
                     alt="home food delivery chennai"
                     width="32"
                     height="32"

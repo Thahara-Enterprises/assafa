@@ -17,6 +17,7 @@ library.add(faUser, faEnvelope, faPhone, faMapMarkerAlt, faBox);
 import LunchForm from '../public/img/dinner-menu-form.png';
 import Head from 'next/head';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 export default function TodaysLunchrOrder({
   date,
@@ -96,7 +97,7 @@ export default function TodaysLunchrOrder({
               height="100"
             />
           </div>
-          <div className="flex items-center justify-center text-sm font-bold text-primary uppercase font-sans">
+          <div className="flex items-center justify-center text-base font-bold text-complementary2 uppercase font-sans">
             {lunch}
           </div>
           <div className="font-bold text-secondary flex items-center justify-center mb-2">
@@ -198,6 +199,7 @@ export default function TodaysLunchrOrder({
           </form>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

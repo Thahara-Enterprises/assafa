@@ -12,9 +12,11 @@ import {
   faUser,
   faEnvelope,
   faPhone,
-  faMapMarkerAlt, faBox
+  faMapMarkerAlt,
+  faBox,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Footer from '../components/footer';
 library.add(faUser, faEnvelope, faPhone, faMapMarkerAlt, faBox);
 
 export default function TodaysDinnerOrder({
@@ -88,7 +90,7 @@ export default function TodaysDinnerOrder({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="max-w-sm mx-auto flex items-center justify-center border lg:border-gray-300 xl:border-gray-300 md:border-gray-300 2xl:border-gray-300 sm:border-none shadow-md rounded px-4 py-4 mb-4">
+      <div className="max-w-sm mx-auto flex items-center justify-center lg:border xl:border md:border 2xl:border sm:border-none lg:border-gray-300 xl:border-gray-300 md:border-gray-300 2xl:border-gray-300  shadow-md sm:shadow-none rounded px-4 py-4 mb-4">
         <div>
           <div className="flex items-center justify-center">
             <Image
@@ -98,7 +100,7 @@ export default function TodaysDinnerOrder({
               height="100"
             />
           </div>
-          <div className="flex items-center justify-center text-sm font-bold text-primary uppercase font-sans">
+          <div className="flex items-center justify-center text-base font-bold text-complementary2 uppercase font-sans">
             {dinner}
           </div>
           <div className="font-bold text-secondary flex items-center justify-center mb-2">
@@ -200,6 +202,7 @@ export default function TodaysDinnerOrder({
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
