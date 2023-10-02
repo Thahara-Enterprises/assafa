@@ -59,9 +59,10 @@ export default function MealSubscription() {
         <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
           Meal Plan Subscription
         </h1>
+        <PricingCard />
 
         <SectionTitle
-          pretitle="Meal Plan"
+          pretitle="Sample Meal Plan"
           title="Check below what does a Assafa Cloud Kitchen's Typical Plan Looks like"
         ></SectionTitle>
 
@@ -195,16 +196,15 @@ export default function MealSubscription() {
             <hr />
             <ul className="text-white text-base">
               <li>
-
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                 Chicken Mandi
+                  Chicken Mandi
                 </span>
                 <br />
                 <span className="text-gray-400">Extras: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                 Salsa
+                  Salsa
                 </span>
                 <br />
               </li>
@@ -258,7 +258,7 @@ export default function MealSubscription() {
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                   Panneer Butter Masala
+                    Panneer Butter Masala
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -274,7 +274,7 @@ export default function MealSubscription() {
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                   Pepper Chicken
+                    Pepper Chicken
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -349,7 +349,6 @@ export default function MealSubscription() {
         will never be delivered based on circumstances.
       </SectionTitle>
 
-      <PricingCard />
       <Cta />
 
       <Footer />
