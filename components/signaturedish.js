@@ -21,7 +21,7 @@ export default function SignatureDish() {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 500,
     slidesToShow: 5,
     slidesToScroll: 2,
     responsive: [
@@ -45,14 +45,14 @@ export default function SignatureDish() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 320,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },

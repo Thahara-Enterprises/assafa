@@ -13,10 +13,13 @@ const Hero = () => {
           <Image src={CloudKitchenBanner} alt="Hero Image" />
 
           <div>
-            <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
-              Think homemade food? Think Assafa Cloud kitchen
+            <h1 className="xs:text-4xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl text-center font-bold leading-snug tracking-tight text-complementary lg:leading-tight dark:text-white">
+              <span className="text-complementary2">
+                Freshly made Homemade food
+              </span>{' '}
+              Home delivered, Delicious and Tasty | Assafa Delicacy
             </h1>
-            <p className="sm:text-base text-center leading-normal text-secondary font-semibold lg:text-xl xl:text-2xl dark:text-gray-300 lg:mx-20 xs:mx-5 xl:mx-20">
+            <p className="sm:text-sm text-center leading-normal text-secondary font-semibold lg:text-xl xl:text-2xl dark:text-gray-300 lg:mx-20 xs:mx-5 xl:mx-20">
               Culinary Engineering, Digitally Delicious - An Online Homemade
               food Cloud kitchen platform for Working couples, Senior citizens,
               Bachelors, Marriage orders and Our Foodie family of Assafa
@@ -27,7 +30,7 @@ const Hero = () => {
                 <span>
                   <Link
                     href="/meal-subscription"
-                    className="px-8 lg:py-4 sm:px-6 sm:mx-3 sm:py-2 xs:mx-1 xs:py-2 lg:text-lg font-medium text-center text-white bg-accent focus:bg-accent border-accent focus:border-accent border-4 sm:border-2 rounded-md"
+                    className="lg:py-4 sm:px-6 sm:py-2 xs:mx-1 xs:py-2 lg:text-lg font-medium text-center text-white bg-accent focus:bg-accent border-accent focus:border-accent border-4 sm:border-2 rounded-md"
                   >
                     Meal Subscription Plans
                   </Link>
@@ -35,7 +38,7 @@ const Hero = () => {
                 <span className="mx-3 xs:mx-0">
                   <Link
                     href="/todays-menu-update"
-                    className="lg:mx-7 lg:px-8 lg:py-4  sm:mx-4 sm:px-4 xs:px-1 xs:px-1 lg:text-lg sm:text-base font-medium text-center border-accent border-4 rounded-md px-2"
+                    className="lg:mx-7 xl:mx-3 2xl:mx-7 md:mx-5 xs:mx-2 sm:mx-2 xl:px-8 2xl:px-8 lg:px-8 lg:py-4 sm:px-2 md:px-4 xs:px-1 lg:text-lg sm:text-sm font-medium text-center border-accent border-4 rounded-md"
                   >
                     View Today&apos;s Meal
                   </Link>
@@ -58,13 +61,19 @@ const Hero = () => {
             <div className="py-5 text-lg leading-normal text-gray-700 lg:text-lg xl:text-lg sm:text-base dark:text-gray-300">
               <ul className="list-disc">
                 <li>
-                  We give weekly and monthly subscription plans Check out{' '}
+                  We give{' '}
+                  <span className="text-accent2 font-medium">
+                    Weekly and Monthly subscription plans
+                  </span>{' '}
+                  Check out&nbsp;
                   <Link href="/meal-subscription" className="text-accent">
                     here
                   </Link>
                 </li>
                 <li>
-                  We cook only after order is placed. Check today&apos;s menu
+                  We cook only after order is placed.
+                  <span className="text-accent2 font-medium"></span> Check
+                  today&apos;s menu&nbsp;
                   <Link href="/meal-subscription" className="text-accent">
                     here
                   </Link>{' '}
@@ -74,9 +83,12 @@ const Hero = () => {
                   We cater South indian, North indian and Middle eastern food
                 </li>
                 <li>
-                  We take orders for variety of traditional Halwa options like
-                  dum karoot, beetroot halwa, bread halwa, omani halwa, see the
-                  range of products{' '}
+                  We take orders for variety of{' '}
+                  <span className="text-accent2 font-medium">
+                    traditional Halwa
+                  </span>{' '}
+                  options like dum karoot, beetroot halwa, bread halwa, omani
+                  halwa, see the range of products{' '}
                   <Link
                     href="/halwa-corner"
                     target="_blank"
@@ -86,8 +98,11 @@ const Hero = () => {
                   </Link>
                 </li>
                 <li>
-                  We undertake Bulk orders for get togethers and party orders.
-                  Get a call back from our experts{' '}
+                  We undertake{' '}
+                  <span className="text-accent2 font-medium">Bulk orders</span>{' '}
+                  for get togethers and{' '}
+                  <span className="text-accent2 font-medium">Party Orders</span>
+                  . Get a call back from our experts{' '}
                   <Link
                     href="/party-order"
                     target="_blank"
@@ -97,8 +112,12 @@ const Hero = () => {
                   </Link>
                 </li>
                 <li>
-                  We take orders for variety of chai like ginger, Masala chai,
-                  kashmiri chai, Sulaimani chai, see the range of products{' '}
+                  We take orders for{' '}
+                  <span className="text-accent2 font-medium">
+                    variety of chai
+                  </span>{' '}
+                  like ginger, Masala chai, kashmiri chai, Sulaimani chai, see
+                  the range of products{' '}
                   <Link
                     href="/party-order"
                     target="_blank"

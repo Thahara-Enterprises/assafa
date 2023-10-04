@@ -8,31 +8,28 @@ const Testimonials = () => {
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-base leading-normal text-secondary">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
+              Mutton gravy was <Mark>very Delicious </Mark> with all the spices mixed with perfection, especially the minor touch of Potato in the gravy gave it an authentic South Tamil nadu taste.
             </p>
 
-            <Avatar name="Sarah Steiner" title="VP Sales at Google" />
+            <Avatar name="Shahul Hameed" title="Indira Nagar" />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-base leading-normal text-secondary">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
+               <Mark>Loved</Mark> the mandi. It was very Flavorful and Aromatic.
             </p>
 
-            <Avatar name="Dylan Ambrose" title="Lead marketer at Netflix" />
+            <Avatar name="Aysha Maryam" title="Mandaveli" />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-base leading-normal text-secondary">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve
-              seen. I would use this for anything.
+              Maa Shaa Allah <Mark>White biriyani</Mark> was very delicious.
             </p>
 
-            <Avatar name="Gabrielle Winn" title="Co-founder of Acme Inc" />
+            <Avatar name="Alimuddin" title="Royapettah" />
           </div>
         </div>
       </div>
@@ -48,7 +45,7 @@ function Avatar(props) {
       </div>
       <div>
         <div className="text-lg font-medium text-accent">{props.name}</div>
-        <div className="text-white">{props.title}</div>
+        <div className="text-black">{props.title}</div>
       </div>
     </div>
   );

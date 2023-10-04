@@ -2,7 +2,7 @@ import Link from 'next/link';
 import ThemeChanger from './DarkSwitch';
 import Image from 'next/image';
 import { Disclosure } from '@headlessui/react';
-import Favicon from '../public/img/favicon-32x32.png';
+import Favicon from '../public/img/logo512.png';
 
 const Navbar = () => {
   const navigation = [
@@ -10,10 +10,7 @@ const Navbar = () => {
       item: 'Home',
       href: '/',
     },
-    {
-      item: 'Meal Subscription',
-      href: '/meal-subscription',
-    },
+
     {
       item: 'Halwa corner',
       href: '/halwa-corner',
@@ -30,7 +27,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between lg:justify-between p-2">
+      <nav className="relative flex flex-wrap items-center justify-between lg:justify-between">
         {/* Logo  */}
         <Disclosure>
           {({ open }) => (
@@ -40,8 +37,8 @@ const Navbar = () => {
                   <Image
                     src={Favicon}
                     alt="home food delivery chennai"
-                    width="32"
-                    height="32"
+                    width="80"
+                    height="80"
                   />
                 </Link>
 

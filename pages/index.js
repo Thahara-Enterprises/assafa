@@ -48,6 +48,7 @@ const Home = ({
 
   const isDinnerTime = () => {
     const currentTimeFormatted = currentTime.format('HH:mm');
+
     return currentTimeFormatted >= '13:00' && currentTimeFormatted <= '19:00';
   };
   const isLunchTime = () => {
@@ -55,14 +56,17 @@ const Home = ({
     return currentTimeFormatted >= '18:00' || currentTimeFormatted <= '10:00';
   };
   return (
-    <div className="mx-5">
+    <div >
       <Head>
-        <title>Assafa Delicacy - Delicious and Tasty Home made food</title>
+        <title>
+          Freshly made Homemade food Home delivered Delicious and Tasty | Assafa
+          Delicacy
+        </title>
         <meta
           name="description"
-          content="Online Cloud kitchen for Working couples, Senior citizens, Bachelors and also or foodie"
+          content="Home cooked food available on Daily / Weekly / Monthly basis. Party Orders undertaken"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <Navbar />
       <Hero />
@@ -221,7 +225,7 @@ const Home = ({
       </SectionTitle>
       <Form id="requestquote" />
 
-      <div className=" bg-secondary pb-10 shadow-md text-center rounded-3xl">
+      <div className="bg-secondary pb-10 shadow-md text-center rounded-3xl">
         <SectionTitle
           pretitle="Halwa Corner"
           title="A bite of halwa is a taste of comfort and tradition."
@@ -279,17 +283,6 @@ export async function getServerSideProps() {
   const total = readData.data.values[0][5];
   const lunchStatus = readData.data.values[0][6];
   const dinnerStatus = readData.data.values[0][7];
-
-  console.log(
-    date,
-    lunch,
-    lunchPrice,
-    dinner,
-    dinnerPrice,
-    total,
-    lunchStatus,
-    dinnerStatus
-  );
 
   return {
     props: {
