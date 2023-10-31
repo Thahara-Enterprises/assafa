@@ -59,12 +59,12 @@ const Home = ({
     <div >
       <Head>
         <title>
-          Freshly made Homemade food Home delivered Delicious and Tasty | Assafa
+          Freshly made Homemade food Home delivered in Chennai | Assafa
           Delicacy
         </title>
         <meta
           name="description"
-          content="Home cooked food available on Daily / Weekly / Monthly basis. Party Orders undertaken"
+          content="Home cooked food available on Daily / Weekly / Monthly basis. Party Orders undertaken. Bulk sweet orders also undertaken"
         />
         <link rel="icon" href="/logo.svg" />
       </Head>

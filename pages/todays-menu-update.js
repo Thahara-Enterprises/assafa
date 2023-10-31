@@ -60,10 +60,7 @@ export default function DailyMenuUpdate({
         title="Learn how to fullfil your needs"
       >
         Submit the form by clicking on Order now button below and Get
-        confirmation Email . We undertake Lunch orders before 10 AM and Dinner
-        Orders Before 06:00 PM. Please be upon the time constraint. Else the
-        order will be delivered the day after or in any untime or it will never
-        be delivered based on circumstances.
+        confirmation Email.
       </SectionTitle>
       <Container>
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 place-items-center items-center gap-2">
