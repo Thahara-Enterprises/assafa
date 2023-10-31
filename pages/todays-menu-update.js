@@ -32,11 +32,17 @@ export default function DailyMenuUpdate({
 
   const isLunchTime = () => {
     const currentTimeFormatted = currentTime.format('HH:mm');
-    return currentTimeFormatted >= '18:00' || currentTimeFormatted <= '10:00';
+    if((lunch !== "") && currentTimeFormatted >= '18:00' || currentTimeFormatted <= '10:00')
+    return true;
   };
   const isDinnerTime = () => {
     const currentTimeFormatted = currentTime.format('HH:mm');
-    return currentTimeFormatted >= '13:00' && currentTimeFormatted <= '19:00';
+    if (
+      (dinner !== "") &&
+        currentTimeFormatted >= '13:00' &&
+        currentTimeFormatted <= '19:00'
+    )
+      return true;
   };
   return (
     <div>
@@ -123,7 +129,7 @@ export default function DailyMenuUpdate({
                 Today&apos;s Dinner Menu
               </div>
               <div className="text-sm">
-                {isDinnerTime() && dinner !== '-' ? (
+                {isDinnerTime() ? (
                   <span className="text-green-500">
                     Current Status: Order Undertaken
                   </span>
