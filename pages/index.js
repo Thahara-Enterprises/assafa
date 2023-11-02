@@ -48,23 +48,31 @@ const Home = ({
 
   const isDinnerTime = () => {
     const currentTimeFormatted = currentTime.format('HH:mm');
-
-    return currentTimeFormatted >= '13:00' && currentTimeFormatted <= '19:00';
+    if (
+      dinner !== '' &&
+      currentTimeFormatted >= '13:00' &&
+      currentTimeFormatted <= '19:00'
+    )
+      return true;
   };
   const isLunchTime = () => {
     const currentTimeFormatted = currentTime.format('HH:mm');
-    return currentTimeFormatted >= '18:00' || currentTimeFormatted <= '10:00';
+    if (
+      (lunch !== '' && currentTimeFormatted >= '18:00') ||
+      currentTimeFormatted <= '10:00'
+    )
+      return true;
   };
   return (
     <div >
       <Head>
         <title>
-          Freshly made Homemade food Home delivered in Chennai | Assafa
+          Freshly made Homemade food with Home delivery services in Chennai | Assafa
           Delicacy
         </title>
         <meta
           name="description"
-          content="Home cooked food available on Daily / Weekly / Monthly basis. Party Orders undertaken. Bulk sweet orders also undertaken"
+          content="Home cooked food available as Daily / Weekly / Monthly meal subscription plans Hot boxes. Party Orders undertaken. Bulk sweet orders undertaken from Chennai's best Cloud kitchen"
         />
         <link rel="icon" href="/logo.svg" />
       </Head>

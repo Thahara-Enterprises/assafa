@@ -57,7 +57,7 @@ export default function MealSubscription() {
 
       <Container>
         <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
-          Meal Plan Subscription
+          Meal Plan Subscription - Monthly, Weekly, Daily plan
         </h1>
         <PricingCard />
 
