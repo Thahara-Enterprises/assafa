@@ -28,12 +28,8 @@ const Home = ({
   lunchPrice,
   dinner,
   dinnerPrice,
-  total,
-  lunchStatus,
-  dinnerStatus,
 }) => {
   const router = useRouter();
-  const { userId } = router.query;
   const [currentTime, setCurrentTime] = useState(moment().tz('Asia/Kolkata'));
 
   useEffect(() => {
@@ -64,11 +60,11 @@ const Home = ({
       return true;
   };
   return (
-    <div >
+    <div>
       <Head>
         <title>
-          Freshly made Homemade food with Home delivery services in Chennai | Assafa
-          Delicacy
+          Freshly made Homemade food with Home delivery services in Chennai |
+          Assafa Delicacy
         </title>
         <meta
           name="description"
@@ -90,9 +86,7 @@ const Home = ({
       >
         Submit the form by clicking on Order now button below and Get
         confirmation Email . We undertake Lunch orders before 10 AM and Dinner
-        Orders Before 06:00 PM. Please be upon the time constraint. Else the
-        order will be delivered the day after or in any untime or it will never
-        be delivered based on circumstances.
+        Orders Before 06:00 PM. Please be upon the time constraint.
       </SectionTitle>
       <Container>
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 place-items-center items-center gap-2">
@@ -107,7 +101,7 @@ const Home = ({
                 Today&apos;s Lunch Menu
               </p>
               <div className="text-green-600 text-sm">
-                {isLunchTime() && lunch !== '-' ? (
+                {isLunchTime() ? (
                   <span className="text-green-500">
                     Current Status: Order Undertaken
                   </span>
@@ -127,7 +121,7 @@ const Home = ({
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
-            {isLunchTime() && lunch !== '-' ? (
+            {isLunchTime() ? (
               <Link href="/todays-lunch-order">
                 <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                   Order Now
@@ -157,7 +151,7 @@ const Home = ({
                 Today&apos;s Dinner Menu
               </div>
               <div className="text-sm">
-                {isDinnerTime() && dinner !== '-' ? (
+                {isDinnerTime() ? (
                   <span className="text-green-500">
                     Current Status: Order Undertaken
                   </span>
@@ -177,7 +171,7 @@ const Home = ({
               </span>
               <span className="text-accent font-bold text-lg">/ per BOX</span>
             </div>
-            {isDinnerTime() && dinner !== '-' ? (
+            {isDinnerTime() ? (
               <Link href="/todays-dinner-order">
                 <button className="bg-complementary text-white font-semibold py-2 px-4 rounded-full mt-6">
                   Order Now
@@ -223,6 +217,13 @@ const Home = ({
         rest of the area based on number of Boxes or orders and kilometers.
       </SectionTitle>
       <Pricing />
+      <SectionTitle title="Areas we serve">
+        Adambakkam, Adyar, Ambattur, Anna Nagar, Besant nagar, Choolaimedu, Chrompet,
+        kk nagar, Kodambakkam, Kolathur, Madipakkam, Medavakkam, Mogappair, Mylapore
+        Nanganallur, Nungambakkam, OMR, Pallavaram, Pallikaranai, Perambur, Perungudi
+        Porur, Ramapuram, Sholinganallur, Tambaram, Thiruvanmiyur, Thoraipakkam,
+        Triplicane Velachery, West tambaram
+      </SectionTitle>
 
       <SectionTitle
         pretitle="Become a Partner"
@@ -239,9 +240,9 @@ const Home = ({
           title="A bite of halwa is a taste of comfort and tradition."
         >
           <div className="text-white font-sans font-bold">
-            Dear Halwa lovers, we make fresh homemade halwa customizable to your
-            preferences - Beetroot, Bread, carrot, pumpkin etc and we also cater
-            for bulk order.
+            A special treat for Halwa lovers, we make fresh homemade halwa
+            customizable to your preferences - Beetroot, Bread, carrot, pumpkin
+            etc and we also cater for bulk order.
           </div>
         </SectionTitle>
         <Link
