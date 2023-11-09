@@ -50,6 +50,7 @@ export default function BulkOrders() {
 Sit back and Relax! We have got you covered till its on your guest's Table"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://www.assafadelicacy.com/party-order" />
       </Head>
       <Navbar />
       <div className="bg-secondary h-screen relative">

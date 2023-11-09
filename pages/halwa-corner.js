@@ -12,14 +12,14 @@ export default function HalwaCorner() {
     <div>
       <Head>
         <title>
-          Assafa Delicacy - Homemade Food Subscription | Get 20% Offer on
-          Monthly Plan Subscription
+          Assafa Delicacy - Homemade Healthy and tasty sweet from Chennai&apos;s Cloud kitchen
         </title>
         <meta
           name="description"
-          content="Online Cloud kitchen for Working couples, Senior citizens, Bachelors and for Chennai foodie"
+          content="We undertake orders for Sweets / Halwa like beetroot, kesari, carrot, bread atc"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://www.assafadelicacy.com/halwa-corner" />
       </Head>
       <Navbar />
       <HalwaHero />

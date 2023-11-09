@@ -71,6 +71,7 @@ const Home = ({
           content="Home cooked food available as Daily / Weekly / Monthly meal subscription plans Hot boxes. Party Orders undertaken. Bulk sweet orders undertaken from Chennai's best Cloud kitchen"
         />
         <link rel="icon" href="/logo.svg" />
+        <link rel="canonical" href="https://www.assafadelicacy.com" />
       </Head>
       <Navbar />
       <Hero />
@@ -218,11 +219,12 @@ const Home = ({
       </SectionTitle>
       <Pricing />
       <SectionTitle title="Areas we serve">
-        Adambakkam, Adyar, Ambattur, Anna Nagar, Besant nagar, Choolaimedu, Chrompet,
-        kk nagar, Kodambakkam, Kolathur, Madipakkam, Medavakkam, Mogappair, Mylapore
-        Nanganallur, Nungambakkam, OMR, Pallavaram, Pallikaranai, Perambur, Perungudi
-        Porur, Ramapuram, Sholinganallur, Tambaram, Thiruvanmiyur, Thoraipakkam,
-        Triplicane Velachery, West tambaram
+        Adambakkam, Adyar, Ambattur, Anna Nagar, Besant nagar, Choolaimedu,
+        Chrompet, kk nagar, Kodambakkam, Kolathur, Madipakkam, Medavakkam,
+        Mogappair, Mylapore Nanganallur, Nungambakkam, OMR, Pallavaram,
+        Pallikaranai, Perambur, Perungudi Porur, Ramapuram, Sholinganallur,
+        Tambaram, Thiruvanmiyur, Thoraipakkam, Triplicane Velachery, West
+        tambaram
       </SectionTitle>
 
       <SectionTitle

@@ -53,6 +53,10 @@ export default function DailyMenuUpdate({
           content="Order hot, Homemade food and get Updates of Dinner and Lunch menu here"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="canonical"
+          href="https://www.assafadelicacy.com/todays-menu-update"
+        />
       </Head>
       <Navbar />
       <SectionTitle

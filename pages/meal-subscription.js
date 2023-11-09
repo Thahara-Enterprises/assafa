@@ -9,49 +9,20 @@ import PricingCard from '../components/pricing';
 import Cta from '../components/cta';
 
 export default function MealSubscription() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    location: '',
-    message: '',
-  });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const response = fetch(`/api/gsheet_subscription`, {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    alert('Message sent!');
-    setFormData({
-      name: '',
-      email: '',
-      location: '',
-      message: '',
-      phone: '',
-    });
-  };
   return (
     <div>
       <Head>
         <title>
-          Assafa Delicacy - Homemade Food Subscription | Get 20% Offer on
-          Monthly Plan Subscription | November
+          Homemade Food Subscription | Get 20% Offer on
+          November Monthly Meal Plan in Chennai
         </title>
         <meta
           name="description"
-          content="Online Cloud kitchen for Working couples, Senior citizens, Bachelors and for Chennai foodie"
+          content="Get Delivered Hot home made food from Assafa Cloud kitchen for Working couples, Senior citizens, Bachelors and for Chennai foodie"
         />
         <link rel="icon" href="/favicon.ico" />
+        
       </Head>
       <Navbar />
 
