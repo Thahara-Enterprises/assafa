@@ -48,10 +48,10 @@ export default function Services() {
   return (
     <div>
       <Head>
-        <title>Contracting site</title>
+        <title>Areas We serve</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="Monthly / Weekly Meal subscription Plan | Party Orders | Sweet /Halwa orders undertaken | "
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

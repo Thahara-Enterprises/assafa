@@ -8,6 +8,7 @@ export default function MealSubscriptionOrder() {
     email: '',
     location: '',
     message: '',
+    meal: '',
   });
 
   const handleChange = (e) => {
@@ -31,6 +32,7 @@ export default function MealSubscriptionOrder() {
       location: '',
       message: '',
       phone: '',
+      meal: '',
     });
   };
   return (
@@ -127,6 +129,28 @@ export default function MealSubscriptionOrder() {
               </option>
               <option>Monthly</option>
               <option>Weekly</option>
+            </select>
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="message"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              Select Meal Plan:
+            </label>
+            <select
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="message"
+              name="message"
+              value={formData.meal}
+              onChange={handleChange}
+            >
+              <option value="" disabled>
+                Select your Meal Plan
+              </option>
+              <option>Dinner Only</option>
+              <option>Lunch Only</option>
+              <option>Both Dinner and Lunch</option>
             </select>
           </div>
           <div className="mb-6">

@@ -32,6 +32,7 @@ async function handler(req, res) {
     const email = req.body.email;
     const location = req.body.location;
     const mealPlan = req.body.message;
+    const meal = req.body.meal;
     const fromDate = req.body.fromDate;
     const toDate = req.body.toDate;
     const date =
@@ -79,8 +80,11 @@ async function handler(req, res) {
         '\n' +
         location +
         '\n' +
-        'Meal Subscription:' +
+        'Monthly/Weekly Subscription:' +
         mealPlan +
+        '\n' +
+        'Meal:' +
+        meal +
         '\n' +
         'From Date: ' +
         fromDate +
