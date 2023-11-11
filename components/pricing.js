@@ -16,7 +16,7 @@ function PricingCard() {
           <p className="text-gray-300 mb-4">Perfect for Working Couples</p>
           <div className="flex justify-between items-center mb-6">
             <span className="text-accent font-extrabold text-3xl">
-              ₹ 189 /- (approx)
+              ₹ 220 /-(Might increase or decrease)
             </span>
             <span className="text-accent font-bold text-lg">/ day</span>
           </div>
@@ -66,7 +66,7 @@ function PricingCard() {
           <p className="text-gray-300 mb-4">Perfect for Working Couples</p>
           <div className="flex justify-between items-center mb-6">
             <span className="text-accent font-extrabold text-3xl">
-              ₹ 999 /- (approx)
+              ₹ 1300 /- 
             </span>
             <span className="text-accent font-bold text-lg">/ week</span>
           </div>
@@ -118,7 +118,7 @@ function PricingCard() {
           </p>
           <div className="flex justify-between items-center mb-6">
             <span className="text-accent font-extrabold text-3xl">
-              ₹ 3999/- (approx)
+              ₹ 5500/-
             </span>
             <span className="text-accent font-bold text-lg">/ month</span>
           </div>

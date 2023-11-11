@@ -22,7 +22,7 @@ export default function MealSubscription() {
           content="Get Delivered Hot home made food from Assafa Cloud kitchen for Working couples, Senior citizens, Bachelors and for Chennai foodie"
         />
         <link rel="icon" href="/favicon.ico" />
-        
+
       </Head>
       <Navbar />
 
@@ -314,7 +314,7 @@ export default function MealSubscription() {
       </Container>
       <Container>
         <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
-          Meal Plan Subscription - Monthly, Weekly, Daily plan in Chennai
+         November Meal Plan Subscription - Monthly, Weekly, Daily plan in Chennai
         </h1>
         <PricingCard />
       </Container>
