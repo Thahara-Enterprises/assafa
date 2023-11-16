@@ -320,15 +320,14 @@ export default function MealSubscription() {
       </Container>
       <SectionTitle pretitle="Note" title="Terms and Conditions alert">
         Delivery is free upto 5 km around the Cloud Kitchen. For the rest of the
-        locations, charges applies and it varies from Rs 30 to Rs 90 and also
-        depends on Number of Boxes Ordered.
+        locations, charges applies and it varies according to porter app prices.
       </SectionTitle>
       <SectionTitle title="Areas we serve">
         Adambakkam, Adyar, Ambattur, Anna Nagar, Besant nagar, Choolaimedu,
         Chrompet, kk nagar, Kodambakkam, Kolathur, Madipakkam, Medavakkam,
         Mogappair, Mylapore Nanganallur, Nungambakkam, OMR, Pallavaram,
         Pallikaranai, Perambur, Perungudi Porur, Ramapuram, Sholinganallur,
-        Tambaram, Thiruvanmiyur, Thoraipakkam, Triplicane Velachery, West
+        Tambaram, Thiruvanmiyur, Thoraipakkam, Triplicane, Velachery, West
         tambaram
       </SectionTitle>
 
