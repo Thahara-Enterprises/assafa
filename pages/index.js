@@ -215,7 +215,7 @@ const Home = ({
         title="Prices That Delight, Every Bite"
       >
         Delivery Free for 5km around Our cloud Kitchen. Charges applies for the
-        rest of the area based on number of Boxes or orders and kilometers.
+        rest of the area based on Porter app.
       </SectionTitle>
       <Pricing />
       <SectionTitle title="Areas we serve">
