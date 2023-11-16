@@ -100,7 +100,7 @@ async function handler(req, res) {
     const mailOpt = {
       from: 'jsafroze@gmail.com',
       to: `${email}`,
-      subject: 'Assafa Delicacy | Your Order is Confirmed',
+      subject: 'Assafa Delicacy | Your Order is Under Review',
       text: `${
         'Ticket: ' +
         Date.now +
