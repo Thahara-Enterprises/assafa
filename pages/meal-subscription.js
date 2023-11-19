@@ -14,15 +14,14 @@ export default function MealSubscription() {
     <div>
       <Head>
         <title>
-          Homemade Food Subscription | Get 20% Offer on
-          November Monthly Meal Plan in Chennai
+          Homemade Food Subscription | Get 20% Offer on November Monthly Meal
+          Plan in Chennai
         </title>
         <meta
           name="description"
           content="Get Delivered Hot home made food from Assafa Cloud kitchen for Working couples, Senior citizens, Bachelors and for Chennai foodie"
         />
         <link rel="icon" href="/favicon.ico" />
-
       </Head>
       <Navbar />
 
@@ -30,7 +29,7 @@ export default function MealSubscription() {
         <SectionTitle
           id="7daymeal"
           pretitle="7 days Meal Plan subscription menus"
-          title="13-11-2023 to 19-11-2023 One week menus"
+          title="20-11-2023 to 26-11-2023 One week menus"
         ></SectionTitle>
 
         <div className="lg:mx-40 grid lg:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-6 lg:p-6 md:p-2 sm:p-2 xs:p-2 rounded-md ">
@@ -39,110 +38,117 @@ export default function MealSubscription() {
               Lunch Menu
             </div>
             <div className="mt-6 uppercase text-accent">
-              Monday (13-11-2023)
+              Monday (20-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Prawn Biriyani
+                  Beef Chukka
                 </span>
 
                 <br />
+                <span className="text-gray-400">Side dish: </span>
+                <span className="text-complementary2 uppercase font-bold">
+                  White rice, Rasam, Snake Guard Dal
+                </span>
+
+                <br />
+
                 <span className="text-gray-400 ">Extras: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Raita
+                  Poriyal
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Tuesday (14-11-2023)
+              Tuesday (21-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Mutton Kofta Curry
+                  Fish Fry, Fish Gravy
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Jeera Rice
+                  Coconut Rice
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Wednesday (15-11-2023)
+              Wednesday (22-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Chettinad Ghee roast Chicken
+                  Thala kari salna
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Basmathi Moong Dal Pulao
+                  White rice
+                </span>
+                <br />
+                <span className="text-gray-400">Extras: </span>
+                <span className="text-complementary2 uppercase font-bold">
+                  Rasam, Poriyal
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Thursday (16-11-2023)
+              Thursday (23-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Pepper Mutton Liver
+                  Prawn Masala Curry
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  White Rice, Thenga pal Rasam
-                </span>
-                <br />
-                <span className="text-gray-400 ">Extras: </span>
-                <span className="text-complementary2 uppercase font-bold">
-                  Kadamba Poriyal
+                  White Rice, Drumstick Dal
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Friday (17-11-2023)
+              Friday (24-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Mutton Kurma & Dhalcha
+                  Al-Faham Chicken & Dhalcha
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Bahara Rice
+                  Ghee Rice
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Saturday (18-11-2023)
+              Saturday (25-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Chicken Mandi
+                  Arabian Chicken Majboos
                 </span>
                 <br />
                 <span className="text-gray-400 ">Extras: </span>
@@ -153,7 +159,7 @@ export default function MealSubscription() {
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Sunday (19-11-2023)
+              Sunday (26-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
@@ -161,12 +167,12 @@ export default function MealSubscription() {
                 <br />
                 <span className="text-gray-400">Main Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Mutton Biriyani
+                  Mutton-Chickpeas Afghani Pulao
                 </span>
                 <br />
                 <span className="text-gray-400">Extras: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Raita
+                  Curd
                 </span>
                 <br />
               </li>
@@ -183,7 +189,7 @@ export default function MealSubscription() {
             </div>
             <div>
               <div className="mt-6 uppercase text-accent">
-                Monday (13-11-2023)
+                Monday (20-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -201,7 +207,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Tuesday (14-11-2023)
+                Tuesday (21-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -219,7 +225,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Wednesday (15-11-2023)
+                Wednesday (22-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -232,7 +238,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent ">
-                Thursday (16-11-2023)
+                Thursday (23-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -250,7 +256,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Friday (17-11-2023)
+                Friday (24-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -268,7 +274,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Saturday (18-11-2023)
+                Saturday (25-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -286,7 +292,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Sunday (19-11-2023)
+                Sunday (26-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -314,7 +320,8 @@ export default function MealSubscription() {
       </Container>
       <Container>
         <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
-         November Meal Plan Subscription - Monthly, Weekly, Daily plan in Chennai
+          November Meal Plan Subscription - Monthly, Weekly, Daily plan in
+          Chennai
         </h1>
         <PricingCard />
       </Container>
