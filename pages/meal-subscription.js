@@ -14,7 +14,7 @@ export default function MealSubscription() {
     <div>
       <Head>
         <title>
-          Homemade Food Subscription | Get 20% Offer on November Monthly Meal
+          Homemade Food Subscription | Get 20% Offer on December Weekly / Monthly Meal
           Plan in Chennai
         </title>
         <meta
@@ -29,7 +29,7 @@ export default function MealSubscription() {
         <SectionTitle
           id="7daymeal"
           pretitle="7 days Meal Plan subscription menus"
-          title="20-11-2023 to 26-11-2023 One week menus"
+          title="27-11-2023 to 03-12-2023 One week menus"
         ></SectionTitle>
 
         <div className="lg:mx-40 grid lg:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-6 lg:p-6 md:p-2 sm:p-2 xs:p-2 rounded-md ">
@@ -38,40 +38,40 @@ export default function MealSubscription() {
               Lunch Menu
             </div>
             <div className="mt-6 uppercase text-accent">
-              Monday (20-11-2023)
+              Monday (27-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Beef Chukka
+                  Soft Mutton liver fry
                 </span>
 
                 <br />
                 <span className="text-gray-400">Side dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  White rice, Rasam, Snake Guard Dal
+                  White rice, Rasam
                 </span>
 
                 <br />
 
                 <span className="text-gray-400 ">Extras: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Poriyal
+                  Kadamba Poriyal
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Tuesday (21-11-2023)
+              Tuesday (28-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Fish Fry, Fish Gravy
+                  Mutton Gravy
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
@@ -82,14 +82,14 @@ export default function MealSubscription() {
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Wednesday (22-11-2023)
+              Wednesday (29-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Thala kari salna
+                  Chettinad ghee roast Chicken
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
@@ -99,20 +99,20 @@ export default function MealSubscription() {
                 <br />
                 <span className="text-gray-400">Extras: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Rasam, Poriyal
+                  Dhalcha
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Thursday (23-11-2023)
+              Thursday (30-11-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Prawn Masala Curry
+                  Mutton Chukka
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
@@ -123,25 +123,25 @@ export default function MealSubscription() {
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Friday (24-11-2023)
+              Friday (01-12-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Al-Faham Chicken & Dhalcha
+                 Mutton Salna & Dhalcha
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Ghee Rice
+                  Bahara Rice
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Saturday (25-11-2023)
+              Saturday (02-12-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
@@ -159,7 +159,7 @@ export default function MealSubscription() {
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Sunday (26-11-2023)
+              Sunday (03-12-2023)
             </div>
             <hr />
             <ul className="text-white text-base">
@@ -189,25 +189,25 @@ export default function MealSubscription() {
             </div>
             <div>
               <div className="mt-6 uppercase text-accent">
-                Monday (20-11-2023)
+                Monday (27-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Prawn-capsicum-Mushroom Curry
+                    Paya
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Ghee Phulka
+                    Idli
                   </span>
                   <br />
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Tuesday (21-11-2023)
+                Tuesday (28-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -225,7 +225,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Wednesday (22-11-2023)
+                Wednesday (29-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -238,7 +238,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent ">
-                Thursday (23-11-2023)
+                Thursday (30-11-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -256,7 +256,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Friday (24-11-2023)
+                Friday (01-12-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -274,7 +274,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Saturday (25-11-2023)
+                Saturday (02-12-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -292,7 +292,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Sunday (26-11-2023)
+                Sunday (03-12-2023)
               </div>
               <hr />
               <ul className="text-white text-base">
