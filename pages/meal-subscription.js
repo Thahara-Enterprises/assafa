@@ -14,8 +14,8 @@ export default function MealSubscription() {
     <div>
       <Head>
         <title>
-          Homemade Food Subscription | Get 20% Offer on December Weekly / Monthly Meal
-          Plan in Chennai
+          Homemade Food Subscription | Get 20% Offer on December Weekly /
+          Monthly Meal Plan in Chennai
         </title>
         <meta
           name="description"
@@ -130,7 +130,7 @@ export default function MealSubscription() {
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                 Mutton Salna & Dhalcha
+                  Mutton Salna & Dhalcha
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
@@ -330,13 +330,17 @@ export default function MealSubscription() {
         locations, charges applies and it varies according to porter app prices.
       </SectionTitle>
       <SectionTitle title="Areas we serve">
-        Adambakkam, Adyar, Ambattur, Anna Nagar, Besant nagar, Choolaimedu,
-        Chrompet, kk nagar, Kodambakkam, Kolathur, Madipakkam, Medavakkam,
-        Mogappair, Mylapore Nanganallur, Nungambakkam, OMR, Pallavaram,
-        Pallikaranai, Perambur, Perungudi Porur, Ramapuram, Sholinganallur,
-        Tambaram, Thiruvanmiyur, Thoraipakkam, Triplicane, Velachery, West
-        tambaram
+        Mylapore, Triplicane, Royapettah, R A Puram, Thousand lights,
+        Pattinambakkam, Mirsahibpet, Nandanam, Adyar, Santhome, Balagi nagar,
+        Pattinapakkam, DR Mgr Janaki college, Alwarpet, Valleeswaran thottam,
+        Chepauk, Gopalapuram, Anna salai, City center, Kailasapuram mylapore,
+        Abhiramapuram, Teynapet, Ice house, Krishnampet
       </SectionTitle>
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1gBGVRr6YtG2monnRbwlH4FTUG355Ypk&ehbc=2E312F"
+        width="640"
+        height="480"
+      ></iframe>
 
       <Cta />
 

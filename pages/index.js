@@ -219,12 +219,7 @@ const Home = ({
       </SectionTitle>
       <Pricing />
       <SectionTitle title="Areas we serve">
-        Adambakkam, Adyar, Ambattur, Anna Nagar, Besant nagar, Choolaimedu,
-        Chrompet, kk nagar, Kodambakkam, Kolathur, Madipakkam, Medavakkam,
-        Mogappair, Mylapore Nanganallur, Nungambakkam, OMR, Pallavaram,
-        Pallikaranai, Perambur, Perungudi Porur, Ramapuram, Sholinganallur,
-        Tambaram, Thiruvanmiyur, Thoraipakkam, Triplicane Velachery, West
-        tambaram
+        Mylapore, Triplicane, Royapettah, R A Puram, Thousand lights, Pattinambakkam, Mirsahibpet, Nandanam, Adyar, Santhome, Balagi nagar, Pattinapakkam, DR Mgr Janaki college, Alwarpet, Valleeswaran thottam, Chepauk, Gopalapuram, Anna salai, City center, Kailasapuram mylapore, Abhiramapuram, Teynapet, Ice house, Krishnampet,
       </SectionTitle>
 
       <SectionTitle
