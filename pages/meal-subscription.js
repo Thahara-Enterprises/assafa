@@ -335,12 +335,12 @@ export default function MealSubscription() {
         Pattinapakkam, DR Mgr Janaki college, Alwarpet, Valleeswaran thottam,
         Chepauk, Gopalapuram, Anna salai, City center, Kailasapuram mylapore,
         Abhiramapuram, Teynapet, Ice house, Krishnampet
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1gBGVRr6YtG2monnRbwlH4FTUG355Ypk&ehbc=2E312F"
+          width="640"
+          height="480"
+        ></iframe>
       </SectionTitle>
-      <iframe
-        src="https://www.google.com/maps/d/embed?mid=1gBGVRr6YtG2monnRbwlH4FTUG355Ypk&ehbc=2E312F"
-        width="640"
-        height="480"
-      ></iframe>
 
       <Cta />
 
