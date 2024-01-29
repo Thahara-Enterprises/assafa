@@ -214,12 +214,25 @@ const Home = ({
         pretitle="Subscription Plan Pricing"
         title="Prices That Delight, Every Bite"
       >
-        Delivery Free for 5km around Our cloud Kitchen. Charges applies for the
-        rest of the area based on Porter app.
+        Delivery is free upto 5 km and per 2 parcels around the Cloud Kitchen.
+        For the rest of the locations, charges applies and it varies according
+        to porter app prices.
       </SectionTitle>
       <Pricing />
       <SectionTitle title="Areas we serve">
-        Mylapore, Triplicane, Royapettah, R A Puram, Thousand lights, Pattinambakkam, Mirsahibpet, Nandanam, Adyar, Santhome, Balagi nagar, Pattinapakkam, DR Mgr Janaki college, Alwarpet, Valleeswaran thottam, Chepauk, Gopalapuram, Anna salai, City center, Kailasapuram mylapore, Abhiramapuram, Teynapet, Ice house, Krishnampet,
+        Mylapore, Triplicane, Royapettah, R A Puram, Thousand lights,
+        Pattinambakkam, Mirsahibpet, Nandanam, Adyar, Santhome, Balagi nagar,
+        Pattinapakkam, DR Mgr Janaki college, Alwarpet, Valleeswaran thottam,
+        Chepauk, Gopalapuram, Anna salai, City center, Kailasapuram mylapore,
+        Abhiramapuram, Teynapet, Ice house, Krishnampet, Vadapalani, T nagar,
+        chepauk, velachery, sholinganalur, nungambakkam, villivakkam,
+        ayanavaram, anna nagar, gopalapuram, thoraipakkam, tambaram, pallavaram,
+        pammal,chrompet, perungalathur.
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1gBGVRr6YtG2monnRbwlH4FTUG355Ypk&ehbc=2E312F"
+          width="640"
+          height="480"
+        ></iframe>
       </SectionTitle>
 
       <SectionTitle

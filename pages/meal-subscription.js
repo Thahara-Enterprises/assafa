@@ -14,22 +14,27 @@ export default function MealSubscription() {
     <div>
       <Head>
         <title>
-          Homemade Food Subscription | Get 20% Offer on December Weekly /
-          Monthly Meal Plan in Chennai
+          Homemade Food Meal Plan Subscription | Get 20% Offer on February 7
+          days / Monthly Meal Plan in Chennai
         </title>
         <meta
           name="description"
-          content="Get Delivered Hot home made food from Assafa Cloud kitchen for Working couples, Senior citizens, Bachelors and for Chennai foodie"
+          content="Best home cooked Food delivery on Monthly weekly basis/ curated Healthy diet for pregnancy women"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
 
       <Container>
+        <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
+          February Meal Plan Subscription - Monthly, Weekly, Daily plan in
+          Chennai
+        </h1>
+
         <SectionTitle
           id="7daymeal"
           pretitle="7 days Meal Plan subscription menus"
-          title="27-11-2023 to 03-12-2023 One week menus"
+          title="29-01-2024 to 04-02-2024 One week menus"
         ></SectionTitle>
 
         <div className="lg:mx-40 grid lg:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-6 lg:p-6 md:p-2 sm:p-2 xs:p-2 rounded-md ">
@@ -38,33 +43,33 @@ export default function MealSubscription() {
               Lunch Menu
             </div>
             <div className="mt-6 uppercase text-accent">
-              Monday (27-11-2023)
+              Monday (29-01-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Soft Mutton liver fry
+                  Crab masala
                 </span>
 
                 <br />
                 <span className="text-gray-400">Side dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  White rice, Rasam
+                  White rice
                 </span>
 
                 <br />
 
                 <span className="text-gray-400 ">Extras: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Kadamba Poriyal
+                  Poriyal
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Tuesday (28-11-2023)
+              Tuesday (30-01-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
@@ -76,20 +81,20 @@ export default function MealSubscription() {
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Coconut Rice
+                  Kuska Rice
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Wednesday (29-11-2023)
+              Wednesday (31-01-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Chettinad ghee roast Chicken
+                  Fish fry, Fish gravy
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
@@ -99,31 +104,31 @@ export default function MealSubscription() {
                 <br />
                 <span className="text-gray-400">Extras: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Dhalcha
+                  Poriyal
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Thursday (30-11-2023)
+              Thursday (01-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Mutton Chukka
+                  Pepper liver masala, Mutton bone semi gravy
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  White Rice, Drumstick Dal
+                  White Rice
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Friday (01-12-2023)
+              Friday (02-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
@@ -141,25 +146,25 @@ export default function MealSubscription() {
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Saturday (02-12-2023)
+              Saturday (03-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Arabian Chicken Majboos
+                  Honey garlic chicken
                 </span>
                 <br />
-                <span className="text-gray-400 ">Extras: </span>
+                <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Salsa
+                  Fried Rice
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Sunday (03-12-2023)
+              Sunday (04-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
@@ -167,12 +172,12 @@ export default function MealSubscription() {
                 <br />
                 <span className="text-gray-400">Main Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Mutton-Chickpeas Afghani Pulao
+                  Mutton Biriyani
                 </span>
                 <br />
                 <span className="text-gray-400">Extras: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Curd
+                  Raita
                 </span>
                 <br />
               </li>
@@ -189,32 +194,32 @@ export default function MealSubscription() {
             </div>
             <div>
               <div className="mt-6 uppercase text-accent">
-                Monday (27-11-2023)
+                Monday (29-01-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Paya
+                    Prawn capsicum curry
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Idli
+                    Ghee phulka
                   </span>
                   <br />
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Tuesday (28-11-2023)
+                Tuesday (30-01-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Mutton Keema Dal
+                    Mutton Gravy
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -225,7 +230,7 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Wednesday (29-11-2023)
+                Wednesday (31-01-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
@@ -238,14 +243,32 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent ">
-                Thursday (30-11-2023)
+                Thursday (01-02-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Afghani Green Chicken
+                    Mutton soup
+                  </span>
+                  <br />
+                  <span className="text-gray-400">Side Dish: </span>
+                  <span className="text-complementary2 uppercase font-bold">
+                    kal dosa
+                  </span>
+                  <br />
+                </li>
+              </ul>
+              <div className="mt-6 uppercase text-accent">
+                Friday (02-02-2024)
+              </div>
+              <hr />
+              <ul className="text-white text-base">
+                <li>
+                  <span className="text-gray-400">Main Course: </span>
+                  <span className="text-complementary2 uppercase font-bold">
+                    Pepper chicken
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -256,55 +279,32 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Friday (01-12-2023)
+                Saturday (03-02-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Honey Garlic Chicken
+                    Mutton green peas gravy
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Ghee Phulka
+                    Ghee phulka
                   </span>
                   <br />
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Saturday (02-12-2023)
+                Sunday (04-02-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    -
-                  </span>
-                  <br />
-                  <span className="text-gray-400">Side Dish: </span>
-                  <span className="text-complementary2 uppercase font-bold">
-                    -
-                  </span>
-                  <br />
-                </li>
-              </ul>
-              <div className="mt-6 uppercase text-accent">
-                Sunday (03-12-2023)
-              </div>
-              <hr />
-              <ul className="text-white text-base">
-                <li>
-                  <span className="text-gray-400">Main Course: </span>
-                  <span className="text-complementary2 uppercase font-bold">
-                    South Indian Mapillai Chicken Pangan
-                  </span>
-                  <br />
-                  <span className="text-gray-400">Side Dish: </span>
-                  <span className="text-complementary2 uppercase font-bold">
-                    Ghee Phulka
+                    Chicken Murthabak
                   </span>
                   <br />
                 </li>
@@ -319,22 +319,31 @@ export default function MealSubscription() {
         </div>
       </Container>
       <Container>
-        <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
-          November Meal Plan Subscription - Monthly, Weekly, Daily plan in
-          Chennai
-        </h1>
         <PricingCard />
       </Container>
+      <SectionTitle
+        pretitle="Contact Number"
+        title="Terms and Conditions alert"
+      >
+        Call 9600052742 for further inquiry or submit your inquiries here{' '}
+        <a href="https://assafadelicacy.com/meal-subscription-order" className="text-blue-400">
+          https://assafadelicacy.com/meal-subscription-order
+        </a>
+      </SectionTitle>
       <SectionTitle pretitle="Note" title="Terms and Conditions alert">
-        Delivery is free upto 5 km around the Cloud Kitchen. For the rest of the
-        locations, charges applies and it varies according to porter app prices.
+        Delivery is free upto 5 km and per 2 parcels around the Cloud Kitchen.
+        For the rest of the locations, charges applies and it varies according
+        to porter app prices.
       </SectionTitle>
       <SectionTitle title="Areas we serve">
         Mylapore, Triplicane, Royapettah, R A Puram, Thousand lights,
         Pattinambakkam, Mirsahibpet, Nandanam, Adyar, Santhome, Balagi nagar,
         Pattinapakkam, DR Mgr Janaki college, Alwarpet, Valleeswaran thottam,
         Chepauk, Gopalapuram, Anna salai, City center, Kailasapuram mylapore,
-        Abhiramapuram, Teynapet, Ice house, Krishnampet
+        Abhiramapuram, Teynapet, Ice house, Krishnampet, Vadapalani, T nagar,
+        chepauk, velachery, sholinganalur, nungambakkam, villivakkam,
+        ayanavaram, anna nagar, gopalapuram, thoraipakkam, tambaram, pallavaram,
+        pammal,chrompet, perungalathur
         <iframe
           src="https://www.google.com/maps/d/embed?mid=1gBGVRr6YtG2monnRbwlH4FTUG355Ypk&ehbc=2E312F"
           width="640"
