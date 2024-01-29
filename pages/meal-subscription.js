@@ -346,7 +346,7 @@ export default function MealSubscription() {
         pammal,chrompet, perungalathur
         <iframe
           src="https://www.google.com/maps/d/embed?mid=1gBGVRr6YtG2monnRbwlH4FTUG355Ypk&ehbc=2E312F"
-          width="640"
+          width="320"
           height="480"
         ></iframe>
       </SectionTitle>
