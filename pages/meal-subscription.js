@@ -43,14 +43,14 @@ export default function MealSubscription() {
               Lunch Menu
             </div>
             <div className="mt-6 uppercase text-accent">
-              Monday (29-01-2024)
+              Monday (05-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Crab masala
+                  Chicken tikka masala
                 </span>
 
                 <br />
@@ -69,25 +69,25 @@ export default function MealSubscription() {
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Tuesday (30-01-2024)
+              Tuesday (06-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Mutton Gravy
+                  Mutton Keema Mutter dal tadka
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Kuska Rice
+                  White Rice
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Wednesday (31-01-2024)
+              Wednesday (07-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
@@ -110,14 +110,14 @@ export default function MealSubscription() {
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Thursday (01-02-2024)
+              Thursday (08-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Pepper liver masala, Mutton bone semi gravy
+                  Squid Capsicum, Pepper rasam
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
@@ -128,7 +128,7 @@ export default function MealSubscription() {
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Friday (02-02-2024)
+              Friday (09-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
@@ -146,25 +146,25 @@ export default function MealSubscription() {
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Saturday (03-02-2024)
+              Saturday (10-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-gray-400">Main Course: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Honey garlic chicken
+                  Boti gravy, Rasam
                 </span>
                 <br />
                 <span className="text-gray-400">Side Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Fried Rice
+                  White Rice
                 </span>
                 <br />
               </li>
             </ul>
             <div className="mt-6 uppercase text-accent">
-              Sunday (04-02-2024)
+              Sunday (11-02-2024)
             </div>
             <hr />
             <ul className="text-white text-base">
@@ -172,12 +172,12 @@ export default function MealSubscription() {
                 <br />
                 <span className="text-gray-400">Main Dish: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Mutton Biriyani
+                  Chicken Kabsa
                 </span>
                 <br />
                 <span className="text-gray-400">Extras: </span>
                 <span className="text-complementary2 uppercase font-bold">
-                  Raita
+                  Salsa
                 </span>
                 <br />
               </li>
@@ -194,14 +194,14 @@ export default function MealSubscription() {
             </div>
             <div>
               <div className="mt-6 uppercase text-accent">
-                Monday (29-01-2024)
+                Monday (05-02-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Prawn capsicum curry
+                    Chicken Tikka masala
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -212,14 +212,14 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Tuesday (30-01-2024)
+                Tuesday (06-02-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Mutton Gravy
+                    Mutton keema Mutter dal tadka
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -230,63 +230,32 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Wednesday (31-01-2024)
+                Wednesday (07-02-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Chicken Murthabak or Mutton Murthabak
+                    Fish gravy
+                  </span>
+                  <br />
+                  <span className="text-gray-400">Side Dish: </span>
+                  <span className="text-complementary2 uppercase font-bold">
+                    Ghee phulka
                   </span>
                   <br />
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent ">
-                Thursday (01-02-2024)
+                Thursday (08-02-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Mutton soup
-                  </span>
-                  <br />
-                  <span className="text-gray-400">Side Dish: </span>
-                  <span className="text-complementary2 uppercase font-bold">
-                    kal dosa
-                  </span>
-                  <br />
-                </li>
-              </ul>
-              <div className="mt-6 uppercase text-accent">
-                Friday (02-02-2024)
-              </div>
-              <hr />
-              <ul className="text-white text-base">
-                <li>
-                  <span className="text-gray-400">Main Course: </span>
-                  <span className="text-complementary2 uppercase font-bold">
-                    Pepper chicken
-                  </span>
-                  <br />
-                  <span className="text-gray-400">Side Dish: </span>
-                  <span className="text-complementary2 uppercase font-bold">
-                    Ghee Phulka
-                  </span>
-                  <br />
-                </li>
-              </ul>
-              <div className="mt-6 uppercase text-accent">
-                Saturday (03-02-2024)
-              </div>
-              <hr />
-              <ul className="text-white text-base">
-                <li>
-                  <span className="text-gray-400">Main Course: </span>
-                  <span className="text-complementary2 uppercase font-bold">
-                    Mutton green peas gravy
+                    Squid capsicum curry
                   </span>
                   <br />
                   <span className="text-gray-400">Side Dish: </span>
@@ -297,14 +266,50 @@ export default function MealSubscription() {
                 </li>
               </ul>
               <div className="mt-6 uppercase text-accent">
-                Sunday (04-02-2024)
+                Friday (09-02-2024)
               </div>
               <hr />
               <ul className="text-white text-base">
                 <li>
                   <span className="text-gray-400">Main Course: </span>
                   <span className="text-complementary2 uppercase font-bold">
-                    Chicken Murthabak
+                    Mutton Salna
+                  </span>
+                  <br />
+                  <span className="text-gray-400">Side Dish: </span>
+                  <span className="text-complementary2 uppercase font-bold">
+                    Ghee Phulka
+                  </span>
+                  <br />
+                </li>
+              </ul>
+              <div className="mt-6 uppercase text-accent">
+                Saturday (10-02-2024)
+              </div>
+              <hr />
+              <ul className="text-white text-base">
+                <li>
+                  <span className="text-gray-400">Main Course: </span>
+                  <span className="text-complementary2 uppercase font-bold">
+                    Mutton Paya
+                  </span>
+                  <br />
+                  <span className="text-gray-400">Side Dish: </span>
+                  <span className="text-complementary2 uppercase font-bold">
+                    Ghee phulka
+                  </span>
+                  <br />
+                </li>
+              </ul>
+              <div className="mt-6 uppercase text-accent">
+                Sunday (11-02-2024)
+              </div>
+              <hr />
+              <ul className="text-white text-base">
+                <li>
+                  <span className="text-gray-400">Main Course: </span>
+                  <span className="text-complementary2 uppercase font-bold">
+                    Chicken Murthabak or Mutton murthabak
                   </span>
                   <br />
                 </li>
@@ -326,7 +331,10 @@ export default function MealSubscription() {
         title="Terms and Conditions alert"
       >
         Call 9600052742 for further inquiry or submit your inquiries here{' '}
-        <a href="https://assafadelicacy.com/meal-subscription-order" className="text-blue-400">
+        <a
+          href="https://assafadelicacy.com/meal-subscription-order"
+          className="text-blue-400"
+        >
           https://assafadelicacy.com/meal-subscription-order
         </a>
       </SectionTitle>
