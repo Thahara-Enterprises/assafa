@@ -32,7 +32,7 @@ export default function MealSubscription() {
 
         <SectionTitle
           id="7daymeal"
-          pretitle="7 days Meal Plan subscription menus"
+          pretitle=" Meal Plan subscription menus"
           title="August meal subscription Menu"
         ></SectionTitle>
 
