@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Container from '../components/container'
+import SectionTitle from '../components/sectionTitle'
 
 export default function MealSubscription() {
   return (
@@ -279,7 +281,7 @@ export default function MealSubscription() {
             </Link>
           </div>
         </div>
-        /*Ramadan menu */
+        {/*Ramadan menu */}
         <Container>
           <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
             March Meal Plan Subscription - Monthly, Weekly, Daily plan in
