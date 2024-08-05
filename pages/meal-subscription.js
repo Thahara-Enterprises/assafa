@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import Container from '../components/container';
-import Footer from '../components/footer';
-import Head from 'next/head';
-import Navbar from '../components/navbar';
-import SectionTitle from '../components/sectionTitle';
-import Link from 'next/link';
-import PricingCard from '../components/pricing';
-import Cta from '../components/cta';
-
+import React, { useState } from 'react'
+import Container from '../components/container'
+import Footer from '../components/footer'
+import Head from 'next/head'
+import Navbar from '../components/navbar'
+import SectionTitle from '../components/sectionTitle'
+import Link from 'next/link'
+import PricingCard from '../components/pricing'
+import Cta from '../components/cta'
+import RamadanMeal from '../public/img/ramadanmeal.jpeg'
+import Image from 'next/image'
 export default function MealSubscription() {
-
   return (
     <div>
       <Head>
         <title>
-          Homemade Food Meal Plan Subscription | Get 20% Offer on Ramadan / March - 7
-          days / Monthly Meal Plan in Chennai
+          Homemade Food Meal Plan Subscription | Get 20% Offer on Ramadan /
+          March - 7 days / Monthly Meal Plan in Chennai
         </title>
         <meta
           name="description"
@@ -27,131 +27,138 @@ export default function MealSubscription() {
 
       <Container>
         <h1 className="sm:text-xl text-center font-bold leading-snug tracking-tight text-complementary lg:text-4xl lg:leading-tight dark:text-white">
-          March and Ramadan Meal Plan Subscription  - Monthly, Weekly, Daily plan in
-          Chennai
+          August Meal Plan Subscription - Monthly, Weekly, Daily plan in Chennai
         </h1>
 
         <SectionTitle
           id="7daymeal"
           pretitle="7 days Meal Plan subscription menus"
-          title="Ramadan Menus / March meal subscription Menu"
+          title="August meal subscription Menu"
         ></SectionTitle>
 
         <div className="lg:mx-40 grid lg:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-6 lg:p-6 md:p-2 sm:p-2 xs:p-2 rounded-md ">
           <div className="p-3 w-full border-2 rounded-md shadow-md bg-secondary">
             <div className="lg:text-5xl text-center sm:text-3xl xs:text-lg font-bold text-primary tracking-wider mb-2 uppercase">
-              Iftar / Lunch Menu
+              Lunch Menu
             </div>
             <hr />
             <ul className="text-white text-base">
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">Common combo :</span> Kanjee + Kadal Paasi(china grass) + Juice + Fruits
+                  <span className=" text-accent">1. </span>Boti gravy, Rasam,
+                  White rice
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">1. </span>Common combo + Zeera rice , Butter Chicken + Falafil + Mint chutney
+                  <span className=" text-accent">2. </span>Plain paruppu, Mutton
+                  liver curry, Poriyal, rasam, white rice
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">2. </span>Common combo + Mutter Pulao + Salsa + Tikka roll + Curd chutney
+                  <span className=" text-accent">3. </span>Chicken salna,
+                  Poriyal, rasam, White rice
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">3. </span>Common Combo + Noodles + Sauce + Cauliflower pakoda + Tamarind chutney
+                  <span className=" text-accent">4. </span>Mutton afghani pulao,
+                  Dates tamarind chutney, Mint chutney, Cucumber curd
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">4. </span>Common Combo + Ghee pulka + Pepper chicken + Vadai + chutney
+                  <span className=" text-accent">5. </span>Crab gravy. Crab
+                  soup, Poriyal, White rice
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">5. </span> Common Combo + Murthabak + Mayonaise + Chicken popcorn + Tomato sauce
+                  <span className=" text-accent">6. </span> Bahara rice, Chicken
+                  salna, Dalcha
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">6. </span> Common Combo + Prawn Noodles + Coconut shrimp + Tomato sauce
+                  <span className=" text-accent">7. </span> Crab gravy. Crab
+                  soup, Poriyal, White rice
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">7. </span> Common Combo + Afghani Pulao + Salsa + Samosa + Tamarind and Mint chutney
+                  <span className=" text-accent">8. </span> Beef chukka,
+                  Parauppu, Rasam, White rice
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">8. </span> Common Combo + Chicken Mandi + Mayonise + Salsa + Paruppu Vadai + Mint chutney
+                  <span className=" text-accent">9. </span> Thala kari salna,
+                  Poriyal, White rice
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">9. </span> Common Combo + Chicken biriyani + Raita + Nuggets + Sauce
+                  <span className=" text-accent">10. </span> Prawn cheppang
+                  kelangu, Prawn kootu, Rasam, white rice
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">10. </span> Common Combo + White sauce noodles + Small burger (2 pcs) + Sauce
+                  <span className=" text-accent">11. </span> Chicken mandi,
+                  Veg-Gravy
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">11. </span> Common Combo + Dal Pulao + Chettinad chicken + Cheese ball
+                  <span className=" text-accent">12. </span> Sambar, Pepper
+                  chicken, Poriyal, Rasam, White rice
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">12. </span> Common Combo + Spaghetti + Hariyali tikka roll + chutney
+                  <span className=" text-accent">13. </span> Ghee rice and
+                  Chicken tikka masala
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">13. </span> Common Combo + Ghee Rice + Dum Aloo + Potato balls + Sauce
+                  <span className=" text-accent">14. </span> Nethili meen gravy,
+                  Nethili meen fry, Poriyal, Rasam, White rice
                 </span>
                 <hr />
                 <br />
               </li>
               <li>
                 <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">14. </span> Common Combo + Veg fried rice + Gobi Manchurian + Chicken Pakoda
-                </span>
-                <hr />
-                <br />
-              </li>
-              <li>
-                <span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">15. </span> Common Combo + Zeera rice + Chicken Tikka Masala + Chicken Culet
+                  <span className=" text-accent">15. </span> Beef chukka,
+                  Parauppu, Rasam, White rice
                 </span>
                 <hr />
                 <br />
@@ -166,63 +173,128 @@ export default function MealSubscription() {
           </div>
           <div className="p-3 w-auto border-2 rounded-md shadow-md bg-secondary">
             <div className="lg:text-5xl text-center sm:text-3xl xs:text-lg font-bold text-primary tracking-wider mb-2 uppercase">
-              Sahar / Dinner Menu
+              Dinner Menu
             </div>
             <div>
               <hr />
               <ul className="text-white text-base">
-                <li><span className="text-complementary2 uppercase font-bold">
-                  <span className=" text-accent">Common combo :</span> White rice  + Rasam + Appalam + Curd
-                </span>
-                  <hr />
-                  <br /></li>
                 <li>
                   <span className="text-complementary2 uppercase font-bold">
-                    <span className=" text-accent">Day 1. </span> Common Combo + Chicken curry + Corn chips
+                    <span className=" text-accent">1. </span> Mutton gravy, Ghee
+                    phulka
                   </span>
                   <hr />
                   <br />
                 </li>
                 <li>
                   <span className="text-complementary2 uppercase font-bold">
-                    <span className=" text-accent">Day 2. </span> Common Combo + Chicken Salna + Poriyal
+                    <span className=" text-accent">2. </span> Chicken gravy,
+                    Ghee phulka
                   </span>
                   <hr />
                   <br />
                 </li>
                 <li>
                   <span className="text-complementary2 uppercase font-bold">
-                    <span className=" text-accent">Day 3. </span> Common Combo + Sambar + Prawn Curry
+                    <span className=" text-accent">3. </span> Fish gravy, Ghee
+                    phulka
                   </span>
                   <hr />
                   <br />
                 </li>
                 <li>
                   <span className="text-complementary2 uppercase font-bold">
-                    <span className=" text-accent">Day 4. </span> Common Combo + Drumsick Dal + Mutton Culet
+                    <span className=" text-accent">4. </span> Prawn mushroom
+                    capsicum semi gravy, Ghee phulka
                   </span>
                   <hr />
                   <br />
                 </li>
                 <li>
                   <span className="text-complementary2 uppercase font-bold">
-                    <span className=" text-accent">Day 5. </span> Common Combo + Mutton Keema dal + Poriyal
+                    <span className=" text-accent">5. </span> Mutton keema dal,
+                    Ghee phulka
                   </span>
                   <hr />
                   <br />
                 </li>
                 <li>
                   <span className="text-complementary2 uppercase font-bold">
-                    <span className=" text-accent">Day 6. </span> Common Combo + Brinjal kulambu + Mutton Liver
+                    <span className=" text-accent">6. </span> Pepper chicken,
+                    Ghee phulka
                   </span>
                   <hr />
                   <br />
                 </li>
                 <li>
                   <span className="text-complementary2 uppercase font-bold">
-                    <span className=" text-accent">Day 7. </span> Common Combo + Prawn sepang kilangu + Poriyal
+                    <span className=" text-accent">7. </span> Afghani chicken,
+                    Ghee phulka
                   </span>
                   <hr />
+                  <br />
+                </li>
+                <li>
+                  <span className="text-complementary2 uppercase font-bold">
+                    <span className=" text-accent">8. </span> South indian
+                    mapillai pangan, Ghee phulka
+                  </span>
+                  <hr />
+                  <br />
+                </li>
+                <li>
+                  <span className="text-complementary2 uppercase font-bold">
+                    <span className=" text-accent">9. </span> Hariyali chicken,
+                    Ghee phulka
+                  </span>
+                  <hr />
+                  <br />
+                </li>
+                <li>
+                  <span className="text-complementary2 uppercase font-bold">
+                    <span className=" text-accent">10. </span> Butter chicken,
+                    Ghee phulka
+                  </span>
+                  <hr />
+                  <br />
+                </li>
+                <li>
+                  <span className="text-complementary2 uppercase font-bold">
+                    <span className=" text-accent">11. </span> Chicken tikka
+                    masala, Ghee phulka
+                  </span>
+                  <hr />
+                  <br />
+                </li>
+                <li>
+                  <span className="text-complementary2 uppercase font-bold">
+                    <span className=" text-accent">12. </span> Chicken murthabak
+                    / Mutton murthabak & Mayonise
+                  </span>
+                  <hr />
+                  <br />
+                </li>
+                <li>
+                  <span className="text-complementary2 uppercase font-bold">
+                    <span className=" text-accent">13. </span> Aatukkal paya,
+                    Ghee phulka
+                  </span>
+                  <hr />
+                  <br />
+                </li>
+                <li>
+                  <span className="text-complementary2 uppercase font-bold">
+                    <span className=" text-accent">14. </span> Prawn chepang
+                    kelangu, Ghee phulka
+                  </span>
+                  <hr />
+                  <br />
+                </li>
+                <li>
+                  <span className="text-complementary2 uppercase font-bold">
+                    <span className=" text-accent">15. </span> Mutton malai
+                    kofta, Ghee phulka
+                  </span>
                   <br />
                 </li>
               </ul>
@@ -276,5 +348,5 @@ export default function MealSubscription() {
 
       <Footer />
     </div>
-  );
+  )
 }
