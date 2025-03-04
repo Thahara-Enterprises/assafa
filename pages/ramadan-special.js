@@ -56,7 +56,7 @@ export default function ShortsGallery() {
   return (
     <div className='relative min-h-screen flex flex-col items-center'>
       <Head>
-        <title>Homemade Food Meal Plan Subscription | Get 20% Offer</title>
+        <title>Homemade Ramadan Meal | Frozen Food | Get 20% Offer</title>
         <meta
           name='description'
           content='Best home cooked Ramadan meals delivery on curated Healthy diet at your Doorsteps'
