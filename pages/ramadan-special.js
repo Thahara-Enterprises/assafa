@@ -128,11 +128,6 @@ export default function ShortsGallery() {
         chepauk, velachery, sholinganalur, nungambakkam, villivakkam,
         ayanavaram, anna nagar, gopalapuram, thoraipakkam, tambaram, pallavaram,
         pammal,chrompet, perungalathur.
-        <iframe
-          src='https://www.google.com/maps/d/embed?mid=1gBGVRr6YtG2monnRbwlH4FTUG355Ypk&ehbc=2E312F'
-          width='640'
-          height='480'
-        ></iframe>
       </SectionTitle>
       <Footer />
     </div>
